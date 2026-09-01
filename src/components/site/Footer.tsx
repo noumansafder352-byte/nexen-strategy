@@ -126,7 +126,7 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label={label}
-                  className="text-white/65 transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:text-cyan"
+                  className="text-cyan transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:text-white"
                 >
                   <Icon className="h-[18px] w-[18px]" strokeWidth={1.6} />
                 </a>

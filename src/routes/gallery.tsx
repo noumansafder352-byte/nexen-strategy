@@ -39,7 +39,6 @@ export const Route = createFileRoute("/gallery")({
 
 interface GalleryItem {
   src: string;
-  category: "CORPORATE" | "MEDIA PRODUCTION";
   title: string;
   alt: string;
 }
@@ -47,64 +46,54 @@ interface GalleryItem {
 const items: GalleryItem[] = [
   {
     src: mediaShoot1,
-    category: "MEDIA PRODUCTION",
-    title: "Social Media Video Production",
-    alt: "Camera on tripod capturing two men reviewing documents during a production shoot",
+    title: "Dr. Shoaib — Clinical Shoot",
+    alt: "Professional photography and video production for Dr. Shoaib.",
   },
   {
     src: mediaShoot2,
-    category: "MEDIA PRODUCTION",
-    title: "Behind the Lens — Brand Storytelling",
-    alt: "Photographer framing a shot of two men in an office setting",
+    title: "Dr. Shoaib — Clinical Shoot",
+    alt: "Professional photography and video production for Dr. Shoaib.",
   },
   {
     src: mediaShoot3,
-    category: "MEDIA PRODUCTION",
-    title: "On-Set Capture — Clinical Campaign",
-    alt: "Camera monitor showing a man and child during a clinical video shoot",
+    title: "Dr. Shoaib — Clinical Shoot",
+    alt: "Professional photography and video production for Dr. Shoaib.",
   },
   {
     src: mediaShoot4,
-    category: "MEDIA PRODUCTION",
-    title: "On-Set Capture — Clinical Campaign",
-    alt: "Camera monitor showing a man and child during a clinical video shoot",
+    title: "Dr. Shoaib — Clinical Shoot",
+    alt: "Professional photography and video production for Dr. Shoaib.",
   },
   {
     src: mediaShoot5,
-    category: "MEDIA PRODUCTION",
-    title: "On-Set Capture — Clinical Campaign",
-    alt: "Camera monitor showing a man and child during a clinical video shoot",
+    title: "Dr. Shoaib — Clinical Shoot",
+    alt: "Professional photography and video production for Dr. Shoaib.",
   },
   {
     src: mediaShoot6,
-    category: "MEDIA PRODUCTION",
-    title: "On-Set Capture — Clinical Campaign",
-    alt: "Camera monitor showing a man and child during a clinical video shoot",
+    title: "Dr. Shoaib — Clinical Shoot",
+    alt: "Professional photography and video production for Dr. Shoaib.",
   },
 
   {
     src: drshahidimg1,
-    category: "MEDIA PRODUCTION",
-    title: "Social Media Video Production",
-    alt: "Camera on tripod capturing two men reviewing documents during a production shoot",
+    title: "Dr. Shahid Mahmud — Clinical Shoot",
+    alt: "Professional photography and video production for Dr. Shahid Mahmud",
   },
   {
     src: drshahidimg2,
-    category: "MEDIA PRODUCTION",
-    title: "Behind the Lens — Brand Storytelling",
-    alt: "Photographer framing a shot of two men in an office setting",
+    title: "Dr. Shahid Mahmud — Clinical Shoot",
+    alt: "Professional photography and video production for Dr. Shahid Mahmud",
   },
   {
     src: drshahidimg3,
-    category: "MEDIA PRODUCTION",
-    title: "On-Set Capture — Clinical Campaign",
-    alt: "Camera monitor showing a man and child during a clinical video shoot",
+    title: "Dr. Shahid Mahmud — Clinical Shoot",
+    alt: "Professional photography and video production for Dr. Shahid Mahmud",
   },
   {
     src: drshahidimg4,
-    category: "MEDIA PRODUCTION",
-    title: "On-Set Capture — Clinical Campaign",
-    alt: "Camera monitor showing a man and child during a clinical video shoot",
+    title: "Dr. Shahid Mahmud — Clinical Shoot",
+    alt: "Professional photography and video production for Dr. Shahid Mahmud",
   },
 ];
 
@@ -175,12 +164,8 @@ function GalleryCard({ item }: { item: GalleryItem }) {
       />
       {/* caption */}
       <figcaption className="absolute inset-x-0 bottom-0 translate-y-3 p-6 opacity-0 transition-all duration-400 ease-out group-hover:translate-y-0 group-hover:opacity-100 lg:p-8">
-        <p className="text-[0.65rem] font-semibold tracking-[0.18em] text-[#FFA53C]">
-          {item.category}
-        </p>
-        <p className="mt-2 text-lg font-semibold tracking-tight text-white lg:text-xl">
-          {item.title}
-        </p>
+        <p className="text-lg font-semibold tracking-tight text-white lg:text-xl">{item.title}</p>
+        <p className="mt-2 text-sm leading-relaxed text-white/80">{item.alt}</p>
       </figcaption>
       {/* accent line */}
       <span
