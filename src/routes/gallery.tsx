@@ -6,10 +6,14 @@ import { Footer } from "@/components/site/Footer";
 import { Reveal } from "@/components/site/Reveal";
 import mediaShoot1 from "@/assets/gallery/media-img1.png";
 import mediaShoot2 from "@/assets/gallery/media-img2.png";
-import mediaShoot3 from "@/assets/gallery/media-img4.png";
+import mediaShoot3 from "@/assets/gallery/media-img3.png";
+import mediaShoot4 from "@/assets/gallery/media-img4.png";
+import mediaShoot5 from "@/assets/gallery/media-img5.png";
+import mediaShoot6 from "@/assets/gallery/media-img6.png";
 import drshahidimg1 from "@/assets/gallery/drshahid-img1.png";
 import drshahidimg2 from "@/assets/gallery/drshahid-img2.png";
 import drshahidimg3 from "@/assets/gallery/drshahid-img3.png";
+import drshahidimg4 from "@/assets/gallery/drshahid-img4.png";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -63,6 +67,24 @@ const items: GalleryItem[] = [
     title: "On-Set Capture — Clinical Campaign",
     alt: "Camera monitor showing a man and child during a clinical video shoot",
   },
+  {
+    src: mediaShoot4,
+    category: "MEDIA PRODUCTION",
+    title: "On-Set Capture — Clinical Campaign",
+    alt: "Camera monitor showing a man and child during a clinical video shoot",
+  },
+  {
+    src: mediaShoot5,
+    category: "MEDIA PRODUCTION",
+    title: "On-Set Capture — Clinical Campaign",
+    alt: "Camera monitor showing a man and child during a clinical video shoot",
+  },
+  {
+    src: mediaShoot6,
+    category: "MEDIA PRODUCTION",
+    title: "On-Set Capture — Clinical Campaign",
+    alt: "Camera monitor showing a man and child during a clinical video shoot",
+  },
 
   {
     src: drshahidimg1,
@@ -78,6 +100,12 @@ const items: GalleryItem[] = [
   },
   {
     src: drshahidimg3,
+    category: "MEDIA PRODUCTION",
+    title: "On-Set Capture — Clinical Campaign",
+    alt: "Camera monitor showing a man and child during a clinical video shoot",
+  },
+  {
+    src: drshahidimg4,
     category: "MEDIA PRODUCTION",
     title: "On-Set Capture — Clinical Campaign",
     alt: "Camera monitor showing a man and child during a clinical video shoot",
