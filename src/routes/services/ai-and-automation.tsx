@@ -191,138 +191,135 @@ function AiAutomationPage() {
                   {/* ===== One proportionally scaled composition at every breakpoint ===== */}
                   <HeroScale designWidth={560} className="relative">
                     <div className="relative aspect-[10/9] w-full">
+                      <svg
+                        aria-hidden
+                        className="pointer-events-none absolute inset-0 h-full w-full"
+                        viewBox="0 0 100 90"
+                        preserveAspectRatio="none"
+                        fill="none"
+                      >
+                        {/* mobile → bottom rail → robot icon */}
+                        <path
+                          d="M30 78 L62 78 L62 84 L86 84"
+                          stroke="#010C62"
+                          strokeOpacity="0.16"
+                          strokeWidth="0.3"
+                          strokeDasharray="1.4 2"
+                        />
+                        <path
+                          className="ai-flow"
+                          d="M30 78 L62 78 L62 84 L86 84"
+                          stroke="#3AF1FF"
+                          strokeOpacity="0.75"
+                          strokeWidth="0.4"
+                        />
+                        {/* brain icon → down → right → down → top of mobile assistant */}
+                        <path
+                          d="M6 22 L6 34 L14 34 L14 42"
+                          stroke="#010C62"
+                          strokeOpacity="0.16"
+                          strokeWidth="0.3"
+                          strokeDasharray="1.4 2"
+                        />
+                        <path
+                          className="ai-flow"
+                          d="M6 22 L6 34 L14 34 L14 42"
+                          stroke="#3AF1FF"
+                          strokeOpacity="0.75"
+                          strokeWidth="0.4"
+                        />
+                        {/* automation panel → sparkle */}
+                        <path
+                          d="M97 45 L97 20"
+                          stroke="#010C62"
+                          strokeOpacity="0.14"
+                          strokeWidth="0.3"
+                          strokeDasharray="1.4 2"
+                        />
 
-                    <svg
-                      aria-hidden
-                      className="pointer-events-none absolute inset-0 h-full w-full"
-                      viewBox="0 0 100 90"
-                      preserveAspectRatio="none"
-                      fill="none"
-                    >
-                      {/* mobile → bottom rail → robot icon */}
-                      <path
-                        d="M30 78 L62 78 L62 84 L86 84"
-                        stroke="#010C62"
-                        strokeOpacity="0.16"
-                        strokeWidth="0.3"
-                        strokeDasharray="1.4 2"
-                      />
-                      <path
-                        className="ai-flow"
-                        d="M30 78 L62 78 L62 84 L86 84"
-                        stroke="#3AF1FF"
-                        strokeOpacity="0.75"
-                        strokeWidth="0.4"
-                      />
-                      {/* brain icon → down → right → down → top of mobile assistant */}
-                      <path
-                        d="M6 22 L6 34 L14 34 L14 42"
-                        stroke="#010C62"
-                        strokeOpacity="0.16"
-                        strokeWidth="0.3"
-                        strokeDasharray="1.4 2"
-                      />
-                      <path
-                        className="ai-flow"
-                        d="M6 22 L6 34 L14 34 L14 42"
-                        stroke="#3AF1FF"
-                        strokeOpacity="0.75"
-                        strokeWidth="0.4"
-                      />
-                      {/* automation panel → sparkle */}
-                      <path
-                        d="M97 45 L97 20"
-                        stroke="#010C62"
-                        strokeOpacity="0.14"
-                        strokeWidth="0.3"
-                        strokeDasharray="1.4 2"
-                      />
+                        <circle cx="14" cy="42" r="0.8" fill="#010C62" fillOpacity="0.3" />
+                        <circle cx="62" cy="78" r="0.8" fill="#010C62" fillOpacity="0.3" />
+                        <circle cx="97" cy="45" r="0.8" fill="#010C62" fillOpacity="0.3" />
+                      </svg>
 
-                      <circle cx="14" cy="42" r="0.8" fill="#010C62" fillOpacity="0.3" />
-                      <circle cx="62" cy="78" r="0.8" fill="#010C62" fillOpacity="0.3" />
-                      <circle cx="97" cy="45" r="0.8" fill="#010C62" fillOpacity="0.3" />
+                      {/* MAIN — AI operations dashboard */}
+                      <figure className="absolute left-[12%] top-[8%] w-[76%] overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-[0_46px_92px_-46px_rgba(1,12,98,0.42)]">
+                        <div className="flex h-7 items-center gap-1.5 border-b border-navy/[0.07] bg-[#F7F8FC] px-3">
+                          <span className="h-1.5 w-1.5 rounded-full bg-navy/15" />
+                          <span className="h-1.5 w-1.5 rounded-full bg-navy/10" />
+                          <span className="h-1.5 w-1.5 rounded-full bg-navy/10" />
+                          <span className="ml-3 font-mono text-[8px] uppercase tracking-[0.22em] text-navy/40">
+                            AI Operations
+                          </span>
+                          <span className="ml-auto flex items-center gap-1.5">
+                            <span className="h-1.5 w-1.5 rounded-full bg-[#3AF1FF]" />
+                            <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-navy/35">
+                              Live
+                            </span>
+                          </span>
+                        </div>
+                        <img
+                          src={aiHeroMain}
+                          alt="AI assistant working alongside a live business operations dashboard"
+                          width={1280}
+                          height={1024}
+                          className="aspect-[5/4] w-full object-cover"
+                        />
+                      </figure>
 
-                    </svg>
+                      {/* AUTOMATION FLOW — floating vertical panel, right of dashboard */}
+                      <figure className="absolute right-0 top-[38%] w-[30%] overflow-hidden rounded-xl border border-navy/10 bg-white shadow-[0_34px_70px_-34px_rgba(1,12,98,0.42)]">
+                        <div className="flex items-center justify-between border-b border-navy/[0.07] bg-white px-2.5 py-1.5">
+                          <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-navy/45">
+                            Automation Flow
+                          </span>
+                          <span className="h-1 w-1 rounded-full bg-[#ffa53c]" />
+                        </div>
+                        <img
+                          src={aiHeroPanel}
+                          alt="Automation flow panel showing trigger, AI processing, action and outcome steps"
+                          loading="lazy"
+                          width={1024}
+                          height={1280}
+                          className="aspect-[4/5] w-full object-cover"
+                        />
+                      </figure>
 
-                    {/* MAIN — AI operations dashboard */}
-                    <figure className="absolute left-[12%] top-[8%] w-[76%] overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-[0_46px_92px_-46px_rgba(1,12,98,0.42)]">
-                      <div className="flex h-7 items-center gap-1.5 border-b border-navy/[0.07] bg-[#F7F8FC] px-3">
-                        <span className="h-1.5 w-1.5 rounded-full bg-navy/15" />
-                        <span className="h-1.5 w-1.5 rounded-full bg-navy/10" />
-                        <span className="h-1.5 w-1.5 rounded-full bg-navy/10" />
-                        <span className="ml-3 font-mono text-[8px] uppercase tracking-[0.22em] text-navy/40">
-                          AI Operations
-                        </span>
-                        <span className="ml-auto flex items-center gap-1.5">
-                          <span className="h-1.5 w-1.5 rounded-full bg-[#3AF1FF]" />
-                          <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-navy/35">Live</span>
-                        </span>
-                      </div>
-                      <img
-                        src={aiHeroMain}
-                        alt="AI assistant working alongside a live business operations dashboard"
-                        width={1280}
-                        height={1024}
-                        className="aspect-[5/4] w-full object-cover"
-                      />
-                    </figure>
+                      {/* MOBILE AI ASSISTANT — lower-left, overlapping dashboard */}
+                      <figure className="ai-float absolute bottom-[6%] left-[2%] w-[24%] overflow-hidden rounded-[1rem] border-[3px] border-white bg-white shadow-[0_36px_70px_-30px_rgba(1,12,98,0.5)]">
+                        <img
+                          src={aiHeroMobile}
+                          alt="Mobile AI assistant showing a conversation and an automation status card"
+                          loading="lazy"
+                          width={720}
+                          height={1280}
+                          className="aspect-[9/16] w-full rounded-[0.75rem] object-cover object-center"
+                        />
+                      </figure>
 
-                    {/* AUTOMATION FLOW — floating vertical panel, right of dashboard */}
-                    <figure className="absolute right-0 top-[38%] w-[30%] overflow-hidden rounded-xl border border-navy/10 bg-white shadow-[0_34px_70px_-34px_rgba(1,12,98,0.42)]">
-                      <div className="flex items-center justify-between border-b border-navy/[0.07] bg-white px-2.5 py-1.5">
-                        <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-navy/45">
-                          Automation Flow
-                        </span>
-                        <span className="h-1 w-1 rounded-full bg-[#ffa53c]" />
-                      </div>
-                      <img
-                        src={aiHeroPanel}
-                        alt="Automation flow panel showing trigger, AI processing, action and outcome steps"
-                        loading="lazy"
-                        width={1024}
-                        height={1280}
-                        className="aspect-[4/5] w-full object-cover"
-                      />
-                    </figure>
-
-                    {/* MOBILE AI ASSISTANT — lower-left, overlapping dashboard */}
-                    <figure className="ai-float absolute bottom-[6%] left-[2%] w-[24%] overflow-hidden rounded-[1rem] border-[3px] border-white bg-white shadow-[0_36px_70px_-30px_rgba(1,12,98,0.5)]">
-                      <img
-                        src={aiHeroMobile}
-                        alt="Mobile AI assistant showing a conversation and an automation status card"
-                        loading="lazy"
-                        width={720}
-                        height={1280}
-                        className="aspect-[9/16] w-full rounded-[0.75rem] object-cover object-center"
-                      />
-                    </figure>
-
-                    {/* Floating AI markers */}
-                    <span
-                      aria-hidden
-                      className="absolute left-0 top-[13%] flex h-11 w-11 items-center justify-center rounded-xl border border-navy/10 bg-white shadow-[0_18px_36px_-22px_rgba(1,12,98,0.5)]"
-                    >
-                      <BrainCircuit className="h-5 w-5 text-navy/70" strokeWidth={1.4} />
-                    </span>
-                    <span
-                      aria-hidden
-                      className="absolute bottom-[4%] right-[8%] flex h-11 w-11 items-center justify-center rounded-xl border border-navy/10 bg-white shadow-[0_18px_36px_-22px_rgba(1,12,98,0.5)]"
-                    >
-                      <Bot className="h-5 w-5 text-navy/70" strokeWidth={1.4} />
-                    </span>
-                    <span
-                      aria-hidden
-                      className="absolute right-[1%] top-[14%] flex h-8 w-8 items-center justify-center rounded-lg border border-navy/10 bg-white shadow-[0_14px_28px_-20px_rgba(1,12,98,0.5)]"
-                    >
-                      <Sparkles className="h-4 w-4 text-[#3AF1FF]" strokeWidth={1.6} />
-                    </span>
+                      {/* Floating AI markers */}
+                      <span
+                        aria-hidden
+                        className="absolute left-0 top-[13%] flex h-11 w-11 items-center justify-center rounded-xl border border-navy/10 bg-white shadow-[0_18px_36px_-22px_rgba(1,12,98,0.5)]"
+                      >
+                        <BrainCircuit className="h-5 w-5 text-navy/70" strokeWidth={1.4} />
+                      </span>
+                      <span
+                        aria-hidden
+                        className="absolute bottom-[4%] right-[8%] flex h-11 w-11 items-center justify-center rounded-xl border border-navy/10 bg-white shadow-[0_18px_36px_-22px_rgba(1,12,98,0.5)]"
+                      >
+                        <Bot className="h-5 w-5 text-navy/70" strokeWidth={1.4} />
+                      </span>
+                      <span
+                        aria-hidden
+                        className="absolute right-[1%] top-[14%] flex h-8 w-8 items-center justify-center rounded-lg border border-navy/10 bg-white shadow-[0_14px_28px_-20px_rgba(1,12,98,0.5)]"
+                      >
+                        <Sparkles className="h-4 w-4 text-[#3AF1FF]" strokeWidth={1.6} />
+                      </span>
                     </div>
                   </HeroScale>
-
-
                 </div>
               </Reveal>
-
             </div>
 
             {/* AI inside the business — technical strip */}
@@ -428,7 +425,9 @@ function AiAutomationPage() {
                   <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-ember">
                     {String(activeCapability + 1).padStart(2, "0")} — Capability
                   </p>
-                  <h3 className="display mt-4 text-3xl text-navy xl:text-[2.4rem]">{active.name}</h3>
+                  <h3 className="display mt-4 text-3xl text-navy xl:text-[2.4rem]">
+                    {active.name}
+                  </h3>
                   <p className="mt-6 max-w-2xl text-[1.15rem] leading-[1.7] text-navy/80">
                     {active.text}
                   </p>
@@ -622,11 +621,14 @@ function AiAutomationPage() {
                     className="display text-white"
                     style={{ fontSize: "clamp(2rem, 4.2vw, 3.4rem)" }}
                   >
-                    Put AI to Work.
+                    AI That Works for Your Business.
                   </h2>
                 </Reveal>
                 <Reveal delay={90}>
-                  <p className="mt-7 text-lg leading-relaxed text-white/75">{heroParagraphs[0]}</p>
+                  <p className="mt-7 text-lg leading-relaxed text-white/75">
+                    Turn everyday processes into smarter, faster operations with practical AI and
+                    automation solutions designed around your business needs.
+                  </p>
                 </Reveal>
                 <Reveal delay={150}>
                   <div className="mt-10">

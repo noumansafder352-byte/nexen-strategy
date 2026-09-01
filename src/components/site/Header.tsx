@@ -321,7 +321,7 @@ export function Header({
                   </li>
                   <li className="flex items-center gap-2.5 py-2 text-[0.9rem] text-white/70 sm:py-1.5">
                     <MapPin className="h-3.5 w-3.5 shrink-0 text-cyan/70" />
-                    UK / Islamabad
+                    United Kingdom | Pakistan
                   </li>
                 </ul>
               </div>

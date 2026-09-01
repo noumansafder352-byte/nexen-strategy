@@ -1,19 +1,46 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import {
+  ArrowRight,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/nexen-logo-white.png";
 import { services } from "@/lib/site-data";
+
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    className={className}
+  >
+    <path
+      d="M15.5 3.5c.8 1.6 2.2 2.7 4 3.1v2.9a7.1 7.1 0 0 1-4-1.3v6.7a5.6 5.6 0 1 1-5.6-5.6c.2 0 .4 0 .6.1v2.7a2.9 2.9 0 1 0 2.1 2.8V3.5h3.9Z"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 const socials = [
   { label: "Facebook", href: "https://facebook.com", Icon: Facebook },
   { label: "Instagram", href: "https://instagram.com", Icon: Instagram },
   { label: "LinkedIn", href: "https://linkedin.com", Icon: Linkedin },
+  { label: "YouTube", href: "https://youtube.com", Icon: Youtube },
+  { label: "TikTok", href: "https://tiktok.com", Icon: TikTokIcon },
 ];
 
 const contactItems = [
   { Icon: Mail, label: "info@nexenstrategy.com", href: "mailto:info@nexenstrategy.com" },
   { Icon: Phone, label: "+92 335 8084973", href: "tel:+923358084973" },
-  { Icon: MapPin, label: "UK / Islamabad", href: null as string | null },
+  { Icon: MapPin, label: "United Kingdom | Pakistan", href: null as string | null },
 ];
 
 export function Footer() {
@@ -107,23 +134,6 @@ export function Footer() {
             </div>
           </div>
 
-          <nav aria-label="Services">
-            <p className="eyebrow text-cyan">Services</p>
-            <ul className="mt-6 space-y-3">
-              {services.map((s) => (
-                <li key={s.slug}>
-                  <Link
-                    to="/services/$slug"
-                    params={{ slug: s.slug }}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
-                  >
-                    {s.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
           <nav aria-label="Quick links">
             <p className="eyebrow text-cyan">Quick Links</p>
             <ul className="mt-6 space-y-3">
@@ -140,6 +150,23 @@ export function Footer() {
                     className="text-sm text-white/70 transition-colors hover:text-white"
                   >
                     {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav aria-label="Services">
+            <p className="eyebrow text-cyan">Services</p>
+            <ul className="mt-6 space-y-3">
+              {services.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    to="/services/$slug"
+                    params={{ slug: s.slug }}
+                    className="text-sm text-white/70 transition-colors hover:text-white"
+                  >
+                    {s.title}
                   </Link>
                 </li>
               ))}
