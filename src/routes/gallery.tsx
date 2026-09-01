@@ -7,6 +7,9 @@ import { Reveal } from "@/components/site/Reveal";
 import mediaShoot1 from "@/assets/gallery/media-img1.png";
 import mediaShoot2 from "@/assets/gallery/media-img2.png";
 import mediaShoot3 from "@/assets/gallery/media-img4.png";
+import drshahidimg1 from "@/assets/gallery/drshahid-img1.png";
+import drshahidimg2 from "@/assets/gallery/drshahid-img2.png";
+import drshahidimg3 from "@/assets/gallery/drshahid-img3.png";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -56,6 +59,25 @@ const items: GalleryItem[] = [
   },
   {
     src: mediaShoot3,
+    category: "MEDIA PRODUCTION",
+    title: "On-Set Capture — Clinical Campaign",
+    alt: "Camera monitor showing a man and child during a clinical video shoot",
+  },
+
+  {
+    src: drshahidimg1,
+    category: "MEDIA PRODUCTION",
+    title: "Social Media Video Production",
+    alt: "Camera on tripod capturing two men reviewing documents during a production shoot",
+  },
+  {
+    src: drshahidimg2,
+    category: "MEDIA PRODUCTION",
+    title: "Behind the Lens — Brand Storytelling",
+    alt: "Photographer framing a shot of two men in an office setting",
+  },
+  {
+    src: drshahidimg3,
     category: "MEDIA PRODUCTION",
     title: "On-Set Capture — Clinical Campaign",
     alt: "Camera monitor showing a man and child during a clinical video shoot",

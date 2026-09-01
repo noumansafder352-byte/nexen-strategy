@@ -103,7 +103,7 @@ export function Footer() {
       </div>
 
       <div className="mx-auto max-w-[1400px] px-6 pt-20 pb-10 lg:px-12 lg:pt-24 lg:pb-12">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.15fr] lg:gap-10">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.55fr_0.85fr_0.85fr_1.15fr] lg:gap-10">
           <div>
             <img
               src={logo}
@@ -134,7 +134,7 @@ export function Footer() {
             </div>
           </div>
 
-          <nav aria-label="Quick links">
+          <nav aria-label="Quick links" className="lg:pl-8">
             <p className="eyebrow text-cyan">Quick Links</p>
             <ul className="mt-6 space-y-3">
               {[
@@ -142,6 +142,7 @@ export function Footer() {
                 { to: "/about", label: "About Us" },
                 { to: "/portfolio", label: "Portfolio" },
                 { to: "/clients", label: "Clients" },
+                { to: "/gallery", label: "Gallery" },
                 { to: "/contact", label: "Contact Us" },
               ].map((l) => (
                 <li key={l.to}>
@@ -156,7 +157,7 @@ export function Footer() {
             </ul>
           </nav>
 
-          <nav aria-label="Services">
+          <nav aria-label="Services" className="lg:pl-2">
             <p className="eyebrow text-cyan">Services</p>
             <ul className="mt-6 space-y-3">
               {services.map((s) => (
