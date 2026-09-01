@@ -5,41 +5,41 @@ import { CtaSection } from "@/components/site/CtaSection";
 import { Reveal } from "@/components/site/Reveal";
 import { GlobalPresence } from "@/components/site/GlobalPresence";
 
-import adobeProperty from "@/assets/client-adobe-property-advisor.svg.asset.json";
-import dxb from "@/assets/client-dxb-real-estate.svg.asset.json";
-import mayfair from "@/assets/client-mayfair.svg.asset.json";
-import muazzamEstate from "@/assets/client-muazzam-estate.svg.asset.json";
-import mustafaAlAnsari from "@/assets/client-mustafa-al-ansari.png.asset.json";
-import rightMove from "@/assets/client-right-move.svg.asset.json";
-import drKhurram from "@/assets/client-dr-khurram.svg.asset.json";
-import drSarfraz from "@/assets/client-dr-sarfraz.svg.asset.json";
-import drShahid from "@/assets/client-dr-shahid-v2.svg.asset.json";
-import drShoaib from "@/assets/client-dr-shoaib.svg.asset.json";
-import drWaseem from "@/assets/client-dr-waseem.svg.asset.json";
-import healthyLifePath from "@/assets/client-healthy-life-path.svg.asset.json";
-import organicRoots from "@/assets/client-organic-roots.svg.asset.json";
-import pakMedinet from "@/assets/client-pakmedinet.svg.asset.json";
-import soapSuds from "@/assets/client-soap-suds.svg.asset.json";
-import comwave from "@/assets/client-comwave.svg.asset.json";
-import gatd from "@/assets/client-gatd.svg.asset.json";
-import phr from "@/assets/client-phr.svg.asset.json";
-import quranReading from "@/assets/client-quran-reading.svg.asset.json";
-import torque from "@/assets/client-torque.svg.asset.json";
-import vivd from "@/assets/client-vivd-v2.svg.asset.json";
-import borsac from "@/assets/client-borsac.svg.asset.json";
-import nhFusion from "@/assets/client-nh-fusion.svg.asset.json";
-import flyShop from "@/assets/client-fly-shop.svg.asset.json";
-import glamByNoor from "@/assets/client-glam-by-noor.svg.asset.json";
-import minahilKhan from "@/assets/client-minahil-khan.svg.asset.json";
-import hiTech from "@/assets/client-hi-tech.svg.asset.json";
-import mumpsMotors from "@/assets/client-mumps-motors.png.asset.json";
-import sbidernet from "@/assets/client-sbidernet.svg.asset.json";
-import oceanOffshore from "@/assets/client-ocean-offshore.svg.asset.json";
-import mohsanCo from "@/assets/client-mohsan-co.svg.asset.json";
-import roofConnect from "@/assets/client-roofconnect.svg.asset.json";
-import royaVenture from "@/assets/client-roya-venture.svg.asset.json";
-import umami from "@/assets/client-umami.svg.asset.json";
-import heroVideo from "@/assets/clients-hero.mp4.asset.json";
+import adobeProperty from "@/assets/clients/client-adobe-property-advisor.svg";
+import dxb from "@/assets/clients/client-dxb-real-estate.svg";
+import mayfair from "@/assets/clients/client-mayfair.svg";
+import muazzamEstate from "@/assets/clients/client-muazzam-estate.svg";
+import mustafaAlAnsari from "@/assets/clients/client-mustafa-al-ansari.png";
+import rightMove from "@/assets/clients/client-right-move.svg";
+import drKhurram from "@/assets/clients/client-dr-khurram.svg";
+import drSarfraz from "@/assets/clients/client-dr-sarfraz.svg";
+import drShahid from "@/assets/clients/client-dr-shahid-v2.svg";
+import drShoaib from "@/assets/clients/client-dr-shoaib.svg";
+import drWaseem from "@/assets/clients/client-dr-waseem.svg";
+import healthyLifePath from "@/assets/clients/client-healthy-life-path.svg";
+import organicRoots from "@/assets/clients/client-organic-roots.svg";
+import pakMedinet from "@/assets/clients/client-pakmedinet.svg";
+import soapSuds from "@/assets/clients/client-soap-suds.svg";
+import comwave from "@/assets/clients/client-comwave.svg";
+import gatd from "@/assets/clients/client-gatd.svg";
+import phr from "@/assets/clients/client-phr.svg";
+import quranReading from "@/assets/clients/client-quran-reading.svg";
+import torque from "@/assets/clients/client-torque.svg";
+import vivd from "@/assets/clients/client-vivd-v2.svg";
+import borsac from "@/assets/clients/client-borsac.svg";
+import nhFusion from "@/assets/clients/client-nh-fusion.svg";
+import flyShop from "@/assets/clients/client-fly-shop.svg";
+import glamByNoor from "@/assets/clients/client-glam-by-noor.svg";
+import minahilKhan from "@/assets/clients/client-minahil-khan.svg";
+import hiTech from "@/assets/clients/client-hi-tech.svg";
+import mumpsMotors from "@/assets/clients/client-mumps-motors.png";
+import sbidernet from "@/assets/clients/client-sbidernet.svg";
+import oceanOffshore from "@/assets/clients/client-ocean-offshore.svg";
+import mohsanCo from "@/assets/clients/client-mohsan-co.svg";
+import roofConnect from "@/assets/clients/client-roofconnect.svg";
+import royaVenture from "@/assets/clients/client-roya-venture.svg";
+import umami from "@/assets/clients/client-umami.svg";
+import heroVideo from "@/assets/clients/clients-hero.mp4";
 
 type Client = { name: string; src: string };
 
@@ -49,12 +49,12 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
     title: "Education & Training",
     note: "From education providers to executive training organisations, we create digital solutions that make learning, communication and professional development more accessible and engaging.",
     clients: [
-      { name: "Comwave", src: comwave.url },
-      { name: "GATD", src: gatd.url },
-      { name: "PHR", src: phr.url },
-      { name: "Quran Reading", src: quranReading.url },
-      { name: "Torque", src: torque.url },
-      { name: "VIVD", src: vivd.url },
+      { name: "Comwave", src: comwave },
+      { name: "GATD", src: gatd },
+      { name: "PHR", src: phr },
+      { name: "Quran Reading", src: quranReading },
+      { name: "Torque", src: torque },
+      { name: "VIVD", src: vivd },
     ],
   },
   {
@@ -62,15 +62,15 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
     title: "Medical & Healthcare",
     note: "We support healthcare professionals, medical organisations and health-focused brands with digital experiences designed to communicate expertise, build credibility and connect with their audiences.",
     clients: [
-      { name: "Dr Khurram", src: drKhurram.url },
-      { name: "Dr Sarfraz", src: drSarfraz.url },
-      { name: "Dr Shahid", src: drShahid.url },
-      { name: "Dr Shoaib", src: drShoaib.url },
-      { name: "Dr Waseem", src: drWaseem.url },
-      { name: "Healthy Life Path", src: healthyLifePath.url },
-      { name: "Organic Roots", src: organicRoots.url },
-      { name: "Pak Medinet", src: pakMedinet.url },
-      { name: "SoapSuds", src: soapSuds.url },
+      { name: "Dr Khurram", src: drKhurram },
+      { name: "Dr Sarfraz", src: drSarfraz },
+      { name: "Dr Shahid", src: drShahid },
+      { name: "Dr Shoaib", src: drShoaib },
+      { name: "Dr Waseem", src: drWaseem },
+      { name: "Healthy Life Path", src: healthyLifePath },
+      { name: "Organic Roots", src: organicRoots },
+      { name: "Pak Medinet", src: pakMedinet },
+      { name: "SoapSuds", src: soapSuds },
     ],
   },
   {
@@ -78,13 +78,13 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
     title: "Real Estate",
     note: "We work with property brands, developers and real estate agencies to create digital experiences that build trust, strengthen their presence and support business growth.",
     clients: [
-      { name: "Adobe Property Advisor", src: adobeProperty.url },
-      { name: "DXB Real Estate", src: dxb.url },
-      { name: "May Fair", src: mayfair.url },
-      { name: "Muazzam Real Estate", src: muazzamEstate.url },
-      { name: "Mustafa Al Ansari Real Estate", src: mustafaAlAnsari.url },
-      { name: "Right Move", src: rightMove.url },
-      { name: "Roof Connect", src: roofConnect.url },
+      { name: "Adobe Property Advisor", src: adobeProperty },
+      { name: "DXB Real Estate", src: dxb },
+      { name: "May Fair", src: mayfair },
+      { name: "Muazzam Real Estate", src: muazzamEstate },
+      { name: "Mustafa Al Ansari Real Estate", src: mustafaAlAnsari },
+      { name: "Right Move", src: rightMove },
+      { name: "Roof Connect", src: roofConnect },
     ],
   },
   {
@@ -92,12 +92,12 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
     title: "Technology & Business Solutions",
     note: "We work with technology, infrastructure and business-focused organisations to create practical digital solutions that simplify complex challenges, strengthen operations and support growth.",
     clients: [
-      { name: "Hi Tech", src: hiTech.url },
-      { name: "Mumps Motors", src: mumpsMotors.url },
-      { name: "Sbidernet", src: sbidernet.url },
-      { name: "Ocean of Shore", src: oceanOffshore.url },
-      { name: "Mohsan & Co", src: mohsanCo.url },
-      { name: "Roya Ventures", src: royaVenture.url },
+      { name: "Hi Tech", src: hiTech },
+      { name: "Mumps Motors", src: mumpsMotors },
+      { name: "Sbidernet", src: sbidernet },
+      { name: "Ocean of Shore", src: oceanOffshore },
+      { name: "Mohsan & Co", src: mohsanCo },
+      { name: "Roya Ventures", src: royaVenture },
     ],
   },
   {
@@ -105,18 +105,18 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
     title: "Fashion & Clothing",
     note: "We help fashion, clothing and lifestyle brands build distinctive digital identities and experiences that showcase their products and connect with modern audiences.",
     clients: [
-      { name: "Borsac", src: borsac.url },
-      { name: "NH Fusion", src: nhFusion.url },
-      { name: "Fly Shop", src: flyShop.url },
-      { name: "Glam by Noor", src: glamByNoor.url },
-      { name: "Minahil Khan", src: minahilKhan.url },
+      { name: "Borsac", src: borsac },
+      { name: "NH Fusion", src: nhFusion },
+      { name: "Fly Shop", src: flyShop },
+      { name: "Glam by Noor", src: glamByNoor },
+      { name: "Minahil Khan", src: minahilKhan },
     ],
   },
   {
     num: "06",
     title: "Food & Hospitality",
     note: "We create digital experiences for food, hospitality and consumer-focused brands that help them present their offerings, strengthen their identity and connect with customers.",
-    clients: [{ name: "Umami", src: umami.url }],
+    clients: [{ name: "Umami", src: umami }],
   },
 ];
 
@@ -165,7 +165,8 @@ export const Route = createFileRoute("/clients")({
       { property: "og:title", content: "Clients — Nexen Strategy" },
       {
         property: "og:description",
-        content: "Strategy, design, technology and creativity delivered for businesses across six industries.",
+        content:
+          "Strategy, design, technology and creativity delivered for businesses across six industries.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -183,7 +184,7 @@ function ClientsPage() {
         <section className="relative overflow-hidden bg-navy pt-[9.5rem] pb-28 lg:pt-40 lg:pb-36">
           <video
             className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-            src={heroVideo.url}
+            src={heroVideo}
             autoPlay
             loop
             muted
@@ -249,8 +250,9 @@ function ClientsPage() {
             </Reveal>
             <Reveal delay={150}>
               <p className="mt-9 max-w-2xl text-lg leading-relaxed text-white/70">
-                We work with businesses across different industries, bringing together strategy, design, technology and
-                creativity to create meaningful digital experiences and solutions.
+                We work with businesses across different industries, bringing together strategy,
+                design, technology and creativity to create meaningful digital experiences and
+                solutions.
               </p>
             </Reveal>
             <Reveal delay={220}>
@@ -285,7 +287,6 @@ function ClientsPage() {
           <div className="mx-auto max-w-[1400px] px-6 py-24 lg:px-12 lg:py-32">
             {industries.map((ind, idx) => (
               <div key={ind.num} className={idx === 0 ? "mt-0" : "mt-24 lg:mt-32"}>
-
                 <Reveal>
                   <div className="min-w-0 text-center">
                     <span className="font-mono text-[0.75rem] text-azure">{ind.num}</span>

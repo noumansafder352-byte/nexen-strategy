@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/nexen-logo-white.png.asset.json";
+import logo from "@/assets/nexen-logo-white.png";
 import { services } from "@/lib/site-data";
 
 const socials = [
@@ -79,7 +79,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.15fr] lg:gap-10">
           <div>
             <img
-              src={logo.url}
+              src={logo}
               alt="Nexen Strategy"
               width={200}
               height={52}
@@ -87,8 +87,8 @@ export function Footer() {
               className="h-9 w-auto object-contain"
             />
             <p className="mt-7 max-w-sm text-[0.95rem] leading-relaxed text-white/65">
-              A UK digital solutions partner helping established businesses build, transform and grow through strategy,
-              design, technology and creative work.
+              A UK digital solutions partner helping established businesses build, transform and
+              grow through strategy, design, technology and creative work.
             </p>
             <div className="mt-8 h-px w-24 bg-gradient-to-r from-cyan to-azure" />
             <div className="mt-7 flex items-center gap-5">
@@ -135,7 +135,10 @@ export function Footer() {
                 { to: "/contact", label: "Contact Us" },
               ].map((l) => (
                 <li key={l.to}>
-                  <Link to={l.to} className="text-sm text-white/70 transition-colors hover:text-white">
+                  <Link
+                    to={l.to}
+                    className="text-sm text-white/70 transition-colors hover:text-white"
+                  >
                     {l.label}
                   </Link>
                 </li>

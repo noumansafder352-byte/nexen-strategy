@@ -3,39 +3,43 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { cn } from "@/lib/utils";
-import royaWeb from "@/assets/roya-laptop.png.asset.json";
-import hitechBrand from "@/assets/hitech-profile-1.jpg.asset.json";
-import drShahidSocial from "@/assets/Dr-Shahid-Posts-Mockup.jpg.asset.json";
-import umamiSocial from "@/assets/umami-1.jpg.asset.json";
+import royaWeb from "@/assets/roya-laptop.png";
+import hitechBrand from "@/assets/hitech-profile-1.jpg";
+import drShahidSocial from "@/assets/Dr-Shahid-Posts-Mockup.jpg";
+import umamiSocial from "@/assets/umami-1.jpg";
 
 const projects = [
   {
     title: "Roya Ventures",
     sector: "Investment & Advisory",
     category: "Web & App Development",
-    summary: "A responsive digital experience engineered end to end — clear communication, intuitive journeys and a scalable foundation built to support growth.",
-    image: royaWeb.url,
+    summary:
+      "A responsive digital experience engineered end to end — clear communication, intuitive journeys and a scalable foundation built to support growth.",
+    image: royaWeb,
   },
   {
     title: "Hightech",
     sector: "Industrial Engineering",
     category: "Brand & Design",
-    summary: "Brand identity and a professional company profile that brings Hightech's identity, services and capabilities together through a clear, cohesive visual system.",
-    image: hitechBrand.url,
+    summary:
+      "Brand identity and a professional company profile that brings Hightech's identity, services and capabilities together through a clear, cohesive visual system.",
+    image: hitechBrand,
   },
   {
     title: "Dr Shahid Mahmud Clinic",
     sector: "Healthcare",
     category: "Social Media Marketing",
-    summary: "Social media marketing across multiple platforms — consistent content, increased visibility and strong engagement and audience growth for the clinic.",
-    image: drShahidSocial.url,
+    summary:
+      "Social media marketing across multiple platforms — consistent content, increased visibility and strong engagement and audience growth for the clinic.",
+    image: drShahidSocial,
   },
   {
     title: "Umami",
     sector: "UK · Hospitality",
     category: "Social Media Marketing",
-    summary: "We delivered social media marketing for Umami, creating engaging content and a consistent digital presence designed to strengthen visibility, connect with the right audience and support brand growth.",
-    image: umamiSocial.url,
+    summary:
+      "We delivered social media marketing for Umami, creating engaging content and a consistent digital presence designed to strengthen visibility, connect with the right audience and support brand growth.",
+    image: umamiSocial,
   },
 ];
 
@@ -54,7 +58,12 @@ export function PortfolioPreview() {
     return () => clearInterval(id);
   }, [paused, cycle]);
 
-  useEffect(() => () => { if (resumeRef.current) clearTimeout(resumeRef.current); }, []);
+  useEffect(
+    () => () => {
+      if (resumeRef.current) clearTimeout(resumeRef.current);
+    },
+    [],
+  );
 
   const select = useCallback((i: number) => {
     setActive(i);
@@ -145,9 +154,27 @@ export function PortfolioPreview() {
           />
         </div>
 
-        <svg className="absolute inset-0 hidden h-full w-full lg:block" preserveAspectRatio="none" viewBox="0 0 1440 900">
-          <path className="pp-dash" d="M-100 690 C 320 640, 520 300, 900 250 S 1420 150, 1560 120" fill="none" stroke="#3AF1FF" strokeOpacity="0.25" strokeWidth="1" />
-          <path className="pp-dash2" d="M-100 300 C 360 380, 620 720, 1080 700 S 1440 640, 1560 620" fill="none" stroke="#4A73FF" strokeOpacity="0.35" strokeWidth="1" />
+        <svg
+          className="absolute inset-0 hidden h-full w-full lg:block"
+          preserveAspectRatio="none"
+          viewBox="0 0 1440 900"
+        >
+          <path
+            className="pp-dash"
+            d="M-100 690 C 320 640, 520 300, 900 250 S 1420 150, 1560 120"
+            fill="none"
+            stroke="#3AF1FF"
+            strokeOpacity="0.25"
+            strokeWidth="1"
+          />
+          <path
+            className="pp-dash2"
+            d="M-100 300 C 360 380, 620 720, 1080 700 S 1440 640, 1560 620"
+            fill="none"
+            stroke="#4A73FF"
+            strokeOpacity="0.35"
+            strokeWidth="1"
+          />
         </svg>
 
         <span className="ghost-type absolute -left-6 bottom-4 text-[6rem] text-white/[0.022] sm:text-[12rem] lg:text-[15rem]">
@@ -159,8 +186,13 @@ export function PortfolioPreview() {
         {/* Intro */}
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-x-12">
           <Reveal className="lg:col-span-7">
-            <p className="eyebrow" style={{ color: "#3AF1FF" }}>Portfolio Preview</p>
-            <span aria-hidden className="mt-4 block h-px w-14 bg-gradient-to-r from-[#4A73FF] to-[#3AF1FF]" />
+            <p className="eyebrow" style={{ color: "#3AF1FF" }}>
+              Portfolio Preview
+            </p>
+            <span
+              aria-hidden
+              className="mt-4 block h-px w-14 bg-gradient-to-r from-[#4A73FF] to-[#3AF1FF]"
+            />
             <h2
               className="display mt-5 text-white"
               style={{ fontSize: "clamp(2.4rem, 4.6vw, 4.6rem)", lineHeight: 1.04 }}
@@ -170,8 +202,8 @@ export function PortfolioPreview() {
           </Reveal>
           <Reveal delay={110} className="lg:col-span-4 lg:col-start-9">
             <p className="max-w-md text-[0.96rem] leading-relaxed text-white/65">
-              Explore selected projects where strategy, design, technology and creativity came together to solve real
-              business challenges.
+              Explore selected projects where strategy, design, technology and creativity came
+              together to solve real business challenges.
             </p>
             <Link to="/portfolio" className="btn-primary group mt-6">
               View Our Portfolio
@@ -186,7 +218,8 @@ export function PortfolioPreview() {
           <div className="lg:col-span-7">
             <div className="mb-4 flex items-center gap-4">
               <span className="eyebrow text-[0.62rem] text-white/50">
-                {String(safeActive + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
+                {String(safeActive + 1).padStart(2, "0")} /{" "}
+                {String(projects.length).padStart(2, "0")}
               </span>
               <span className="h-px flex-1 bg-white/10">
                 <span
@@ -212,15 +245,27 @@ export function PortfolioPreview() {
               <span
                 aria-hidden
                 className="pointer-events-none absolute inset-0"
-                style={{ background: "linear-gradient(180deg, rgba(1,12,98,0.10) 0%, rgba(1,12,98,0.55) 100%)" }}
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(1,12,98,0.10) 0%, rgba(1,12,98,0.55) 100%)",
+                }}
               />
               <span
                 aria-hidden
                 className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 opacity-0 transition-all duration-[900ms] ease-out group-hover:left-[110%] group-hover:opacity-100"
-                style={{ background: "linear-gradient(90deg, transparent, rgba(58,241,255,0.16), transparent)" }}
+                style={{
+                  background:
+                    "linear-gradient(90deg, transparent, rgba(58,241,255,0.16), transparent)",
+                }}
               />
-              <span aria-hidden className="absolute left-0 top-0 h-6 w-6 border-l border-t border-[#3AF1FF]/50" />
-              <span aria-hidden className="absolute bottom-0 right-0 h-6 w-6 border-b border-r border-[#3AF1FF]/50" />
+              <span
+                aria-hidden
+                className="absolute left-0 top-0 h-6 w-6 border-l border-t border-[#3AF1FF]/50"
+              />
+              <span
+                aria-hidden
+                className="absolute bottom-0 right-0 h-6 w-6 border-b border-r border-[#3AF1FF]/50"
+              />
             </Link>
           </div>
 
@@ -233,8 +278,12 @@ export function PortfolioPreview() {
               <p className="eyebrow mt-4 text-[0.64rem]" style={{ color: "#3AF1FF" }}>
                 {p.sector} · {p.category}
               </p>
-              <h3 className="display mt-3 text-[2rem] text-white sm:text-[2.6rem] lg:text-[3rem]">{p.title}</h3>
-              <p className="mt-4 max-w-md text-[0.95rem] leading-relaxed text-white/65">{p.summary}</p>
+              <h3 className="display mt-3 text-[2rem] text-white sm:text-[2.6rem] lg:text-[3rem]">
+                {p.title}
+              </h3>
+              <p className="mt-4 max-w-md text-[0.95rem] leading-relaxed text-white/65">
+                {p.summary}
+              </p>
               <Link to="/portfolio" className="btn-primary group mt-7">
                 View Case Study
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1" />
@@ -256,7 +305,10 @@ export function PortfolioPreview() {
                 className="group relative flex items-baseline gap-4 border-b border-white/10 py-5 text-left sm:border-b-0 sm:pr-6"
               >
                 <span
-                  className={cn("eyebrow text-[0.6rem] transition-colors duration-300", on ? "" : "text-white/35")}
+                  className={cn(
+                    "eyebrow text-[0.6rem] transition-colors duration-300",
+                    on ? "" : "text-white/35",
+                  )}
                   style={on ? { color: "#3AF1FF" } : undefined}
                 >
                   {String(i + 1).padStart(2, "0")}

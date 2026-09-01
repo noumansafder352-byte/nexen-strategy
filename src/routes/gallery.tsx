@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Reveal } from "@/components/site/Reveal";
-import mediaShoot1 from "@/assets/media-img1.png.asset.json";
-import mediaShoot2 from "@/assets/media-img2.png.asset.json";
-import mediaShoot3 from "@/assets/media-img4.png.asset.json";
+import mediaShoot1 from "@/assets/gallery/media-img1.png";
+import mediaShoot2 from "@/assets/gallery/media-img2.png";
+import mediaShoot3 from "@/assets/gallery/media-img4.png";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -43,19 +43,19 @@ interface GalleryItem {
 
 const items: GalleryItem[] = [
   {
-    src: mediaShoot1.url,
+    src: mediaShoot1,
     category: "MEDIA PRODUCTION",
     title: "Social Media Video Production",
     alt: "Camera on tripod capturing two men reviewing documents during a production shoot",
   },
   {
-    src: mediaShoot2.url,
+    src: mediaShoot2,
     category: "MEDIA PRODUCTION",
     title: "Behind the Lens — Brand Storytelling",
     alt: "Photographer framing a shot of two men in an office setting",
   },
   {
-    src: mediaShoot3.url,
+    src: mediaShoot3,
     category: "MEDIA PRODUCTION",
     title: "On-Set Capture — Clinical Campaign",
     alt: "Camera monitor showing a man and child during a clinical video shoot",
@@ -168,7 +168,9 @@ function GalleryCard({ item }: { item: GalleryItem }) {
         <p className="text-[0.65rem] font-semibold tracking-[0.18em] text-[#FFA53C]">
           {item.category}
         </p>
-        <p className="mt-2 text-lg font-semibold tracking-tight text-white lg:text-xl">{item.title}</p>
+        <p className="mt-2 text-lg font-semibold tracking-tight text-white lg:text-xl">
+          {item.title}
+        </p>
       </figcaption>
       {/* accent line */}
       <span

@@ -19,8 +19,8 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Reveal } from "@/components/site/Reveal";
 import { cn } from "@/lib/utils";
-import aboutEcosystemAsset from "@/assets/about-who-we-are.png.asset.json";
-const aboutEcosystem = aboutEcosystemAsset.url;
+import aboutEcosystemAsset from "@/assets/about-who-we-are.png";
+const aboutEcosystem = aboutEcosystemAsset;
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -45,8 +45,16 @@ export const Route = createFileRoute("/about")({
 });
 
 const stages: { word: string; text: string; icon: LucideIcon }[] = [
-  { word: "Understand", text: "Customers, processes and objectives before features.", icon: Search },
-  { word: "Create", text: "Practical solutions designed, built and tested together.", icon: PenTool },
+  {
+    word: "Understand",
+    text: "Customers, processes and objectives before features.",
+    icon: Search,
+  },
+  {
+    word: "Create",
+    text: "Practical solutions designed, built and tested together.",
+    icon: PenTool,
+  },
   { word: "Transform", text: "Systems and experiences moved into everyday use.", icon: Repeat },
   { word: "Grow", text: "Refined against real performance, quarter after quarter.", icon: Sprout },
 ];
@@ -128,7 +136,8 @@ function AboutPage() {
         <section
           className="relative isolate flex min-h-[70svh] items-center overflow-hidden pt-[8.75rem] pb-16 sm:pt-[9.5rem] sm:pb-20 lg:min-h-[94svh] lg:pt-40 lg:pb-28"
           style={{
-            background: "linear-gradient(140deg, #02052D 0%, #010C62 38%, #0A146F 62%, #111B82 100%)",
+            background:
+              "linear-gradient(140deg, #02052D 0%, #010C62 38%, #0A146F 62%, #111B82 100%)",
           }}
         >
           {/* L2 — technical grid */}
@@ -187,7 +196,10 @@ function AboutPage() {
                 <circle cx="360" cy="360" r="150" strokeOpacity="0.12" />
               </g>
               <g stroke="#3AF1FF" strokeWidth="1" fill="none" strokeOpacity="0.3">
-                <path className="ab-dash" d="M360 100 L134 230 L134 490 L360 620 L586 490 L586 230 Z" />
+                <path
+                  className="ab-dash"
+                  d="M360 100 L134 230 L134 490 L360 620 L586 490 L586 230 Z"
+                />
                 <path
                   d="M360 360 L360 100 M360 360 L134 230 M360 360 L586 230 M360 360 L134 490 M360 360 L586 490 M360 360 L360 620"
                   strokeOpacity="0.2"
@@ -230,7 +242,13 @@ function AboutPage() {
                   <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="4.5" />
                 ))}
               </g>
-              <g fill="#FFFFFF" opacity="0.35" fontSize="11" letterSpacing="4" fontFamily="ui-monospace, monospace">
+              <g
+                fill="#FFFFFF"
+                opacity="0.35"
+                fontSize="11"
+                letterSpacing="4"
+                fontFamily="ui-monospace, monospace"
+              >
                 <text x="330" y="72">
                   STRATEGY
                 </text>
@@ -274,14 +292,17 @@ function AboutPage() {
                 <p className="eyebrow text-cyan">About Us</p>
               </Reveal>
               <Reveal delay={80}>
-                <h1 className="display mt-7 text-white" style={{ fontSize: "clamp(2.4rem, 4.6vw, 4.2rem)" }}>
+                <h1
+                  className="display mt-7 text-white"
+                  style={{ fontSize: "clamp(2.4rem, 4.6vw, 4.2rem)" }}
+                >
                   We Build What Businesses Need <span className="text-cyan">Next.</span>
                 </h1>
               </Reveal>
               <Reveal delay={150}>
                 <p className="mt-8 max-w-[52ch] text-lg leading-relaxed text-white/70">
-                  Nexen Strategy brings together strategy, technology, creativity and marketing to help businesses
-                  navigate an increasingly digital world.
+                  Nexen Strategy brings together strategy, technology, creativity and marketing to
+                  help businesses navigate an increasingly digital world.
                 </p>
               </Reveal>
               <Reveal delay={220}>
@@ -310,7 +331,10 @@ function AboutPage() {
 
         {/* 02 — WHO WE ARE */}
         <section className="relative overflow-hidden bg-background py-24 lg:py-28">
-          <div aria-hidden className="grid-faint pointer-events-none absolute inset-0 opacity-[0.22]" />
+          <div
+            aria-hidden
+            className="grid-faint pointer-events-none absolute inset-0 opacity-[0.22]"
+          />
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0"
@@ -325,7 +349,10 @@ function AboutPage() {
               <div>
                 <Reveal>
                   <div className="flex items-center gap-4">
-                    <span aria-hidden className="h-px w-10 bg-gradient-to-r from-cyan to-transparent" />
+                    <span
+                      aria-hidden
+                      className="h-px w-10 bg-gradient-to-r from-cyan to-transparent"
+                    />
                     <p className="eyebrow text-azure">Who We Are</p>
                   </div>
                 </Reveal>
@@ -346,14 +373,15 @@ function AboutPage() {
                 </Reveal>
                 <Reveal delay={210}>
                   <p className="mt-9 max-w-[58ch] text-[1.03rem] leading-[1.85] text-muted-foreground">
-                    We work with organisations that want more from their digital presence than a website that simply
-                    looks good.
+                    We work with organisations that want more from their digital presence than a
+                    website that simply looks good.
                   </p>
                 </Reveal>
                 <Reveal delay={270}>
                   <p className="mt-7 max-w-[58ch] text-[1.03rem] leading-[1.85] text-muted-foreground">
-                    Our work spans digital experiences, software solutions, AI and automation, marketing and media —
-                    allowing us to support businesses across multiple stages of their digital journey.
+                    Our work spans digital experiences, software solutions, AI and automation,
+                    marketing and media — allowing us to support businesses across multiple stages
+                    of their digital journey.
                   </p>
                 </Reveal>
                 <Reveal delay={330}>
@@ -361,8 +389,8 @@ function AboutPage() {
                     className="mt-9 max-w-[44ch] font-medium leading-[1.55] text-navy"
                     style={{ fontSize: "clamp(1.15rem, 1.5vw, 1.4rem)" }}
                   >
-                    Whether you need to launch, transform, automate or grow, we bring the people, expertise and
-                    technology together to make it happen.
+                    Whether you need to launch, transform, automate or grow, we bring the people,
+                    expertise and technology together to make it happen.
                   </p>
                 </Reveal>
               </div>
@@ -373,7 +401,9 @@ function AboutPage() {
                   <div
                     aria-hidden
                     className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] opacity-40 blur-[70px]"
-                    style={{ background: "radial-gradient(circle at 60% 40%, #4A73FF 0%, transparent 70%)" }}
+                    style={{
+                      background: "radial-gradient(circle at 60% 40%, #4A73FF 0%, transparent 70%)",
+                    }}
                   />
                   <div
                     className="relative overflow-hidden rounded-[1.75rem] border border-white/10"
@@ -387,7 +417,10 @@ function AboutPage() {
                       height={1280}
                       className="ab-float h-[380px] w-full object-cover sm:h-[460px] lg:h-[560px]"
                     />
-                    <div aria-hidden className="grid-faint ab-grid pointer-events-none absolute inset-0 opacity-10" />
+                    <div
+                      aria-hidden
+                      className="grid-faint ab-grid pointer-events-none absolute inset-0 opacity-10"
+                    />
                     <div
                       aria-hidden
                       className="pointer-events-none absolute inset-0 mix-blend-multiply"
@@ -398,12 +431,17 @@ function AboutPage() {
                     <div
                       aria-hidden
                       className="ab-drift2 pointer-events-none absolute -left-1/4 top-0 h-full w-1/2 opacity-10"
-                      style={{ background: "linear-gradient(90deg, transparent, rgba(58,241,255,0.18), transparent)" }}
+                      style={{
+                        background:
+                          "linear-gradient(90deg, transparent, rgba(58,241,255,0.18), transparent)",
+                      }}
                     />
                     <span
                       aria-hidden
                       className="pointer-events-none absolute inset-x-0 bottom-0 h-px"
-                      style={{ background: "linear-gradient(90deg, transparent, #3AF1FF, transparent)" }}
+                      style={{
+                        background: "linear-gradient(90deg, transparent, #3AF1FF, transparent)",
+                      }}
                     />
                   </div>
                 </div>
@@ -427,7 +465,10 @@ function AboutPage() {
                   <p className="eyebrow text-cyan">Our Approach</p>
                 </Reveal>
                 <Reveal delay={70}>
-                  <h2 className="display mt-8 text-white" style={{ fontSize: "clamp(2rem, 4vw, 3.4rem)" }}>
+                  <h2
+                    className="display mt-8 text-white"
+                    style={{ fontSize: "clamp(2rem, 4vw, 3.4rem)" }}
+                  >
                     Understand. Create. Transform. Grow.
                   </h2>
                 </Reveal>
@@ -440,14 +481,14 @@ function AboutPage() {
                 </Reveal>
                 <Reveal delay={180}>
                   <p className="mt-7 text-lg leading-relaxed text-white/70">
-                    That means looking beyond features and technology to understand your customers, processes,
-                    objectives and challenges.
+                    That means looking beyond features and technology to understand your customers,
+                    processes, objectives and challenges.
                   </p>
                 </Reveal>
                 <Reveal delay={230}>
                   <p className="mt-7 text-lg leading-relaxed text-white/70">
-                    From there, we develop solutions that are practical, scalable and aligned with where your business
-                    is going — not simply where it is today.
+                    From there, we develop solutions that are practical, scalable and aligned with
+                    where your business is going — not simply where it is today.
                   </p>
                 </Reveal>
               </div>
@@ -458,7 +499,10 @@ function AboutPage() {
               <div className="ab-flow relative">
                 <div className="relative">
                   {/* continuous line */}
-                  <div aria-hidden className="absolute left-[12.5%] right-[12.5%] top-[7px] hidden h-px bg-white/15 sm:block" />
+                  <div
+                    aria-hidden
+                    className="absolute left-[12.5%] right-[12.5%] top-[7px] hidden h-px bg-white/15 sm:block"
+                  />
                   <div
                     aria-hidden
                     className="ab-line absolute left-[12.5%] top-[7px] hidden h-px origin-left sm:block"
@@ -616,7 +660,10 @@ function AboutPage() {
                     "radial-gradient(40% 60% at 15% 25%, rgba(74,115,255,0.4) 0%, transparent 65%), radial-gradient(40% 60% at 85% 75%, rgba(58,241,255,0.25) 0%, transparent 70%)",
                 }}
               />
-              <div aria-hidden className="grid-faint ab-grid pointer-events-none absolute inset-[-80px] opacity-70" />
+              <div
+                aria-hidden
+                className="grid-faint ab-grid pointer-events-none absolute inset-[-80px] opacity-70"
+              />
               <svg
                 aria-hidden
                 className="pointer-events-none absolute inset-0 h-full w-full"
@@ -642,7 +689,10 @@ function AboutPage() {
 
               <div className="relative max-w-3xl">
                 <Reveal>
-                  <h2 className="display text-white" style={{ fontSize: "clamp(2rem, 4.2vw, 3.6rem)" }}>
+                  <h2
+                    className="display text-white"
+                    style={{ fontSize: "clamp(2rem, 4.2vw, 3.6rem)" }}
+                  >
                     Let's Build Something That Matters.
                   </h2>
                 </Reveal>

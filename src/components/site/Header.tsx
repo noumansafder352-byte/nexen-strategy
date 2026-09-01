@@ -1,19 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import {
-  ChevronDown,
-  Menu,
-  X,
-  ArrowRight,
-  Plus,
-  Minus,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
-import logo from "@/assets/nexen-logo.png.asset.json";
-import logoWhite from "@/assets/nexen-logo-white.png.asset.json";
+import { ChevronDown, Menu, X, ArrowRight, Plus, Minus, Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/nexen-logo.png";
+import logoWhite from "@/assets/nexen-logo-white.png";
 import { services } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
@@ -84,23 +74,17 @@ export function Header({
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,padding] duration-500",
-        light
-          ? "py-6"
-          : transparentStatic
-            ? "py-4"
-            : "bg-white/92 py-4 backdrop-blur-xl",
+        light ? "py-6" : transparentStatic ? "py-4" : "bg-white/92 py-4 backdrop-blur-xl",
       )}
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 lg:px-12">
         <Link to="/" aria-label="Nexen Strategy home" className="shrink-0">
           <img
-            src={light ? logoWhite.url : logo.url}
+            src={light ? logoWhite : logo}
             alt="Nexen Strategy"
             width={160}
             height={42}
-            className={cn(
-              "h-8 w-auto object-contain transition-all duration-500 sm:h-9",
-            )}
+            className={cn("h-8 w-auto object-contain transition-all duration-500 sm:h-9")}
           />
         </Link>
 
@@ -192,158 +176,156 @@ export function Header({
               open ? "opacity-100" : "pointer-events-none opacity-0",
             )}
           >
-        {/* premium background layers */}
-        <div className="pointer-events-none absolute inset-0 grid-faint opacity-60" />
-        <div
-          className="pointer-events-none absolute -top-32 -right-24 h-[420px] w-[420px] rounded-full opacity-50 blur-3xl"
-          style={{
-            background:
-              "radial-gradient(circle, color-mix(in oklab, var(--azure) 55%, transparent), transparent 70%)",
-          }}
-        />
-        <div
-          className="pointer-events-none absolute -bottom-40 -left-28 h-[380px] w-[380px] rounded-full opacity-35 blur-3xl"
-          style={{
-            background:
-              "radial-gradient(circle, color-mix(in oklab, var(--cyan) 45%, transparent), transparent 70%)",
-          }}
-        />
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-px"
-          style={{ backgroundImage: "var(--gradient-tech)", opacity: 0.7 }}
-        />
-
-        <div className="relative flex items-center justify-between px-6 pt-7 pb-5 sm:px-8">
-          <img
-            src={logoWhite.url}
-            alt="Nexen Strategy"
-            width={160}
-            height={42}
-            className="h-8 w-auto object-contain"
-          />
-          <button
-            type="button"
-            aria-label="Close menu"
-            onClick={() => setOpen(false)}
-            className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/20 bg-white/[0.06] text-white backdrop-blur-sm transition-colors hover:border-cyan/60 hover:text-cyan"
-          >
-            <X className="h-5 w-5" />
-          </button>
-        </div>
-        <nav
-          className="relative flex h-[calc(100%-92px)] flex-col overflow-y-auto px-6 pb-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:px-8"
-          aria-label="Mobile"
-        >
-          {[
-            { to: "/", label: "Home" },
-            { to: "/about", label: "About Us" },
-          ].map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              onClick={() => setOpen(false)}
-              className="group flex items-center justify-between border-b border-white/10 py-4 text-[1.15rem] font-semibold sm:text-[1.25rem] tracking-tight text-white transition-colors hover:text-cyan"
-            >
-              {l.label}
-              <ArrowRight className="h-4 w-4 -translate-x-1 text-cyan opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
-            </Link>
-          ))}
-
-          <div className="border-b border-white/10">
-            <button
-              type="button"
-              aria-expanded={mobileServicesOpen}
-              onClick={() => setMobileServicesOpen((v) => !v)}
-              className="flex w-full items-center justify-between py-4 text-[1.15rem] font-semibold sm:text-[1.25rem] tracking-tight text-white transition-colors hover:text-cyan"
-            >
-              Services
-              <span className="grid h-8 w-8 place-items-center rounded-full border border-white/20 text-cyan transition-colors">
-                {mobileServicesOpen ? (
-                  <Minus className="h-4 w-4" />
-                ) : (
-                  <Plus className="h-4 w-4" />
-                )}
-              </span>
-            </button>
+            {/* premium background layers */}
+            <div className="pointer-events-none absolute inset-0 grid-faint opacity-60" />
             <div
-              className={cn(
-                "grid transition-all duration-400 ease-out",
-                mobileServicesOpen
-                  ? "grid-rows-[1fr] opacity-100"
-                  : "grid-rows-[0fr] opacity-0",
-              )}
+              className="pointer-events-none absolute -top-32 -right-24 h-[420px] w-[420px] rounded-full opacity-50 blur-3xl"
+              style={{
+                background:
+                  "radial-gradient(circle, color-mix(in oklab, var(--azure) 55%, transparent), transparent 70%)",
+              }}
+            />
+            <div
+              className="pointer-events-none absolute -bottom-40 -left-28 h-[380px] w-[380px] rounded-full opacity-35 blur-3xl"
+              style={{
+                background:
+                  "radial-gradient(circle, color-mix(in oklab, var(--cyan) 45%, transparent), transparent 70%)",
+              }}
+            />
+            <div
+              className="pointer-events-none absolute inset-x-0 top-0 h-px"
+              style={{ backgroundImage: "var(--gradient-tech)", opacity: 0.7 }}
+            />
+
+            <div className="relative flex items-center justify-between px-6 pt-7 pb-5 sm:px-8">
+              <img
+                src={logoWhite}
+                alt="Nexen Strategy"
+                width={160}
+                height={42}
+                className="h-8 w-auto object-contain"
+              />
+              <button
+                type="button"
+                aria-label="Close menu"
+                onClick={() => setOpen(false)}
+                className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/20 bg-white/[0.06] text-white backdrop-blur-sm transition-colors hover:border-cyan/60 hover:text-cyan"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            <nav
+              className="relative flex h-[calc(100%-92px)] flex-col overflow-y-auto px-6 pb-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:px-8"
+              aria-label="Mobile"
             >
-              <div className="overflow-hidden">
-                <div className="mb-4 ml-1 border-l border-white/12 pl-4">
-                  <p className="eyebrow pt-1 pb-1 text-[0.72rem] text-cyan/80">
-                    All Services
-                  </p>
-                  {services.map((s) => (
-                    <Link
-                      key={s.slug}
-                      to="/services/$slug"
-                      params={{ slug: s.slug }}
-                      onClick={() => setOpen(false)}
-                      className="block py-2.5 text-[1.05rem] font-medium text-white/75 transition-colors hover:text-cyan"
-                    >
-                      {s.title}
-                    </Link>
-                  ))}
+              {[
+                { to: "/", label: "Home" },
+                { to: "/about", label: "About Us" },
+              ].map((l) => (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  onClick={() => setOpen(false)}
+                  className="group flex items-center justify-between border-b border-white/10 py-4 text-[1.15rem] font-semibold sm:text-[1.25rem] tracking-tight text-white transition-colors hover:text-cyan"
+                >
+                  {l.label}
+                  <ArrowRight className="h-4 w-4 -translate-x-1 text-cyan opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
+                </Link>
+              ))}
+
+              <div className="border-b border-white/10">
+                <button
+                  type="button"
+                  aria-expanded={mobileServicesOpen}
+                  onClick={() => setMobileServicesOpen((v) => !v)}
+                  className="flex w-full items-center justify-between py-4 text-[1.15rem] font-semibold sm:text-[1.25rem] tracking-tight text-white transition-colors hover:text-cyan"
+                >
+                  Services
+                  <span className="grid h-8 w-8 place-items-center rounded-full border border-white/20 text-cyan transition-colors">
+                    {mobileServicesOpen ? (
+                      <Minus className="h-4 w-4" />
+                    ) : (
+                      <Plus className="h-4 w-4" />
+                    )}
+                  </span>
+                </button>
+                <div
+                  className={cn(
+                    "grid transition-all duration-400 ease-out",
+                    mobileServicesOpen
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0",
+                  )}
+                >
+                  <div className="overflow-hidden">
+                    <div className="mb-4 ml-1 border-l border-white/12 pl-4">
+                      <p className="eyebrow pt-1 pb-1 text-[0.72rem] text-cyan/80">All Services</p>
+                      {services.map((s) => (
+                        <Link
+                          key={s.slug}
+                          to="/services/$slug"
+                          params={{ slug: s.slug }}
+                          onClick={() => setOpen(false)}
+                          className="block py-2.5 text-[1.05rem] font-medium text-white/75 transition-colors hover:text-cyan"
+                        >
+                          {s.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {[
-            { to: "/portfolio", label: "Portfolio" },
-            { to: "/clients", label: "Clients" },
-            { to: "/gallery", label: "Gallery" },
-            { to: "/contact", label: "Contact Us" },
-          ].map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              onClick={() => setOpen(false)}
-              className="group flex items-center justify-between border-b border-white/10 py-4 text-[1.15rem] font-semibold sm:text-[1.25rem] tracking-tight text-white transition-colors hover:text-cyan"
-            >
-              {l.label}
-              <ArrowRight className="h-4 w-4 -translate-x-1 text-cyan opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
-            </Link>
-          ))}
-          <Link
-            to="/contact"
-            onClick={() => setOpen(false)}
-            className="btn-primary mt-8 mb-4 justify-center"
-          >
-            Start a Project
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-
-          <div className="mt-7 border-t border-white/10 pt-5 pb-3">
-            <p className="eyebrow mb-3 text-[0.65rem] text-cyan">Contact</p>
-            <ul className="divide-y divide-white/8 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:divide-y-0">
-              <li className="flex items-center gap-2.5 py-2 text-[0.9rem] text-white/70 sm:col-span-2 sm:py-1.5">
-                <Mail className="h-3.5 w-3.5 shrink-0 text-cyan/70" />
-                <a
-                  href="mailto:info@nexenstrategy.com"
-                  className="truncate transition-colors hover:text-cyan"
+              {[
+                { to: "/portfolio", label: "Portfolio" },
+                { to: "/clients", label: "Clients" },
+                { to: "/gallery", label: "Gallery" },
+                { to: "/contact", label: "Contact Us" },
+              ].map((l) => (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  onClick={() => setOpen(false)}
+                  className="group flex items-center justify-between border-b border-white/10 py-4 text-[1.15rem] font-semibold sm:text-[1.25rem] tracking-tight text-white transition-colors hover:text-cyan"
                 >
-                  info@nexenstrategy.com
-                </a>
-              </li>
-              <li className="flex items-center gap-2.5 py-2 text-[0.9rem] text-white/70 sm:py-1.5">
-                <Phone className="h-3.5 w-3.5 shrink-0 text-cyan/70" />
-                <a href="tel:+923358084973" className="transition-colors hover:text-cyan">
-                  +92 335 8084973
-                </a>
-              </li>
-              <li className="flex items-center gap-2.5 py-2 text-[0.9rem] text-white/70 sm:py-1.5">
-                <MapPin className="h-3.5 w-3.5 shrink-0 text-cyan/70" />
-                UK / Islamabad
-              </li>
-             </ul>
-           </div>
-         </nav>
+                  {l.label}
+                  <ArrowRight className="h-4 w-4 -translate-x-1 text-cyan opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
+                </Link>
+              ))}
+              <Link
+                to="/contact"
+                onClick={() => setOpen(false)}
+                className="btn-primary mt-8 mb-4 justify-center"
+              >
+                Start a Project
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+
+              <div className="mt-7 border-t border-white/10 pt-5 pb-3">
+                <p className="eyebrow mb-3 text-[0.65rem] text-cyan">Contact</p>
+                <ul className="divide-y divide-white/8 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:divide-y-0">
+                  <li className="flex items-center gap-2.5 py-2 text-[0.9rem] text-white/70 sm:col-span-2 sm:py-1.5">
+                    <Mail className="h-3.5 w-3.5 shrink-0 text-cyan/70" />
+                    <a
+                      href="mailto:info@nexenstrategy.com"
+                      className="truncate transition-colors hover:text-cyan"
+                    >
+                      info@nexenstrategy.com
+                    </a>
+                  </li>
+                  <li className="flex items-center gap-2.5 py-2 text-[0.9rem] text-white/70 sm:py-1.5">
+                    <Phone className="h-3.5 w-3.5 shrink-0 text-cyan/70" />
+                    <a href="tel:+923358084973" className="transition-colors hover:text-cyan">
+                      +92 335 8084973
+                    </a>
+                  </li>
+                  <li className="flex items-center gap-2.5 py-2 text-[0.9rem] text-white/70 sm:py-1.5">
+                    <MapPin className="h-3.5 w-3.5 shrink-0 text-cyan/70" />
+                    UK / Islamabad
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>,
           document.body,
         )}

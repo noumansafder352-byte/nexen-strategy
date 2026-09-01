@@ -7,25 +7,25 @@ import { CtaSection } from "@/components/site/CtaSection";
 import { Reveal } from "@/components/site/Reveal";
 import { MockupComposition } from "@/components/site/MockupComposition";
 import { cn } from "@/lib/utils";
-import gatdMobile from "@/assets/gatd-mobile-3.png.asset.json";
-import gatdLaptop from "@/assets/gatd-laptop-2.png.asset.json";
-import gatdThird from "@/assets/gatd-img3-3.png.asset.json";
-import mohsanLaptop from "@/assets/mohsan-laptop.png.asset.json";
-import mohsanMobile from "@/assets/mohsan-mobile.png.asset.json";
-import mohsanThird from "@/assets/mohsan-img3.png.asset.json";
-import drshahidLaptop from "@/assets/drshahid-laptop-2.png.asset.json";
-import drshahidMobile from "@/assets/drshahid-mobile-2.png.asset.json";
-import drshahidThird from "@/assets/drshahid-img3.png.asset.json";
-import royaLaptop from "@/assets/roya-laptop.png.asset.json";
-import royaMobile from "@/assets/roya-mobile.png.asset.json";
-import royaMobile2 from "@/assets/roya-mobile-2.png.asset.json";
-import royaThird from "@/assets/roya-img3.png.asset.json";
-import drsarfrazLaptop from "@/assets/drsarfraz-laptop.png.asset.json";
-import drsarfrazMobile from "@/assets/drsarfraz-mobile-2.png.asset.json";
-import drsarfrazThird from "@/assets/drsarfraz-img3-2.png.asset.json";
-import smmPrimary from "@/assets/Dr-Shahid-Posts-Mockup.jpg.asset.json";
-import smmSupport1 from "@/assets/Dr-Shahid-Posts-Mockup-2.jpg.asset.json";
-import smmSupport2 from "@/assets/Dr-Shahid-Posts-Mockup-3.jpg.asset.json";
+import gatdMobile from "@/assets/portfolio/gatd-mobile-3.png";
+import gatdLaptop from "@/assets/portfolio/gatd-laptop-2.png";
+import gatdThird from "@/assets/portfolio/gatd-img3-3.png";
+import mohsanLaptop from "@/assets/portfolio/mohsan-laptop.png";
+import mohsanMobile from "@/assets/portfolio/mohsan-mobile.png";
+import mohsanThird from "@/assets/portfolio/mohsan-img3.png";
+import drshahidLaptop from "@/assets/portfolio/drshahid-laptop-2.png";
+import drshahidMobile from "@/assets/portfolio/drshahid-mobile-2.png";
+import drshahidThird from "@/assets/portfolio/drshahid-img3.png";
+import royaLaptop from "@/assets/portfolio/roya-laptop.png";
+import royaMobile from "@/assets/portfolio/roya-mobile.png";
+import royaMobile2 from "@/assets/portfolio/roya-mobile-2.png";
+import royaThird from "@/assets/portfolio/roya-img3.png";
+import drsarfrazLaptop from "@/assets/portfolio/drsarfraz-laptop.png";
+import drsarfrazMobile from "@/assets/portfolio/drsarfraz-mobile-2.png";
+import drsarfrazThird from "@/assets/portfolio/drsarfraz-img3-2.png";
+import smmPrimary from "@/assets/portfolio/Dr-Shahid-Posts-Mockup.jpg";
+import smmSupport1 from "@/assets/portfolio/Dr-Shahid-Posts-Mockup-2.jpg";
+import smmSupport2 from "@/assets/portfolio/Dr-Shahid-Posts-Mockup-3.jpg";
 import aiChatbotMain from "@/assets/pf-ai-chatbot-main.jpg";
 import aiChatbotConv from "@/assets/pf-ai-chatbot-conv.jpg";
 import aiChatbotAnalytics from "@/assets/pf-ai-chatbot-analytics.jpg";
@@ -44,24 +44,24 @@ import aiAutoDash from "@/assets/pf-aiauto-dash.jpg";
 import aiAssistMain from "@/assets/pf-aiassist-main.jpg";
 import aiAssistTasks from "@/assets/pf-aiassist-tasks.jpg";
 import aiAssistInsights from "@/assets/pf-aiassist-insights.jpg";
-import hitech1 from "@/assets/hitech-profile-1.jpg.asset.json";
-import roya1 from "@/assets/roya-profile-1.jpg.asset.json";
-import roya2 from "@/assets/roya-profile-2.jpg.asset.json";
-import roya3 from "@/assets/roya-profile-3.jpg.asset.json";
-import shazia1 from "@/assets/shazia-profile-1.jpg.asset.json";
-import logoCst from "@/assets/logo-cst.jpg.asset.json";
-import logoHirex from "@/assets/logo-hirex.jpg.asset.json";
-import logoRoya from "@/assets/logo-roya.jpg.asset.json";
-import shazia2 from "@/assets/shazia-profile-2.jpg.asset.json";
-import shazia3 from "@/assets/shazia-profile-3.jpg.asset.json";
-import hitech2 from "@/assets/hitech-profile-2.jpg.asset.json";
-import hitech3 from "@/assets/hitech-profile-3.jpg.asset.json";
-import umami1 from "@/assets/umami-1.jpg.asset.json";
-import umami2 from "@/assets/umami-2.jpg.asset.json";
-import umami3 from "@/assets/umami-3.jpg.asset.json";
-import mediaShoot1 from "@/assets/media-img1.png.asset.json";
-import mediaShoot2 from "@/assets/media-img2.png.asset.json";
-import mediaShoot3 from "@/assets/media-img4.png.asset.json";
+import hitech1 from "@/assets/portfolio/hitech-profile-1.jpg";
+import roya1 from "@/assets/portfolio/roya-profile-1.jpg";
+import roya2 from "@/assets/portfolio/roya-profile-2.jpg";
+import roya3 from "@/assets/portfolio/roya-profile-3.jpg";
+import shazia1 from "@/assets/portfolio/shazia-profile-1.jpg";
+import logoCst from "@/assets/portfolio/logo-cst.jpg";
+import logoHirex from "@/assets/portfolio/logo-hirex.jpg";
+import logoRoya from "@/assets/portfolio/logo-roya.jpg";
+import shazia2 from "@/assets/portfolio/shazia-profile-2.jpg";
+import shazia3 from "@/assets/portfolio/shazia-profile-3.jpg";
+import hitech2 from "@/assets/portfolio/hitech-profile-2.jpg";
+import hitech3 from "@/assets/portfolio/hitech-profile-3.jpg";
+import umami2 from "@/assets/portfolio/umami-2.jpg";
+import umami1 from "@/assets/portfolio/umami-1.jpg";
+import umami3 from "@/assets/portfolio/umami-3.jpg";
+import mediaShoot1 from "@/assets/portfolio/media-img1.png";
+import mediaShoot2 from "@/assets/portfolio/media-img2.png";
+import mediaShoot3 from "@/assets/portfolio/media-img4.png";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -72,7 +72,10 @@ export const Route = createFileRoute("/portfolio")({
         content:
           "Selected digital solutions, technology platforms and business-focused projects built by Nexen Strategy to help organisations launch, transform, automate and grow.",
       },
-      { property: "og:title", content: "Solutions Built for Real Business Challenges — Nexen Strategy" },
+      {
+        property: "og:title",
+        content: "Solutions Built for Real Business Challenges — Nexen Strategy",
+      },
       {
         property: "og:description",
         content:
@@ -117,7 +120,7 @@ const projects: Project[] = [
     description:
       "A modern digital experience designed to communicate the business clearly, improve customer journeys and create a stronger digital foundation for growth.",
     capabilities: ["Strategy", "UX/UI", "Web Development"],
-    images: [gatdLaptop.url, gatdMobile.url, gatdThird.url],
+    images: [gatdLaptop, gatdMobile, gatdThird],
     layout: "layered",
     href: "/contact",
   },
@@ -129,7 +132,7 @@ const projects: Project[] = [
     description:
       "A responsive digital experience designed around business goals, usability and modern technology — combining clear communication, intuitive journeys and a scalable foundation built to support growth.",
     capabilities: ["Web Design", "UX/UI", "Web Development"],
-    images: [royaLaptop.url, royaMobile2.url, royaThird.url],
+    images: [royaLaptop, royaMobile2, royaThird],
     layout: "layered",
     ratios: ["1527/797", "528/930", "1275/811"],
     href: "/contact",
@@ -142,7 +145,7 @@ const projects: Project[] = [
     description:
       "We developed a distinctive brand identity for Hightech and designed a professional company profile that brings its brand, services and capabilities together into a clear and cohesive visual presentation.",
     capabilities: ["Branding", "Visual Identity", "Company Profile"],
-    images: [hitech1.url, hitech2.url, hitech3.url],
+    images: [hitech1, hitech2, hitech3],
     layout: "simple",
     href: "/contact",
   },
@@ -226,7 +229,7 @@ const projects: Project[] = [
     description:
       "We manage social media marketing for Dr Shahid Mahmud Child & Neuro Clinic, creating consistent, engaging content across multiple social media platforms to strengthen their digital presence, connect with the right audience and drive meaningful results.",
     capabilities: ["Social Media Marketing", "Content Strategy", "Multi-Platform Growth"],
-    images: [smmPrimary.url, smmSupport1.url, smmSupport2.url],
+    images: [smmPrimary, smmSupport1, smmSupport2],
     layout: "simple",
     href: "/contact",
   },
@@ -238,7 +241,7 @@ const projects: Project[] = [
     description:
       "We produced professional video content for Dr Shoaib Ahmed, creating engaging visuals specifically designed for social media platforms. From production and shooting to creating content suited for digital audiences, the work was focused on building a stronger and more engaging social media presence.",
     capabilities: ["Video Production", "Social Media Content", "Creative Direction"],
-    images: [mediaShoot1.url, mediaShoot2.url, mediaShoot3.url],
+    images: [mediaShoot1, mediaShoot2, mediaShoot3],
     layout: "simple",
     href: "/contact",
   },
@@ -250,7 +253,7 @@ const projects: Project[] = [
     description:
       "A responsive digital experience designed to create a seamless journey across devices, strengthen the digital presence and support meaningful business growth.",
     capabilities: ["Strategy", "UX/UI", "Web Development"],
-    images: [mohsanLaptop.url, mohsanMobile.url, mohsanThird.url],
+    images: [mohsanLaptop, mohsanMobile, mohsanThird],
     layout: "layered",
     ratios: ["1567/922", "532/895", "1267/893"],
     href: "/contact",
@@ -263,7 +266,7 @@ const projects: Project[] = [
     description:
       "A responsive digital experience designed around usability, performance and the evolving needs of modern businesses.",
     capabilities: ["Web Design", "UX/UI", "Web Development"],
-    images: [drshahidLaptop.url, drshahidMobile.url, drshahidThird.url],
+    images: [drshahidLaptop, drshahidMobile, drshahidThird],
     layout: "layered",
     ratios: ["945/593", "517/890", "846/548"],
     thirdImageClassName: "!p-0",
@@ -277,7 +280,7 @@ const projects: Project[] = [
     description:
       "A responsive digital solution designed around usability, performance and a seamless experience across modern devices.",
     capabilities: ["Web Design", "UX/UI", "Web Development"],
-    images: [drsarfrazLaptop.url, drsarfrazMobile.url, drsarfrazThird.url],
+    images: [drsarfrazLaptop, drsarfrazMobile, drsarfrazThird],
     layout: "layered",
     ratios: ["1277/832", "532/892", "836/668"],
     href: "/contact",
@@ -290,7 +293,7 @@ const projects: Project[] = [
     description:
       "We designed a professional company profile for RoyaVentures, bringing its brand, services and capabilities together into a clear, structured and visually engaging presentation.",
     capabilities: ["Company Profile", "Brand Presentation", "Visual Design"],
-    images: [roya1.url, roya2.url, roya3.url],
+    images: [roya1, roya2, roya3],
     layout: "simple",
     href: "/contact",
   },
@@ -302,7 +305,7 @@ const projects: Project[] = [
     description:
       "We designed a polished company profile for Shazia Boutique, creating a cohesive visual presentation that communicates the brand, its offerings and its identity with clarity and sophistication.",
     capabilities: ["Company Profile", "Brand Identity", "Visual Presentation"],
-    images: [shazia1.url, shazia2.url, shazia3.url],
+    images: [shazia1, shazia2, shazia3],
     layout: "simple",
     href: "/contact",
   },
@@ -314,7 +317,7 @@ const projects: Project[] = [
     description:
       "A collection of custom logo identities designed to give businesses a clear, distinctive and memorable visual presence.",
     capabilities: ["Logo Design", "Visual Identity", "Brand Identity"],
-    images: [logoCst.url, logoHirex.url, logoRoya.url],
+    images: [logoCst, logoHirex, logoRoya],
     layout: "simple",
     href: "/contact",
   },
@@ -327,7 +330,7 @@ const projects: Project[] = [
     description:
       "We delivered social media marketing for Umami, creating engaging content and a consistent digital presence across social platforms to strengthen brand visibility, connect with the right audience and support ongoing growth.",
     capabilities: ["Social Media Marketing", "Content Strategy", "Social Media Growth"],
-    images: [umami1.url, umami2.url, umami3.url],
+    images: [umami1, umami2, umami3],
     layout: "simple",
     href: "/contact",
   },
@@ -337,7 +340,12 @@ function ProjectSection({ p, index, first }: { p: Project; index: number; first?
   const imageRight = index % 2 === 1;
 
   return (
-    <section className={cn("relative overflow-hidden bg-white pb-14 lg:pb-20", first ? "pt-8 lg:pt-12" : "pt-14 lg:pt-20")}>
+    <section
+      className={cn(
+        "relative overflow-hidden bg-white pb-14 lg:pb-20",
+        first ? "pt-8 lg:pt-12" : "pt-14 lg:pt-20",
+      )}
+    >
       <div className="relative mx-auto w-full max-w-[1400px] min-w-0 px-6 lg:px-12">
         <div className="grid min-w-0 items-center gap-10 lg:grid-cols-12 lg:gap-x-16">
           {/* Category — shown above the visuals on mobile only */}
@@ -347,7 +355,12 @@ function ProjectSection({ p, index, first }: { p: Project; index: number; first?
           </div>
 
           {/* Mockups */}
-          <Reveal className={cn("min-w-0 lg:col-span-7", imageRight ? "lg:order-2 lg:col-start-6" : "lg:order-1")}>
+          <Reveal
+            className={cn(
+              "min-w-0 lg:col-span-7",
+              imageRight ? "lg:order-2 lg:col-start-6" : "lg:order-1",
+            )}
+          >
             <MockupComposition
               images={p.images}
               alt={p.title}
@@ -362,7 +375,10 @@ function ProjectSection({ p, index, first }: { p: Project; index: number; first?
           {/* Content */}
           <Reveal
             delay={120}
-            className={cn("min-w-0 lg:col-span-5 lg:-mt-10", imageRight ? "lg:order-1 lg:col-start-1" : "lg:order-2")}
+            className={cn(
+              "min-w-0 lg:col-span-5 lg:-mt-10",
+              imageRight ? "lg:order-1 lg:col-start-1" : "lg:order-2",
+            )}
           >
             <div className="hidden items-center gap-4 lg:flex">
               <span className={"h-px w-8 bg-gradient-to-r from-amber to-ember"} />
@@ -373,11 +389,18 @@ function ProjectSection({ p, index, first }: { p: Project; index: number; first?
               {p.title}
             </h2>
 
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">{p.description}</p>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
+              {p.description}
+            </p>
 
-            <p className="mt-7 text-sm tracking-wide text-muted-foreground">{p.capabilities.join("  ·  ")}</p>
+            <p className="mt-7 text-sm tracking-wide text-muted-foreground">
+              {p.capabilities.join("  ·  ")}
+            </p>
 
-            <span aria-hidden className={"mt-3 block h-px w-24 bg-gradient-to-r from-amber to-ember"} />
+            <span
+              aria-hidden
+              className={"mt-3 block h-px w-24 bg-gradient-to-r from-amber to-ember"}
+            />
           </Reveal>
         </div>
       </div>
@@ -397,7 +420,8 @@ const filters = [
 
 function PortfolioPage() {
   const [active, setActive] = useState<(typeof filters)[number]>("All");
-  const visible = active === "All" ? projects : projects.filter((project) => project.category === active);
+  const visible =
+    active === "All" ? projects : projects.filter((project) => project.category === active);
 
   return (
     <>
@@ -450,8 +474,8 @@ function PortfolioPage() {
             </Reveal>
             <Reveal delay={150}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70">
-                Explore selected digital solutions, technology experiences and business-focused projects we've built to
-                help organisations launch, transform, automate and grow.
+                Explore selected digital solutions, technology experiences and business-focused
+                projects we've built to help organisations launch, transform, automate and grow.
               </p>
             </Reveal>
             <Reveal delay={220}>
@@ -474,8 +498,9 @@ function PortfolioPage() {
             </Reveal>
             <Reveal delay={110} className="lg:col-span-5">
               <p className="max-w-xl text-base leading-relaxed text-muted-foreground">
-                From digital experiences and software solutions to AI, automation, branding and growth-focused
-                platforms, our work is designed around how businesses operate and where they want to go next.
+                From digital experiences and software solutions to AI, automation, branding and
+                growth-focused platforms, our work is designed around how businesses operate and
+                where they want to go next.
               </p>
             </Reveal>
           </div>
@@ -502,7 +527,9 @@ function PortfolioPage() {
                         ? "border-transparent text-white shadow-[0_12px_30px_-14px_rgba(255,72,63,0.85)]"
                         : "border-border bg-transparent text-muted-foreground hover:border-azure/40 hover:text-navy",
                     )}
-                    style={on ? { backgroundImage: "linear-gradient(90deg,#FFA53C,#FF483F)" } : undefined}
+                    style={
+                      on ? { backgroundImage: "linear-gradient(90deg,#FFA53C,#FF483F)" } : undefined
+                    }
                   >
                     {f}
                   </button>

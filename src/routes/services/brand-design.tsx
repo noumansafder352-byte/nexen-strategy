@@ -16,7 +16,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { HeroScale } from "@/components/site/HeroScale";
 import { cn } from "@/lib/utils";
 import brandHero from "@/assets/brand-hero.jpg";
-import brandSignatureVideo from "@/assets/brand-signature.mp4.asset.json";
+import brandSignatureVideo from "@/assets/about-video-brand-signature.mp4";
 import brandTouchpoints from "@/assets/brand-touchpoints.jpg";
 
 import svcBrandIdentity from "@/assets/svc-brand-identity.jpg";
@@ -34,7 +34,6 @@ import svcBrandGuidelines from "@/assets/svc-brand-guidelines.jpg";
 
 const heroParagraph =
   "Your brand is more than a logo. We create distinctive visual identities and digital experiences that help businesses communicate with clarity, consistency and confidence.";
-
 
 const serviceAreas = [
   {
@@ -88,11 +87,27 @@ const serviceAreas = [
 ];
 
 const processStages: { name: string; text: string; icon: LucideIcon }[] = [
-  { name: "Discover", text: "Understand your brand, audience, market and objectives.", icon: Search },
-  { name: "Define", text: "Establish the creative direction and visual opportunity.", icon: Crosshair },
+  {
+    name: "Discover",
+    text: "Understand your brand, audience, market and objectives.",
+    icon: Search,
+  },
+  {
+    name: "Define",
+    text: "Establish the creative direction and visual opportunity.",
+    icon: Crosshair,
+  },
   { name: "Design", text: "Develop concepts, interfaces and visual assets.", icon: PenTool },
-  { name: "Refine", text: "Review, test and improve the work based on feedback.", icon: SlidersHorizontal },
-  { name: "Deliver", text: "Provide the final assets and systems ready for implementation.", icon: Rocket },
+  {
+    name: "Refine",
+    text: "Review, test and improve the work based on feedback.",
+    icon: SlidersHorizontal,
+  },
+  {
+    name: "Deliver",
+    text: "Provide the final assets and systems ready for implementation.",
+    icon: Rocket,
+  },
 ];
 
 const closingParagraph =
@@ -103,7 +118,10 @@ export const Route = createFileRoute("/services/brand-design")({
     meta: [
       { title: "Brand & Design — Nexen Strategy" },
       { name: "description", content: heroParagraph.slice(0, 155) },
-      { property: "og:title", content: "Build a Brand People Remember. | Brand & Design — Nexen Strategy" },
+      {
+        property: "og:title",
+        content: "Build a Brand People Remember. | Brand & Design — Nexen Strategy",
+      },
       { property: "og:description", content: heroParagraph.slice(0, 155) },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -148,10 +166,7 @@ function BrandDesignPage() {
     const child = el.children[0] as HTMLElement | undefined;
     if (!child) return;
     const step = child.offsetWidth + 16;
-    const idx = Math.min(
-      processStages.length - 1,
-      Math.max(0, Math.round(el.scrollLeft / step)),
-    );
+    const idx = Math.min(processStages.length - 1, Math.max(0, Math.round(el.scrollLeft / step)));
     if (idx !== activeStage) {
       setStageAutoPlay(false);
       setActiveStage(idx);
@@ -175,14 +190,13 @@ function BrandDesignPage() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
     observer.observe(video);
     return () => observer.disconnect();
   }, []);
 
   return (
-
     <>
       <style>{`
         @keyframes bd-drift{0%{transform:scale(1.06) translateX(-1.2%)}100%{transform:scale(1.06) translateX(1.2%)}}
@@ -198,7 +212,6 @@ function BrandDesignPage() {
         .bd-cta-dash2{stroke-dasharray:120 1000;animation:bd-cta-dash 26s linear infinite;animation-delay:-8s}
         @media (prefers-reduced-motion: reduce){.bd-kenburns,.bd-caption,.bd-cta-drift,.bd-cta-grid,.bd-cta-dash,.bd-cta-dash2{animation:none !important}}
       `}</style>
-
 
       <Header />
       <main className="bg-white">
@@ -217,17 +230,13 @@ function BrandDesignPage() {
                 <Reveal>
                   <div className="flex items-center gap-5">
                     <p className="eyebrow text-azure">01 — Brand &amp; Design</p>
-                    <span
-                      aria-hidden
-                      className="h-px w-12 bg-gradient-to-r from-amber to-ember"
-                    />
+                    <span aria-hidden className="h-px w-12 bg-gradient-to-r from-amber to-ember" />
                   </div>
                 </Reveal>
                 <Reveal delay={80}>
                   <h1 className="display mt-7 text-[3rem] leading-[1.02] text-navy sm:text-6xl lg:text-[4.6rem]">
                     Build
-                    <br />
-                    a Brand People Remember.
+                    <br />a Brand People Remember.
                   </h1>
                 </Reveal>
                 <Reveal delay={160}>
@@ -241,10 +250,7 @@ function BrandDesignPage() {
                       Start a Design Project
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
-                    <span
-                      aria-hidden
-                      className="hidden h-px w-16 bg-navy/15 sm:block"
-                    />
+                    <span aria-hidden className="hidden h-px w-16 bg-navy/15 sm:block" />
                   </div>
                 </Reveal>
               </div>
@@ -253,65 +259,59 @@ function BrandDesignPage() {
               <Reveal delay={180} className="lg:col-span-6">
                 <HeroScale designWidth={600} className="relative">
                   <div className="relative flex items-center justify-center px-12 py-10">
-                  {/* inner composition container: reduced & rebalanced */}
-                  <div className="relative w-[85%]">
-
-                    {/* thin offset framing line */}
-                    <span
-                      aria-hidden
-                      className="absolute -top-6 -right-6 block h-full w-full rounded-xl border border-navy/12"
-                    />
-                    {/* primary brand visual */}
-                    <div className="relative overflow-hidden rounded-xl bg-secondary/40 shadow-[0_50px_90px_-40px_rgba(1,12,98,0.4)]">
-                      <img
-                        src={brandHero}
-                        alt="Premium brand identity system with typography, colour palette and logo applications"
-                        width={1024}
-                        height={1280}
-                        className="aspect-[4/5] w-full object-cover"
+                    {/* inner composition container: reduced & rebalanced */}
+                    <div className="relative w-[85%]">
+                      {/* thin offset framing line */}
+                      <span
+                        aria-hidden
+                        className="absolute -top-6 -right-6 block h-full w-full rounded-xl border border-navy/12"
+                      />
+                      {/* primary brand visual */}
+                      <div className="relative overflow-hidden rounded-xl bg-secondary/40 shadow-[0_50px_90px_-40px_rgba(1,12,98,0.4)]">
+                        <img
+                          src={brandHero}
+                          alt="Premium brand identity system with typography, colour palette and logo applications"
+                          width={1024}
+                          height={1280}
+                          className="aspect-[4/5] w-full object-cover"
+                        />
+                      </div>
+                      {/* small cropped brand detail — overlapping bottom-left */}
+                      <div className="absolute -bottom-8 -left-10 block w-36 overflow-hidden rounded-lg border-[5px] border-white shadow-[0_30px_60px_-25px_rgba(1,12,98,0.45)]">
+                        <img
+                          src={brandTouchpoints}
+                          alt="Brand identity applied across digital and print touchpoints"
+                          loading="lazy"
+                          width={1600}
+                          height={1200}
+                          className="aspect-square w-full object-cover object-left-top"
+                        />
+                      </div>
+                      {/* colour swatch detail — overlapping top-left edge */}
+                      <div aria-hidden className="absolute -left-5 top-10 flex flex-col gap-2.5">
+                        <span className="h-9 w-9 rounded-[4px] bg-navy shadow-[0_14px_28px_-12px_rgba(1,12,98,0.5)]" />
+                        <span className="h-9 w-9 rounded-[4px] bg-gradient-to-br from-amber to-ember shadow-[0_14px_28px_-12px_rgba(255,72,63,0.5)]" />
+                        <span className="h-9 w-9 rounded-[4px] border border-navy/15 bg-white shadow-[0_14px_28px_-12px_rgba(1,12,98,0.25)]" />
+                      </div>
+                      {/* fine orange accent marker */}
+                      <span
+                        aria-hidden
+                        className="absolute -bottom-5 right-12 block h-px w-24 bg-gradient-to-r from-amber to-ember"
                       />
                     </div>
-                    {/* small cropped brand detail — overlapping bottom-left */}
-                    <div className="absolute -bottom-8 -left-10 block w-36 overflow-hidden rounded-lg border-[5px] border-white shadow-[0_30px_60px_-25px_rgba(1,12,98,0.45)]">
-                      <img
-                        src={brandTouchpoints}
-                        alt="Brand identity applied across digital and print touchpoints"
-                        loading="lazy"
-                        width={1600}
-                        height={1200}
-                        className="aspect-square w-full object-cover object-left-top"
-                      />
-                    </div>
-                    {/* colour swatch detail — overlapping top-left edge */}
-                    <div
-                      aria-hidden
-                      className="absolute -left-5 top-10 flex flex-col gap-2.5"
-                    >
-                      <span className="h-9 w-9 rounded-[4px] bg-navy shadow-[0_14px_28px_-12px_rgba(1,12,98,0.5)]" />
-                      <span className="h-9 w-9 rounded-[4px] bg-gradient-to-br from-amber to-ember shadow-[0_14px_28px_-12px_rgba(255,72,63,0.5)]" />
-                      <span className="h-9 w-9 rounded-[4px] border border-navy/15 bg-white shadow-[0_14px_28px_-12px_rgba(1,12,98,0.25)]" />
-                    </div>
-                    {/* fine orange accent marker */}
-                    <span
-                      aria-hidden
-                      className="absolute -bottom-5 right-12 block h-px w-24 bg-gradient-to-r from-amber to-ember"
-                    />
-                  </div>
                   </div>
                 </HeroScale>
-
               </Reveal>
             </div>
           </div>
         </section>
-
 
         {/* ============ SIGNATURE VISUAL / VIDEO ============ */}
         <section className="relative overflow-hidden bg-navy">
           <div>
             <video
               ref={signatureVideoRef}
-              src={brandSignatureVideo.url}
+              src={brandSignatureVideo}
               autoPlay
               loop
               muted
@@ -329,7 +329,6 @@ function BrandDesignPage() {
             }}
           />
         </section>
-
 
         {/* ============ WHAT WE DO — image-led showcase ============ */}
         <section className="relative overflow-hidden border-t border-border bg-white">
@@ -384,9 +383,7 @@ function BrandDesignPage() {
                           <span
                             className={cn(
                               "display text-[1.55rem] leading-none tracking-tight transition-all duration-300 ease-out",
-                              on
-                                ? "text-navy"
-                                : "text-navy/40 group-hover:text-navy/75",
+                              on ? "text-navy" : "text-navy/40 group-hover:text-navy/75",
                             )}
                           >
                             {s.name}
@@ -397,7 +394,9 @@ function BrandDesignPage() {
                             aria-hidden
                             className={cn(
                               "ml-auto h-4 w-4 shrink-0 text-ember transition-all duration-300",
-                              on ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-50",
+                              on
+                                ? "translate-x-0 opacity-100"
+                                : "-translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-50",
                             )}
                           />
 
@@ -447,15 +446,14 @@ function BrandDesignPage() {
                         aria-hidden={i !== activeService}
                         className={cn(
                           "absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-out",
-                          i === activeService
-                            ? "scale-100 opacity-100"
-                            : "scale-[1.04] opacity-0",
+                          i === activeService ? "scale-100 opacity-100" : "scale-[1.04] opacity-0",
                         )}
                       />
                     ))}
                     {/* index marker */}
                     <span className="absolute left-5 top-5 rounded-full border border-white/25 bg-navy/55 px-3.5 py-1.5 font-mono text-[11px] tracking-[0.18em] text-white backdrop-blur-sm">
-                      {String(activeService + 1).padStart(2, "0")} / {String(serviceAreas.length).padStart(2, "0")}
+                      {String(activeService + 1).padStart(2, "0")} /{" "}
+                      {String(serviceAreas.length).padStart(2, "0")}
                     </span>
                   </div>
                 </div>
@@ -551,10 +549,7 @@ function BrandDesignPage() {
 
             {/* ---- Desktop / tablet: horizontal timeline ---- */}
             <div className="relative mt-14 hidden md:block">
-              <div
-                aria-hidden
-                className="absolute left-[10%] right-[10%] top-7 h-px bg-navy/10"
-              />
+              <div aria-hidden className="absolute left-[10%] right-[10%] top-7 h-px bg-navy/10" />
               <div
                 aria-hidden
                 className="absolute left-[10%] top-7 h-px bg-gradient-to-r from-amber to-ember transition-[width] duration-700 ease-out"
@@ -752,7 +747,10 @@ function BrandDesignPage() {
                     "radial-gradient(40% 60% at 15% 25%, rgba(74,115,255,0.4) 0%, transparent 65%), radial-gradient(40% 60% at 85% 75%, rgba(58,241,255,0.25) 0%, transparent 70%)",
                 }}
               />
-              <div aria-hidden className="grid-faint bd-cta-grid pointer-events-none absolute inset-[-80px] opacity-70" />
+              <div
+                aria-hidden
+                className="grid-faint bd-cta-grid pointer-events-none absolute inset-[-80px] opacity-70"
+              />
               <svg
                 aria-hidden
                 className="pointer-events-none absolute inset-0 h-full w-full"
@@ -778,14 +776,15 @@ function BrandDesignPage() {
 
               <div className="relative max-w-3xl">
                 <Reveal>
-                  <h2 className="display text-white" style={{ fontSize: "clamp(2rem, 4.2vw, 3.6rem)" }}>
+                  <h2
+                    className="display text-white"
+                    style={{ fontSize: "clamp(2rem, 4.2vw, 3.6rem)" }}
+                  >
                     Good Design Creates Recognition. Great Design Creates Connection.
                   </h2>
                 </Reveal>
                 <Reveal delay={90}>
-                  <p className="mt-7 text-lg leading-relaxed text-white/75">
-                    {closingParagraph}
-                  </p>
+                  <p className="mt-7 text-lg leading-relaxed text-white/75">{closingParagraph}</p>
                 </Reveal>
                 <Reveal delay={150}>
                   <div className="mt-10">
@@ -799,7 +798,6 @@ function BrandDesignPage() {
             </div>
           </div>
         </section>
-
       </main>
       <Footer />
     </>

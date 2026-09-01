@@ -1,83 +1,83 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import cosh from "@/assets/client-cosh.svg.asset.json";
-import college from "@/assets/client-college-of-science.svg.asset.json";
-import drAmir from "@/assets/client-dr-amir.svg.asset.json";
-import adobeProperty from "@/assets/client-adobe-property-advisor.svg.asset.json";
-import comwave from "@/assets/client-comwave.svg.asset.json";
-import dxb from "@/assets/client-dxb-real-estate.svg.asset.json";
-import drKhurram from "@/assets/client-dr-khurram.svg.asset.json";
-import drSarfraz from "@/assets/client-dr-sarfraz.svg.asset.json";
-import drShahid from "@/assets/client-dr-shahid-v2.svg.asset.json";
-import drShoaib from "@/assets/client-dr-shoaib.svg.asset.json";
-import drWaseem from "@/assets/client-dr-waseem.svg.asset.json";
-import englishCoach from "@/assets/client-english-coach.svg.asset.json";
-import flyShop from "@/assets/client-fly-shop.svg.asset.json";
-import gatd from "@/assets/client-gatd.svg.asset.json";
-import glamByNoor from "@/assets/client-glam-by-noor.svg.asset.json";
-import healthyLifePath from "@/assets/client-healthy-life-path.svg.asset.json";
-import hiTech from "@/assets/client-hi-tech.svg.asset.json";
-import mayfair from "@/assets/client-mayfair.svg.asset.json";
-import minahilKhan from "@/assets/client-minahil-khan.svg.asset.json";
-import mohsanCo from "@/assets/client-mohsan-co.svg.asset.json";
-import muazzamEstate from "@/assets/client-muazzam-estate.svg.asset.json";
-import nhFusion from "@/assets/client-nh-fusion.svg.asset.json";
-import oceanOffshore from "@/assets/client-ocean-offshore.svg.asset.json";
-import organicRoots from "@/assets/client-organic-roots.svg.asset.json";
-import pakMedinet from "@/assets/client-pakmedinet.svg.asset.json";
-import phr from "@/assets/client-phr.svg.asset.json";
-import quranReading from "@/assets/client-quran-reading.svg.asset.json";
-import rightMove from "@/assets/client-right-move.svg.asset.json";
-import roofConnect from "@/assets/client-roofconnect.svg.asset.json";
-import royaVenture from "@/assets/client-roya-venture.svg.asset.json";
-import mumpsMotors from "@/assets/client-mumps-motors.png.asset.json";
-import mustafaAlAnsari from "@/assets/client-mustafa-al-ansari.png.asset.json";
-import sbidernet from "@/assets/client-sbidernet.svg.asset.json";
-import soapSuds from "@/assets/client-soap-suds.svg.asset.json";
-import torque from "@/assets/client-torque.svg.asset.json";
-import umami from "@/assets/client-umami.svg.asset.json";
-import vivd from "@/assets/client-vivd-v2.svg.asset.json";
+import cosh from "@/assets/clients/client-cosh.svg";
+import college from "@/assets/clients/client-college-of-science.svg";
+import drAmir from "@/assets/clients/client-dr-amir.svg";
+import adobeProperty from "@/assets/clients/client-adobe-property-advisor.svg";
+import comwave from "@/assets/clients/client-comwave.svg";
+import dxb from "@/assets/clients/client-dxb-real-estate.svg";
+import drKhurram from "@/assets/clients/client-dr-khurram.svg";
+import drSarfraz from "@/assets/clients/client-dr-sarfraz.svg";
+import drShahid from "@/assets/clients/client-dr-shahid-v2.svg";
+import drShoaib from "@/assets/clients/client-dr-shoaib.svg";
+import drWaseem from "@/assets/clients/client-dr-waseem.svg";
+import englishCoach from "@/assets/clients/client-english-coach.svg";
+import flyShop from "@/assets/clients/client-fly-shop.svg";
+import gatd from "@/assets/clients/client-gatd.svg";
+import glamByNoor from "@/assets/clients/client-glam-by-noor.svg";
+import healthyLifePath from "@/assets/clients/client-healthy-life-path.svg";
+import hiTech from "@/assets/clients/client-hi-tech.svg";
+import mayfair from "@/assets/clients/client-mayfair.svg";
+import minahilKhan from "@/assets/clients/client-minahil-khan.svg";
+import mohsanCo from "@/assets/clients/client-mohsan-co.svg";
+import muazzamEstate from "@/assets/clients/client-muazzam-estate.svg";
+import nhFusion from "@/assets/clients/client-nh-fusion.svg";
+import oceanOffshore from "@/assets/clients/client-ocean-offshore.svg";
+import organicRoots from "@/assets/clients/client-organic-roots.svg";
+import pakMedinet from "@/assets/clients/client-pakmedinet.svg";
+import phr from "@/assets/clients/client-phr.svg";
+import quranReading from "@/assets/clients/client-quran-reading.svg";
+import rightMove from "@/assets/clients/client-right-move.svg";
+import roofConnect from "@/assets/clients/client-roofconnect.svg";
+import royaVenture from "@/assets/clients/client-roya-venture.svg";
+import mumpsMotors from "@/assets/clients/client-mumps-motors.png";
+import mustafaAlAnsari from "@/assets/clients/client-mustafa-al-ansari.png";
+import sbidernet from "@/assets/clients/client-sbidernet.svg";
+import soapSuds from "@/assets/clients/client-soap-suds.svg";
+import torque from "@/assets/clients/client-torque.svg";
+import umami from "@/assets/clients/client-umami.svg";
+import vivd from "@/assets/clients/client-vivd-v2.svg";
 
 const LOGO_CLS = "h-9 lg:h-12";
 const clients = [
-  { name: "COSH", src: cosh.url, cls: LOGO_CLS },
-  { name: "College of Science", src: college.url, cls: LOGO_CLS },
-  { name: "Dr Amir", src: drAmir.url, cls: LOGO_CLS },
-  { name: "English Coach", src: englishCoach.url, cls: LOGO_CLS },
-  { name: "Dr Shahid", src: drShahid.url, cls: LOGO_CLS },
-  { name: "Dr Shoaib", src: drShoaib.url, cls: LOGO_CLS },
-  { name: "Dr Sarfraz", src: drSarfraz.url, cls: LOGO_CLS },
-  { name: "Dr Khurram", src: drKhurram.url, cls: LOGO_CLS },
-  { name: "Dr Waseem", src: drWaseem.url, cls: LOGO_CLS },
-  { name: "Comwave", src: comwave.url, cls: LOGO_CLS },
-  { name: "DXB Real Estate", src: dxb.url, cls: LOGO_CLS },
-  { name: "Adobe Property Advisor", src: adobeProperty.url, cls: LOGO_CLS },
-  { name: "Fly Shop", src: flyShop.url, cls: LOGO_CLS },
-  { name: "GATD", src: gatd.url, cls: LOGO_CLS },
-  { name: "Hi Tech", src: hiTech.url, cls: LOGO_CLS },
-  { name: "Mayfair", src: mayfair.url, cls: LOGO_CLS },
-  { name: "Healthy Life Path", src: healthyLifePath.url, cls: LOGO_CLS },
-  { name: "Glam by Noor", src: glamByNoor.url, cls: LOGO_CLS },
-  { name: "Minahil Khan", src: minahilKhan.url, cls: LOGO_CLS },
-  { name: "Mohsan & Co", src: mohsanCo.url, cls: LOGO_CLS },
-  { name: "Muazzam Estate", src: muazzamEstate.url, cls: LOGO_CLS },
-  { name: "NH Fusion", src: nhFusion.url, cls: LOGO_CLS },
-  { name: "Ocean Offshore", src: oceanOffshore.url, cls: LOGO_CLS },
-  { name: "Organic Roots", src: organicRoots.url, cls: LOGO_CLS },
-  { name: "PakMedinet", src: pakMedinet.url, cls: LOGO_CLS },
-  { name: "PHR", src: phr.url, cls: LOGO_CLS },
-  { name: "Quran Reading", src: quranReading.url, cls: LOGO_CLS },
-  { name: "Right Move", src: rightMove.url, cls: LOGO_CLS },
-  { name: "RoofConnect", src: roofConnect.url, cls: LOGO_CLS },
-  { name: "Roya Venture", src: royaVenture.url, cls: LOGO_CLS },
-  { name: "Mumps Motors", src: mumpsMotors.url, cls: LOGO_CLS },
-  { name: "Mustafa Al Ansari Real Estate", src: mustafaAlAnsari.url, cls: LOGO_CLS },
-  { name: "Sbidernet", src: sbidernet.url, cls: LOGO_CLS },
-  { name: "Soap Suds", src: soapSuds.url, cls: LOGO_CLS },
-  { name: "Torque", src: torque.url, cls: LOGO_CLS },
-  { name: "Umami", src: umami.url, cls: LOGO_CLS },
-  { name: "VIVD", src: vivd.url, cls: LOGO_CLS },
+  { name: "COSH", src: cosh, cls: LOGO_CLS },
+  { name: "College of Science", src: college, cls: LOGO_CLS },
+  { name: "Dr Amir", src: drAmir, cls: LOGO_CLS },
+  { name: "English Coach", src: englishCoach, cls: LOGO_CLS },
+  { name: "Dr Shahid", src: drShahid, cls: LOGO_CLS },
+  { name: "Dr Shoaib", src: drShoaib, cls: LOGO_CLS },
+  { name: "Dr Sarfraz", src: drSarfraz, cls: LOGO_CLS },
+  { name: "Dr Khurram", src: drKhurram, cls: LOGO_CLS },
+  { name: "Dr Waseem", src: drWaseem, cls: LOGO_CLS },
+  { name: "Comwave", src: comwave, cls: LOGO_CLS },
+  { name: "DXB Real Estate", src: dxb, cls: LOGO_CLS },
+  { name: "Adobe Property Advisor", src: adobeProperty, cls: LOGO_CLS },
+  { name: "Fly Shop", src: flyShop, cls: LOGO_CLS },
+  { name: "GATD", src: gatd, cls: LOGO_CLS },
+  { name: "Hi Tech", src: hiTech, cls: LOGO_CLS },
+  { name: "Mayfair", src: mayfair, cls: LOGO_CLS },
+  { name: "Healthy Life Path", src: healthyLifePath, cls: LOGO_CLS },
+  { name: "Glam by Noor", src: glamByNoor, cls: LOGO_CLS },
+  { name: "Minahil Khan", src: minahilKhan, cls: LOGO_CLS },
+  { name: "Mohsan & Co", src: mohsanCo, cls: LOGO_CLS },
+  { name: "Muazzam Estate", src: muazzamEstate, cls: LOGO_CLS },
+  { name: "NH Fusion", src: nhFusion, cls: LOGO_CLS },
+  { name: "Ocean Offshore", src: oceanOffshore, cls: LOGO_CLS },
+  { name: "Organic Roots", src: organicRoots, cls: LOGO_CLS },
+  { name: "PakMedinet", src: pakMedinet, cls: LOGO_CLS },
+  { name: "PHR", src: phr, cls: LOGO_CLS },
+  { name: "Quran Reading", src: quranReading, cls: LOGO_CLS },
+  { name: "Right Move", src: rightMove, cls: LOGO_CLS },
+  { name: "RoofConnect", src: roofConnect, cls: LOGO_CLS },
+  { name: "Roya Venture", src: royaVenture, cls: LOGO_CLS },
+  { name: "Mumps Motors", src: mumpsMotors, cls: LOGO_CLS },
+  { name: "Mustafa Al Ansari Real Estate", src: mustafaAlAnsari, cls: LOGO_CLS },
+  { name: "Sbidernet", src: sbidernet, cls: LOGO_CLS },
+  { name: "Soap Suds", src: soapSuds, cls: LOGO_CLS },
+  { name: "Torque", src: torque, cls: LOGO_CLS },
+  { name: "Umami", src: umami, cls: LOGO_CLS },
+  { name: "VIVD", src: vivd, cls: LOGO_CLS },
 ];
 
 export function ClientLogos() {
@@ -88,7 +88,12 @@ export function ClientLogos() {
   const STEP = DURATION / PER_GROUP;
   const rafRef = useRef<number | null>(null);
 
-  useEffect(() => () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); }, []);
+  useEffect(
+    () => () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    },
+    [],
+  );
 
   const nudge = (dir: 1 | -1) => {
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -127,21 +132,29 @@ export function ClientLogos() {
         />
         <div
           className="cll-glow absolute left-1/2 top-1/2 h-[420px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.10] blur-[140px]"
-          style={{ background: "radial-gradient(circle, #4A73FF 0%, #3AF1FF 45%, transparent 72%)" }}
+          style={{
+            background: "radial-gradient(circle, #4A73FF 0%, #3AF1FF 45%, transparent 72%)",
+          }}
         />
       </div>
 
       <div className="relative mx-auto max-w-[1400px] px-6 py-16 lg:px-12 lg:py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow text-azure">Clients</p>
-          <span aria-hidden className="mx-auto mt-4 block h-px w-12 bg-gradient-to-r from-azure to-cyan" />
+          <span
+            aria-hidden
+            className="mx-auto mt-4 block h-px w-12 bg-gradient-to-r from-azure to-cyan"
+          />
           <h2 className="display mt-5 text-[1.7rem] text-navy sm:text-3xl lg:text-[2.4rem]">
             Trusted by businesses building what&rsquo;s next.
           </h2>
         </Reveal>
 
         <Reveal delay={90} className="mt-12 lg:mt-14">
-          <div aria-hidden className="h-px w-full bg-gradient-to-r from-transparent via-navy/12 to-transparent" />
+          <div
+            aria-hidden
+            className="h-px w-full bg-gradient-to-r from-transparent via-navy/12 to-transparent"
+          />
           <div className="relative">
             <div className="relative overflow-hidden py-10 lg:py-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
               <div
@@ -173,7 +186,10 @@ export function ClientLogos() {
               </div>
             </div>
           </div>
-          <div aria-hidden className="h-px w-full bg-gradient-to-r from-transparent via-navy/12 to-transparent" />
+          <div
+            aria-hidden
+            className="h-px w-full bg-gradient-to-r from-transparent via-navy/12 to-transparent"
+          />
           <div className="mt-7 flex items-center justify-center gap-10">
             <button
               type="button"
