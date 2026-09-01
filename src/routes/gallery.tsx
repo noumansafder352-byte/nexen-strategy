@@ -37,13 +37,9 @@ export const Route = createFileRoute("/gallery")({
   component: GalleryPage,
 });
 
-type Category = "ALL" | "CORPORATE" | "MEDIA PRODUCTION";
-
-const filters: Category[] = ["ALL", "CORPORATE", "MEDIA PRODUCTION"];
-
 interface GalleryItem {
   src: string;
-  category: Exclude<Category, "ALL">;
+  category: "CORPORATE" | "MEDIA PRODUCTION";
   title: string;
   alt: string;
 }
@@ -113,8 +109,7 @@ const items: GalleryItem[] = [
 ];
 
 function GalleryPage() {
-  const [filter, setFilter] = useState<Category>("ALL");
-  const visible = items.filter((i) => filter === "ALL" || i.category === filter);
+  const visible = items;
 
   return (
     <>
@@ -148,50 +143,15 @@ function GalleryPage() {
           </div>
         </section>
 
-        {/* ================= FILTERS + GALLERY ================= */}
+        {/* ================= GALLERY ================= */}
         <section className="mx-auto max-w-[1400px] px-6 py-16 lg:px-12 lg:py-20">
-          <Reveal>
-            <div className="flex flex-wrap items-center gap-3 border-y border-border py-6">
-              <span className="mr-2 hidden h-px w-10 bg-gradient-to-r from-[#FFA53C] to-[#FF483F] sm:block" />
-              {filters.map((f) => {
-                const active = filter === f;
-                return (
-                  <button
-                    key={f}
-                    type="button"
-                    onClick={() => setFilter(f)}
-                    className={
-                      active
-                        ? "rounded-full bg-gradient-to-r from-[#FFA53C] to-[#FF483F] px-5 py-2.5 text-[0.72rem] font-semibold tracking-[0.14em] text-white transition-all duration-300"
-                        : "rounded-full border border-border px-5 py-2.5 text-[0.72rem] font-semibold tracking-[0.14em] text-navy/70 transition-all duration-300 hover:border-azure hover:text-navy"
-                    }
-                  >
-                    {f}
-                  </button>
-                );
-              })}
-            </div>
-          </Reveal>
-
-          {visible.length === 0 ? (
-            <div className="py-24 text-center">
-              <p className="eyebrow text-muted-foreground">Coming soon</p>
-              <p className="mt-4 text-lg text-muted-foreground">
-                New work in this category is on its way.
-              </p>
-            </div>
-          ) : (
-            <div
-              key={filter}
-              className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-6"
-            >
-              {visible.map((item, i) => (
-                <Reveal key={item.src} delay={60 + i * 70}>
-                  <GalleryCard item={item} />
-                </Reveal>
-              ))}
-            </div>
-          )}
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-6">
+            {visible.map((item, i) => (
+              <Reveal key={item.src} delay={60 + i * 70}>
+                <GalleryCard item={item} />
+              </Reveal>
+            ))}
+          </div>
         </section>
       </main>
       <Footer />
