@@ -1,10 +1,10 @@
 import { Reveal } from "@/components/site/Reveal";
-import saudiFlag from "@/assets/flag-saudi-arabia.webp.asset.json";
-import singaporeFlag from "@/assets/flag-singapore.webp.asset.json";
-import pakistanFlag from "@/assets/flag-pakistan.png.asset.json";
-import qatarFlag from "@/assets/flag-qatar.png.asset.json";
-import ukFlag from "@/assets/flag-uk.png.asset.json";
-import usaFlag from "@/assets/flag-usa.png.asset.json";
+import saudiFlag from "@/assets/clients/flag_of_saudi_arabia.png";
+import singaporeFlag from "@/assets/clients/flag_of_singapore.png";
+import pakistanFlag from "@/assets/clients/flag_of_pakistan.png";
+import qatarFlag from "@/assets/clients/flag_of_qatar.png";
+import ukFlag from "@/assets/clients/flag_of_united_kingdom.png";
+import usaFlag from "@/assets/clients/flag_of_united_states.png";
 
 type Country = { name: string; short: string; flag: React.ReactNode };
 
@@ -14,16 +14,12 @@ const countries: Country[] = [
   {
     name: "Pakistan",
     short: "PK",
-    flag: (
-      <img src={pakistanFlag.url} alt="" className="h-full w-full object-cover" loading="lazy" />
-    ),
+    flag: <img src={pakistanFlag} alt="" className="h-full w-full object-cover" loading="lazy" />,
   },
   {
     name: "United Kingdom",
     short: "UK",
-    flag: (
-      <img src={ukFlag.url} alt="" className="h-full w-full object-cover" loading="lazy" />
-    ),
+    flag: <img src={ukFlag} alt="" className="h-full w-full object-cover" loading="lazy" />,
   },
   {
     name: "United Arab Emirates",
@@ -40,30 +36,22 @@ const countries: Country[] = [
   {
     name: "Saudi Arabia",
     short: "KSA",
-    flag: (
-      <img src={saudiFlag.url} alt="" className="h-full w-full object-cover" loading="lazy" />
-    ),
+    flag: <img src={saudiFlag} alt="" className="h-full w-full object-cover" loading="lazy" />,
   },
   {
     name: "Singapore",
     short: "SG",
-    flag: (
-      <img src={singaporeFlag.url} alt="" className="h-full w-full object-cover" loading="lazy" />
-    ),
+    flag: <img src={singaporeFlag} alt="" className="h-full w-full object-cover" loading="lazy" />,
   },
   {
     name: "Qatar",
     short: "QA",
-    flag: (
-      <img src={qatarFlag.url} alt="" className="h-full w-full object-cover" loading="lazy" />
-    ),
+    flag: <img src={qatarFlag} alt="" className="h-full w-full object-cover" loading="lazy" />,
   },
   {
     name: "United States",
     short: "US",
-    flag: (
-      <img src={usaFlag.url} alt="" className="h-full w-full object-cover" loading="lazy" />
-    ),
+    flag: <img src={usaFlag} alt="" className="h-full w-full object-cover" loading="lazy" />,
   },
 ];
 
@@ -157,8 +145,7 @@ export function GlobalPresence() {
                   className="gp-flag relative h-[62px] w-[92px] rounded-[6px] lg:h-[70px] lg:w-[104px]"
                   style={{
                     animationDelay: `${(i % countries.length) * 0.4}s`,
-                    boxShadow:
-                      "0 16px 28px -16px rgba(1,12,98,0.45), 0 0 0 1px rgba(1,12,98,0.08)",
+                    boxShadow: "0 16px 28px -16px rgba(1,12,98,0.45), 0 0 0 1px rgba(1,12,98,0.08)",
                   }}
                 >
                   <div className="h-full w-full overflow-hidden rounded-[6px]">{c.flag}</div>

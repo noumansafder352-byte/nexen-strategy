@@ -47,7 +47,7 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
   {
     num: "01",
     title: "Education & Training",
-    note: "From education providers to executive training organisations, we create digital solutions that make learning, communication and professional development more accessible and engaging.",
+    note: "From education providers to training organisations, we create digital solutions that support learning, communication, and professional development.",
     clients: [
       { name: "Comwave", src: comwave },
       { name: "GATD", src: gatd },
@@ -60,7 +60,7 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
   {
     num: "02",
     title: "Medical & Healthcare",
-    note: "We support healthcare professionals, medical organisations and health-focused brands with digital experiences designed to communicate expertise, build credibility and connect with their audiences.",
+    note: "We support healthcare providers with digital experiences designed to improve communication, accessibility, and patient engagement.",
     clients: [
       { name: "Dr Khurram", src: drKhurram },
       { name: "Dr Sarfraz", src: drSarfraz },
@@ -76,7 +76,7 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
   {
     num: "03",
     title: "Real Estate",
-    note: "We work with property brands, developers and real estate agencies to create digital experiences that build trust, strengthen their presence and support business growth.",
+    note: "We help property brands, developers, and real estate businesses create digital experiences that build trust and connect them with their audiences.",
     clients: [
       { name: "Adobe Property Advisor", src: adobeProperty },
       { name: "DXB Real Estate", src: dxb },
@@ -90,7 +90,7 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
   {
     num: "04",
     title: "Technology & Business Solutions",
-    note: "We work with technology, infrastructure and business-focused organisations to create practical digital solutions that simplify complex challenges, strengthen operations and support growth.",
+    note: "We work with technology and business-focused organisations to create practical digital solutions that improve operations, experiences, and growth.",
     clients: [
       { name: "Hi Tech", src: hiTech },
       { name: "Mumps Motors", src: mumpsMotors },
@@ -103,7 +103,7 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
   {
     num: "05",
     title: "Fashion & Clothing",
-    note: "We help fashion, clothing and lifestyle brands build distinctive digital identities and experiences that showcase their products and connect with modern audiences.",
+    note: "We help fashion and lifestyle brands build distinctive digital experiences that showcase their products and connect with their audiences.",
     clients: [
       { name: "Borsac", src: borsac },
       { name: "NH Fusion", src: nhFusion },
@@ -115,7 +115,7 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
   {
     num: "06",
     title: "Food & Hospitality",
-    note: "We create digital experiences for food, hospitality and consumer-focused brands that help them present their offerings, strengthen their identity and connect with customers.",
+    note: "We create digital experiences for food, hospitality, and consumer-focused brands that help them present their offerings and connect with customers.",
     clients: [{ name: "Umami", src: umami }],
   },
 ];
@@ -250,9 +250,8 @@ function ClientsPage() {
             </Reveal>
             <Reveal delay={150}>
               <p className="mt-9 max-w-2xl text-lg leading-relaxed text-white/70">
-                We work with businesses across different industries, bringing together strategy,
-                design, technology and creativity to create meaningful digital experiences and
-                solutions.
+                We work with businesses across industries and markets, combining strategy, design,
+                technology, and creativity to create meaningful digital experiences and solutions.
               </p>
             </Reveal>
             <Reveal delay={220}>
@@ -260,7 +259,7 @@ function ClientsPage() {
                 {[
                   { k: `${totalClients}+`, v: "Brands served" },
                   { k: "06", v: "Industries" },
-                  { k: "UK, USA & GCC", v: "Markets" },
+                  { k: "GLOBAL", v: "Reach" },
                   { k: "End-to-end", v: "Delivery" },
                 ].map((s) => (
                   <div key={s.v} className="min-w-0">
