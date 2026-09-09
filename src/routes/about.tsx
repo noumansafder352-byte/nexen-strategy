@@ -406,7 +406,7 @@ function AboutPage() {
 
               {/* RIGHT — premium visual */}
               <Reveal delay={200}>
-                <div className="relative lg:translate-y-4">
+                <div className="relative">
                   <div
                     aria-hidden
                     className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] opacity-40 blur-[70px]"
@@ -415,7 +415,7 @@ function AboutPage() {
                     }}
                   />
                   <div
-                    className="relative overflow-hidden rounded-[1.75rem] border border-white/10"
+                    className="ab-float relative overflow-hidden rounded-[1.75rem] border border-white/10"
                     style={{ background: "#010C62" }}
                   >
                     <img
@@ -424,7 +424,7 @@ function AboutPage() {
                       loading="lazy"
                       width={1024}
                       height={1280}
-                      className="ab-float h-[380px] w-full object-cover sm:h-[460px] lg:h-[560px]"
+                      className="h-[400px] w-full object-cover sm:h-[480px] lg:h-[580px]"
                     />
                     <div
                       aria-hidden
