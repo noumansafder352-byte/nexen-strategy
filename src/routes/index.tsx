@@ -864,7 +864,7 @@ function Home() {
                       src={p.src}
                       alt={`${p.name} logo`}
                       loading="lazy"
-                      className={`relative h-auto w-auto max-w-[180px] object-contain opacity-70 transition-all duration-500 group-hover:scale-[1.02] group-hover:opacity-100 group-hover:brightness-105 lg:max-w-[210px] ${p.cls}`}
+                      className={`relative h-auto w-auto max-w-[180px] object-contain opacity-100 transition-all duration-500 group-hover:scale-[1.02] group-hover:brightness-105 lg:max-w-[210px] ${p.cls}`}
                     />
                   </div>
                 ))}
