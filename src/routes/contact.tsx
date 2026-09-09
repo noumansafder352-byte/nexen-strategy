@@ -1,8 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState, type FormEvent } from "react";
-import { ArrowRight, ArrowUpRight, Check, ChevronDown, Mail, MapPin, Phone, Search } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  ChevronDown,
+  Mail,
+  MapPin,
+  Phone,
+  Search,
+} from "lucide-react";
 import { toast } from "sonner";
-import { AsYouType, getCountries, getCountryCallingCode, isValidPhoneNumber } from "libphonenumber-js";
+import {
+  AsYouType,
+  getCountries,
+  getCountryCallingCode,
+  isValidPhoneNumber,
+} from "libphonenumber-js";
 import type { CountryCode } from "libphonenumber-js";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -16,7 +30,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { serviceOptions } from "@/lib/site-data";
-
 
 function countryFlag(code: string) {
   return String.fromCodePoint(...[...code].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65));
@@ -47,15 +60,13 @@ export const Route = createFileRoute("/contact")({
 const fieldClass =
   "peer h-[52px] w-full border-0 border-b border-border bg-transparent px-0 text-base text-navy outline-none transition-colors duration-300 placeholder:text-muted-foreground/55 hover:border-navy/30 focus:border-[#FFA53C] aria-[invalid=true]:border-[#FF483F]";
 
-const labelClass =
-  "block text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-navy/70";
-
+const labelClass = "block text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-navy/70";
 
 const contactDetails = [
   {
     Icon: MapPin,
     label: "Location",
-    value: "UK / Islamabad",
+    value: "United Kingdom | Pakistan",
     href: null as string | null,
   },
   {
@@ -223,8 +234,6 @@ function CountrySelect({
   );
 }
 
-
-
 function ContactPage() {
   const [sent, setSent] = useState(false);
   const [country, setCountry] = useState<CountryCode>("PK");
@@ -238,10 +247,7 @@ function ContactPage() {
     message: "",
   });
 
-  const countryInfo = useMemo(
-    () => countryOptions.find((c) => c.code === country),
-    [country],
-  );
+  const countryInfo = useMemo(() => countryOptions.find((c) => c.code === country), [country]);
 
   function updateField(field: keyof FormDataState, value: string) {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -563,7 +569,6 @@ function ContactPage() {
                     </p>
                   </div>
                 </form>
-
               </div>
             </Reveal>
           </div>

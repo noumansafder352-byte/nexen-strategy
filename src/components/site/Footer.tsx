@@ -30,9 +30,9 @@ const TikTokIcon = ({ className }: { className?: string }) => (
 );
 
 const socials = [
-  { label: "Facebook", href: "https://facebook.com", Icon: Facebook },
-  { label: "Instagram", href: "https://instagram.com", Icon: Instagram },
-  { label: "LinkedIn", href: "https://linkedin.com", Icon: Linkedin },
+  { label: "Facebook", href: "https://www.facebook.com/nexenstrategy", Icon: Facebook },
+  { label: "Instagram", href: "https://www.instagram.com/nexenstrategy/", Icon: Instagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/nexenstrategy/", Icon: Linkedin },
   { label: "YouTube", href: "https://youtube.com", Icon: Youtube },
   { label: "TikTok", href: "https://tiktok.com", Icon: TikTokIcon },
 ];
@@ -233,9 +233,35 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-white/12 pt-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
+        {/* <div className="mt-14 flex flex-col gap-3 border-t border-white/12 pt-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; 2026 All rights reserved by Nexen Strategy</p>
           <p>Build Better. Move Smarter. Grow Further.</p>
+        </div> */}
+        <div className="mt-14 flex flex-col gap-4 border-t border-white/12 pt-6 text-xs text-white/45 lg:flex-row lg:items-center lg:justify-between">
+          <p>&copy; 2026 All rights reserved by Nexen Strategy</p>
+
+          <nav aria-label="Legal" className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link to="/privacy-policy" className="transition-colors duration-300 hover:text-cyan">
+              Privacy Policy
+            </Link>
+
+            <Link
+              to="/terms-and-conditions"
+              className="transition-colors duration-300 hover:text-cyan"
+            >
+              Terms &amp; Conditions
+            </Link>
+
+            <Link to="/cookie-policy" className="transition-colors duration-300 hover:text-cyan">
+              Cookie Policy
+            </Link>
+
+            <Link to="/disclaimer" className="transition-colors duration-300 hover:text-cyan">
+              Disclaimer
+            </Link>
+          </nav>
+
+          <p className="lg:text-right">Build Better. Move Smarter. Grow Further.</p>
         </div>
       </div>
     </footer>
