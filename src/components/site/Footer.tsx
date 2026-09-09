@@ -114,8 +114,8 @@ export function Footer() {
               className="h-9 w-auto object-contain"
             />
             <p className="mt-7 max-w-sm text-[0.95rem] leading-relaxed text-white/65">
-              A UK digital solutions partner helping established businesses build, transform and
-              grow through strategy, design, technology and creative work.
+              Nexen Strategy is a digital solutions partner helping ambitious businesses build,
+              transform, and grow through strategy, technology, creativity, and innovation.
             </p>
             <div className="mt-8 h-px w-24 bg-gradient-to-r from-cyan to-azure" />
             <div className="mt-7 flex items-center gap-5">

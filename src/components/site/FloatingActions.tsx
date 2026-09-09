@@ -77,7 +77,7 @@ export function FloatingActions() {
             <WhatsAppIcon className="h-6 w-6 text-white" />
           </span>
           <span className="hidden text-xs font-semibold uppercase tracking-wider text-white md:inline-block">
-            Connect Now
+            Lets Connect
           </span>
         </span>
       </a>

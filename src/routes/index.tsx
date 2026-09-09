@@ -544,9 +544,9 @@ function Home() {
               <div className="mt-8 grid gap-7 lg:grid-cols-12 lg:items-end">
                 <Reveal delay={170} className="lg:col-span-6">
                   <p className="max-w-xl text-base leading-relaxed text-white/70">
-                    Nexen Strategy helps established businesses and growing organisations design,
-                    build and scale what comes next, across brand, digital platforms, software, AI,
-                    marketing and media.
+                    We help ambitious businesses turn ideas into digital experiences, intelligent
+                    solutions, and measurable growth, combining strategy, technology, creativity,
+                    and innovation for businesses worldwide.
                   </p>
                 </Reveal>
 
@@ -558,7 +558,7 @@ function Home() {
                     </a>
 
                     <Link to="/contact" className="btn-ghost-light">
-                      Start a Project
+                      Start a Conversation
                     </Link>
                   </div>
                 </Reveal>
@@ -614,7 +614,7 @@ function Home() {
                     },
                     {
                       k: "GLOBAL",
-                      v: "Based and accountable",
+                      v: "Business Reach",
                     },
                   ].map((s) => (
                     <div key={s.v}>
@@ -635,9 +635,9 @@ function Home() {
 
               <Reveal delay={150} className="lg:col-span-4 lg:col-start-9 lg:pt-22">
                 <p className="text-base leading-relaxed text-muted-foreground">
-                  Businesses rarely struggle because of one missing capability. They struggle
-                  because brand, technology, operations and marketing are being handled separately,
-                  by people who never speak to each other.
+                  From strategy and design to technology, automation, marketing, and digital
+                  experiences, we bring the expertise businesses need to move forward, wherever they
+                  operate.
                 </p>
 
                 <p className="mt-6 text-base leading-relaxed text-muted-foreground">
@@ -834,8 +834,8 @@ function Home() {
               />
 
               <h2 className="display mt-6 text-[2rem] text-navy sm:text-4xl lg:text-[2.9rem]">
-                Technology and expertise,
-                <br className="hidden sm:block" /> connected.
+                Technology and Expertise,
+                <br className="hidden sm:block" /> Working as One.
               </h2>
             </Reveal>
 
@@ -891,7 +891,7 @@ function Home() {
         <CtaSection
           eyebrow="Start a conversation"
           heading="Have an Idea? Let's Build What's Next."
-          body="Whether you're launching a new digital product, modernising your website, automating your operations or looking to accelerate growth, we're ready to help."
+          body="Whether you're launching something new, transforming an existing business, or looking for a smarter way forward, let's turn your next idea into something that moves your business ahead."
           ctaLabel="Start a Conversation"
         />
       </main>
