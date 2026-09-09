@@ -29,7 +29,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Nexen Strategy brings together strategy, technology, creativity and marketing to help businesses navigate an increasingly digital world.",
+          "Nexen Strategy brings together strategy, technology, creativity, and innovation to help businesses build, transform, and grow in an increasingly digital world.",
       },
       { property: "og:title", content: "About Nexen Strategy" },
       {
@@ -47,42 +47,50 @@ export const Route = createFileRoute("/about")({
 const stages: { word: string; text: string; icon: LucideIcon }[] = [
   {
     word: "Understand",
-    text: "Customers, processes and objectives before features.",
+    text: "Understand the business, people, challenges, and opportunities behind the project.",
     icon: Search,
   },
   {
     word: "Create",
-    text: "Practical solutions designed, built and tested together.",
+    text: "Turn insights into practical ideas, experiences, and solutions built around your goals.",
     icon: PenTool,
   },
-  { word: "Transform", text: "Systems and experiences moved into everyday use.", icon: Repeat },
-  { word: "Grow", text: "Refined against real performance, quarter after quarter.", icon: Sprout },
+  {
+    word: "Transform",
+    text: "Bring the solution to life and integrate it into the way your business operates.",
+    icon: Repeat,
+  },
+  {
+    word: "Grow",
+    text: "Refine, improve, and scale based on performance, changing needs, and new opportunities.",
+    icon: Sprout,
+  },
 ];
 
 const values: { name: string; text: string; icon: LucideIcon }[] = [
   {
     name: "Think Beyond the Brief",
-    text: "We look at the bigger picture and challenge assumptions when a better opportunity exists.",
+    text: "We look beyond the immediate request to understand the bigger picture and challenge assumptions when it creates a better outcome.",
     icon: Compass,
   },
   {
     name: "Make Technology Useful",
-    text: "Technology should simplify business, improve experiences and create opportunities — not create unnecessary complexity.",
+    text: "Technology should simplify business, improve experiences, and create opportunities, not add unnecessary complexity.",
     icon: Network,
   },
   {
     name: "Create With Purpose",
-    text: "Every design decision, feature and campaign should have a reason behind it.",
+    text: "Every design, feature, and campaign should have a clear reason behind it and a meaningful role to play.",
     icon: Target,
   },
   {
     name: "Build for the Future",
-    text: "We create solutions that can evolve as your business, customers and technology change.",
+    text: "We create solutions that can evolve with your business, your customers, and changing technology.",
     icon: TrendingUp,
   },
   {
     name: "Work as One Team",
-    text: "The best results come from close collaboration, transparency and shared ownership.",
+    text: "The best results come from close collaboration, transparency, shared thinking, and shared ownership.",
     icon: Users,
   },
 ];
@@ -301,8 +309,8 @@ function AboutPage() {
               </Reveal>
               <Reveal delay={150}>
                 <p className="mt-8 max-w-[52ch] text-lg leading-relaxed text-white/70">
-                  Nexen Strategy brings together strategy, technology, creativity and marketing to
-                  help businesses navigate an increasingly digital world.
+                  Nexen Strategy brings together strategy, technology, creativity, and innovation to
+                  help businesses build, transform, and grow in an increasingly digital world.
                 </p>
               </Reveal>
               <Reveal delay={220}>
@@ -373,14 +381,15 @@ function AboutPage() {
                 </Reveal>
                 <Reveal delay={210}>
                   <p className="mt-9 max-w-[58ch] text-[1.03rem] leading-[1.85] text-muted-foreground">
-                    We work with organisations that want more from their digital presence than a
-                    website that simply looks good.
+                    We work with organisations that want more from digital than something that
+                    simply looks good. We focus on building solutions that support real business
+                    goals, solve meaningful challenges, and create measurable value.
                   </p>
                 </Reveal>
                 <Reveal delay={270}>
                   <p className="mt-7 max-w-[58ch] text-[1.03rem] leading-[1.85] text-muted-foreground">
                     Our work spans digital experiences, software solutions, AI and automation,
-                    marketing and media — allowing us to support businesses across multiple stages
+                    marketing, and media, allowing us to support businesses across multiple stages
                     of their digital journey.
                   </p>
                 </Reveal>
@@ -476,19 +485,20 @@ function AboutPage() {
               <div className="lg:col-span-6 lg:col-start-7 lg:pt-4">
                 <Reveal delay={130}>
                   <p className="text-lg leading-relaxed text-white/70">
-                    We start by understanding the business behind the project.
+                    We start by understanding the business behind the project,your customers,
+                    objectives, processes, challenges, and opportunities.
                   </p>
                 </Reveal>
-                <Reveal delay={180}>
+                {/* <Reveal delay={180}>
                   <p className="mt-7 text-lg leading-relaxed text-white/70">
                     That means looking beyond features and technology to understand your customers,
                     processes, objectives and challenges.
                   </p>
-                </Reveal>
+                </Reveal> */}
                 <Reveal delay={230}>
                   <p className="mt-7 text-lg leading-relaxed text-white/70">
-                    From there, we develop solutions that are practical, scalable and aligned with
-                    where your business is going — not simply where it is today.
+                    From there, we develop practical, scalable solutions designed around what your
+                    business actually needs — not simply what is technically possible.
                   </p>
                 </Reveal>
               </div>
