@@ -39,6 +39,9 @@ import mohsanCo from "@/assets/clients/client-mohsan-co.svg";
 import roofConnect from "@/assets/clients/client-roofconnect.svg";
 import royaVenture from "@/assets/clients/client-roya-venture.svg";
 import umami from "@/assets/clients/client-umami.svg";
+import chickChicken from "@/assets/clients/client-chick-chicken.svg";
+import austinPizza from "@/assets/clients/client-austin-pizza.svg";
+import amigos from "@/assets/clients/client-amigos.svg";
 import heroVideo from "@/assets/clients/clients-hero.mp4";
 
 type Client = { name: string; src: string };
@@ -116,7 +119,12 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
     num: "06",
     title: "Food & Hospitality",
     note: "We create digital experiences for food, hospitality, and consumer-focused brands that help them present their offerings and connect with customers.",
-    clients: [{ name: "Umami", src: umami }],
+    clients: [
+      { name: "Umami", src: umami },
+      { name: "Chick Chicken", src: chickChicken },
+      { name: "Austin Pizza", src: austinPizza },
+      { name: "Amigos", src: amigos },
+    ],
   },
 ];
 

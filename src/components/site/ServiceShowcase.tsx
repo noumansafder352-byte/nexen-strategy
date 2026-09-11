@@ -14,12 +14,12 @@ import {
 } from "lucide-react";
 import type { ServiceKey } from "@/lib/site-data";
 import { Reveal } from "./Reveal";
-import imgBrand from "@/assets/svc-brand.jpg";
-import imgWeb from "@/assets/svc-web.jpg";
-import imgSoftware from "@/assets/svc-software.jpg";
-import imgAi from "@/assets/svc-ai.jpg";
-import imgMarketing from "@/assets/svc-marketing.jpg";
-import imgMedia from "@/assets/svc-media.jpg";
+import imgBrand from "@/assets/homepageservices/svc-brand-design.jpg";
+import imgWeb from "@/assets/homepageservices/svc-web-development.jpeg";
+import imgSoftware from "@/assets/homepageservices/svc-software-solutions.jpg";
+import imgAi from "@/assets/homepageservices/svc-ai-automation.jpg";
+import imgMarketing from "@/assets/homepageservices/svc-marketing-growth.jpg";
+import imgMedia from "@/assets/homepageservices/svc-media-production.jpg";
 
 interface ShowcaseItem {
   no: string;
@@ -136,7 +136,12 @@ export function ServiceShowcase() {
     resumeRef.current = setTimeout(() => setPaused(false), RESUME_MS);
   }, []);
 
-  useEffect(() => () => { if (resumeRef.current) clearTimeout(resumeRef.current); }, []);
+  useEffect(
+    () => () => {
+      if (resumeRef.current) clearTimeout(resumeRef.current);
+    },
+    [],
+  );
 
   return (
     <div className="mt-10 w-full max-w-full lg:mt-12">
@@ -153,7 +158,10 @@ export function ServiceShowcase() {
           />
           <div
             className="relative h-[470px] overflow-hidden border border-navy/10 bg-navy sm:h-[520px] lg:h-[420px]"
-            style={{ boxShadow: "0 40px 90px -50px color-mix(in oklab, var(--color-navy) 60%, transparent)" }}
+            style={{
+              boxShadow:
+                "0 40px 90px -50px color-mix(in oklab, var(--color-navy) 60%, transparent)",
+            }}
           >
             {items.map((s, i) => (
               <img
@@ -163,7 +171,9 @@ export function ServiceShowcase() {
                 loading="lazy"
                 className={
                   "absolute inset-0 h-full w-full object-cover transition-all duration-[420ms] ease-out motion-reduce:transition-none " +
-                  (i === active ? "scale-100 opacity-100 blur-0" : "scale-[1.04] opacity-0 blur-[2px]")
+                  (i === active
+                    ? "scale-100 opacity-100 blur-0"
+                    : "scale-[1.04] opacity-0 blur-[2px]")
                 }
               />
             ))}
@@ -333,7 +343,9 @@ export function ServiceShowcase() {
                         strokeWidth={1.5}
                         className={
                           "mt-0.5 h-3.5 w-3.5 shrink-0 transition-all duration-300 motion-reduce:transition-none " +
-                          (isActive ? "text-azure opacity-100" : "-translate-x-1 translate-y-1 opacity-0")
+                          (isActive
+                            ? "text-azure opacity-100"
+                            : "-translate-x-1 translate-y-1 opacity-0")
                         }
                       />
                     </span>

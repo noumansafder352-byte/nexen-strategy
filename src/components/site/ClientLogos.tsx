@@ -37,6 +37,9 @@ import sbidernet from "@/assets/clients/client-sbidernet.svg";
 import soapSuds from "@/assets/clients/client-soap-suds.svg";
 import torque from "@/assets/clients/client-torque.svg";
 import umami from "@/assets/clients/client-umami.svg";
+import chickChicken from "@/assets/clients/client-chick-chicken.svg";
+import austinPizza from "@/assets/clients/client-austin-pizza.svg";
+import amigos from "@/assets/clients/client-amigos.svg";
 import vivd from "@/assets/clients/client-vivd-v2.svg";
 
 const LOGO_CLS = "h-9 lg:h-12";
@@ -78,6 +81,9 @@ const clients = [
   { name: "Soap Suds", src: soapSuds, cls: LOGO_CLS },
   { name: "Torque", src: torque, cls: LOGO_CLS },
   { name: "Umami", src: umami, cls: LOGO_CLS },
+  { name: "Chick Chicken", src: chickChicken, cls: LOGO_CLS },
+  { name: "Austin Pizza", src: austinPizza, cls: LOGO_CLS },
+  { name: "Amigos", src: amigos, cls: LOGO_CLS },
   { name: "VIVD", src: vivd, cls: COMPACT_LOGO_CLS },
 ];
 
@@ -169,7 +175,7 @@ export function ClientLogos() {
                       clients.map((c) => (
                         <div
                           key={`${rep}-${c.name}`}
-                          className="flex items-center justify-center px-8 sm:px-12 lg:px-16"
+                          className="group flex items-center justify-center px-8 sm:px-12 lg:px-16"
                         >
                           <img
                             src={c.src}
@@ -177,7 +183,7 @@ export function ClientLogos() {
                             loading="lazy"
                             onMouseEnter={() => setPaused(true)}
                             onMouseLeave={() => setPaused(false)}
-                            className={`w-auto max-w-[150px] object-contain lg:max-w-[190px] ${c.cls}`}
+                            className={`w-auto max-w-[150px] object-contain transition-all duration-500 group-hover:scale-[1.02] group-hover:brightness-105 lg:max-w-[190px] ${c.cls}`}
                           />
                         </div>
                       )),
