@@ -790,7 +790,7 @@ Graphic Design
 
 UI/UX Design
 
-Website & Digital Design
+Packaging Design
 
 Design Systems
 

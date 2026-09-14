@@ -8,17 +8,17 @@ import { Reveal } from "@/components/site/Reveal";
 import { HeroScale } from "@/components/site/HeroScale";
 import { cn } from "@/lib/utils";
 
-import swHeroMain from "@/assets/sw-hero-main-v2.jpg";
-import swHeroPanel from "@/assets/sw-hero-panel-v2.jpg";
-import swHeroMobile from "@/assets/sw-hero-mobile-v2.jpg";
-import swCrm from "@/assets/sw-crm-v2.jpg";
-import swCms from "@/assets/sw-cms-v2.jpg";
-import swPortal from "@/assets/sw-portal-v2.jpg";
-import swCustom from "@/assets/sw-custom-v2.jpg";
-import swDashboards from "@/assets/sw-dashboards-v2.jpg";
-import swIntegrations from "@/assets/sw-integrations-v2.jpg";
-import swWorkflowAutomation from "@/assets/sw-workflow-automation-v2.jpg";
-import swModular from "@/assets/sw-modular-v2.jpg";
+import swHeroMain from "@/assets/services/software-solution/sw-hero-main-v2.jpg";
+import swHeroPanel from "@/assets/services/software-solution/sw-hero-panel-v2.jpg";
+import swHeroMobile from "@/assets/services/software-solution/sw-hero-mobile-v2.jpg";
+import swCrm from "@/assets/services/software-solution/sw-crm-v2.jpg";
+import swCms from "@/assets/services/software-solution/sw-cms-v2.jpg";
+import swPortal from "@/assets/services/software-solution/sw-portal-v2.jpg";
+import swCustom from "@/assets/services/software-solution/sw-custom-v2.jpg";
+import swDashboards from "@/assets/services/software-solution/sw-dashboards-v2.jpg";
+import swIntegrations from "@/assets/services/software-solution/sw-integrations-v2.jpg";
+import swWorkflowAutomation from "@/assets/services/software-solution/sw-workflow-automation-v2.jpg";
+import swModular from "@/assets/services/software-solution/sw-modular-v2.jpg";
 
 /* ================================================================
    FINAL APPROVED CONTENT — do not alter wording
@@ -174,52 +174,51 @@ function SoftwareSolutionsPage() {
               <Reveal delay={180} className="lg:col-span-6">
                 <HeroScale designWidth={600} className="relative">
                   <div className="relative flex items-center justify-center px-10 py-10">
-                  <div className="relative w-[88%]">
-                    <span
-                      aria-hidden
-                      className="absolute -top-6 -right-6 block h-full w-full rounded-2xl border border-navy/12"
-                    />
-                    <div className="relative overflow-hidden rounded-2xl bg-secondary/40 shadow-[0_50px_90px_-40px_rgba(1,12,98,0.4)]">
-                      <img
-                        src={swHeroMain}
-                        alt="Central business platform dashboard with analytics, metrics and data tables"
-                        width={1280}
-                        height={1024}
-                        className="aspect-[5/4] w-full object-cover"
+                    <div className="relative w-[88%]">
+                      <span
+                        aria-hidden
+                        className="absolute -top-6 -right-6 block h-full w-full rounded-2xl border border-navy/12"
+                      />
+                      <div className="relative overflow-hidden rounded-2xl bg-secondary/40 shadow-[0_50px_90px_-40px_rgba(1,12,98,0.4)]">
+                        <img
+                          src={swHeroMain}
+                          alt="Central business platform dashboard with analytics, metrics and data tables"
+                          width={1280}
+                          height={1024}
+                          className="aspect-[5/4] w-full object-cover"
+                        />
+                      </div>
+                      <div className="sw-float absolute -bottom-10 -left-8 block w-[26%] overflow-hidden rounded-[1.1rem] border-[5px] border-white shadow-[0_36px_70px_-28px_rgba(1,12,98,0.5)]">
+                        <img
+                          src={swHeroMobile}
+                          alt="Mobile business application showing customer records and metrics"
+                          loading="lazy"
+                          width={720}
+                          height={1280}
+                          className="aspect-[9/16] w-full object-cover object-top"
+                        />
+                      </div>
+                      <div className="absolute -right-6 top-[12%] block w-[42%] overflow-hidden rounded-xl border-[5px] border-white shadow-[0_34px_66px_-28px_rgba(1,12,98,0.45)]">
+                        <img
+                          src={swHeroPanel}
+                          alt="Connected workflow module showing process status and performance"
+                          loading="lazy"
+                          width={1024}
+                          height={768}
+                          className="aspect-[4/3] w-full object-cover"
+                        />
+                      </div>
+                      <span
+                        aria-hidden
+                        className="absolute -bottom-5 right-14 block h-px w-24 bg-gradient-to-r from-amber to-ember"
+                      />
+                      <span
+                        aria-hidden
+                        className="absolute -left-4 top-8 block h-16 w-px bg-gradient-to-b from-azure to-transparent"
                       />
                     </div>
-                    <div className="sw-float absolute -bottom-10 -left-8 block w-[26%] overflow-hidden rounded-[1.1rem] border-[5px] border-white shadow-[0_36px_70px_-28px_rgba(1,12,98,0.5)]">
-                      <img
-                        src={swHeroMobile}
-                        alt="Mobile business application showing customer records and metrics"
-                        loading="lazy"
-                        width={720}
-                        height={1280}
-                        className="aspect-[9/16] w-full object-cover object-top"
-                      />
-                    </div>
-                    <div className="absolute -right-6 top-[12%] block w-[42%] overflow-hidden rounded-xl border-[5px] border-white shadow-[0_34px_66px_-28px_rgba(1,12,98,0.45)]">
-                      <img
-                        src={swHeroPanel}
-                        alt="Connected workflow module showing process status and performance"
-                        loading="lazy"
-                        width={1024}
-                        height={768}
-                        className="aspect-[4/3] w-full object-cover"
-                      />
-                    </div>
-                    <span
-                      aria-hidden
-                      className="absolute -bottom-5 right-14 block h-px w-24 bg-gradient-to-r from-amber to-ember"
-                    />
-                    <span
-                      aria-hidden
-                      className="absolute -left-4 top-8 block h-16 w-px bg-gradient-to-b from-azure to-transparent"
-                    />
-                  </div>
                   </div>
                 </HeroScale>
-
               </Reveal>
             </div>
 
@@ -326,7 +325,9 @@ function SoftwareSolutionsPage() {
                   <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-ember">
                     {String(activeService + 1).padStart(2, "0")} — Capability
                   </p>
-                  <h3 className="display mt-4 text-3xl text-navy xl:text-[2.4rem]">{active.name}</h3>
+                  <h3 className="display mt-4 text-3xl text-navy xl:text-[2.4rem]">
+                    {active.name}
+                  </h3>
                   <p className="mt-6 max-w-2xl text-[1.15rem] leading-[1.7] text-navy/80">
                     {active.text}
                   </p>
@@ -347,7 +348,9 @@ function SoftwareSolutionsPage() {
                           aria-hidden={i !== activeService}
                           className={cn(
                             "absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-out",
-                            i === activeService ? "scale-100 opacity-100" : "scale-[1.03] opacity-0",
+                            i === activeService
+                              ? "scale-100 opacity-100"
+                              : "scale-[1.03] opacity-0",
                           )}
                         />
                       ))}

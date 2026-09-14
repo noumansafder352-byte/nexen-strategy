@@ -15,18 +15,18 @@ import { Footer } from "@/components/site/Footer";
 import { Reveal } from "@/components/site/Reveal";
 import { HeroScale } from "@/components/site/HeroScale";
 import { cn } from "@/lib/utils";
-import brandHero from "@/assets/brand-hero.jpg";
+import brandHero from "@/assets/services/brand-design/brand-hero.jpg";
 import brandSignatureVideo from "@/assets/about-video-brand-signature.mp4";
-import brandTouchpoints from "@/assets/brand-touchpoints.jpg";
+import brandTouchpoints from "@/assets/services/brand-design/brand-touchpoints.jpg";
 
-import svcBrandIdentity from "@/assets/svc-brand-identity.jpg";
-import svcLogoDesign from "@/assets/svc-logo-design.jpg";
-import svcVisualIdentity from "@/assets/svc-visual-identity.jpg";
-import svcGraphicDesign from "@/assets/svc-graphic-design.jpg";
-import svcUiuxDesign from "@/assets/svc-uiux-design.jpg";
-import svcWebDesign from "@/assets/svc-web-design.jpg";
-import svcDesignSystems from "@/assets/svc-design-systems.jpg";
-import svcBrandGuidelines from "@/assets/svc-brand-guidelines.jpg";
+import svcBrandIdentity from "@/assets/services/brand-design/svc-brand-identity.jpg";
+import svcLogoDesign from "@/assets/services/brand-design/svc-logo-design.jpg";
+import svcVisualIdentity from "@/assets/services/brand-design/svc-visual-identity.jpg";
+import svcGraphicDesign from "@/assets/services/brand-design/svc-graphic-design.jpg";
+import svcUiuxDesign from "@/assets/services/brand-design/svc-uiux-design.jpg";
+import svcpkgdesign from "@/assets/services/brand-design/svc-pkg-design.jpg";
+import svcDesignSystems from "@/assets/services/brand-design/svc-design-systems.jpg";
+import svcBrandGuidelines from "@/assets/services/brand-design/svc-brand-guidelines.jpg";
 
 /* ================================================================
    FINAL APPROVED CONTENT — do not alter wording
@@ -67,10 +67,10 @@ const serviceAreas = [
     alt: "Polished mobile and tablet interface screens for a digital product",
   },
   {
-    name: "Website & Digital Design",
-    text: "Create engaging digital experiences that combine visual impact with usability.",
-    img: svcWebDesign,
-    alt: "Premium corporate website design shown on laptop and mobile",
+    name: "Packaging Design",
+    text: "Product packaging, labels, boxes, bags and branded product materials.",
+    img: svcpkgdesign,
+    alt: "Packaging design shown across product packaging, labels, boxes and bags",
   },
   {
     name: "Design Systems",

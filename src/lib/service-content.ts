@@ -56,8 +56,8 @@ export const serviceContent: Record<ServiceKey, ServiceContent> = {
         text: "Interfaces designed around real user behaviour and real commercial objectives.",
       },
       {
-        name: "Website & Digital Design",
-        text: "Digital experiences that carry the brand with confidence and convert with intent.",
+        name: "Packaging Design",
+        text: "Product packaging, labels, boxes, bags and branded product materials.",
       },
       {
         name: "Design Systems",

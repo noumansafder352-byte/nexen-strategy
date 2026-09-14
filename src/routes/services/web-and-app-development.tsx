@@ -18,19 +18,19 @@ import { Reveal } from "@/components/site/Reveal";
 import { HeroScale } from "@/components/site/HeroScale";
 import { cn } from "@/lib/utils";
 
-import wadHeroMain from "@/assets/wad-hero-main.jpg";
-import wadHeroMobile from "@/assets/wad-hero-mobile.jpg";
-import wadHeroPanel from "@/assets/wad-hero-panel.jpg";
-import wadOverview from "@/assets/wad-overview.jpg";
-import wadWebsite from "@/assets/wad-website.jpg";
-import wadWebapp from "@/assets/wad-webapp.jpg";
-import wadMobile from "@/assets/wad-mobile.jpg";
-import wadWordpress from "@/assets/wad-wordpress.jpg";
-import wadShopify from "@/assets/wad-shopify.jpg";
-import wadEcommerce from "@/assets/wad-ecommerce.jpg";
-import wadAi from "@/assets/wad-ai.jpg";
-import wadApi from "@/assets/wad-api.jpg";
-import wadModular from "@/assets/wad-modular.jpg";
+import wadHeroMain from "@/assets/services/web-app-development/wad-hero-main.jpg";
+import wadHeroMobile from "@/assets/services/web-app-development/wad-hero-mobile.jpg";
+import wadHeroPanel from "@/assets/services/web-app-development/wad-hero-panel.jpg";
+import wadOverview from "@/assets/services/web-app-development/wad-overview.jpg";
+import wadWebsite from "@/assets/services/web-app-development/wad-website.jpg";
+import wadWebapp from "@/assets/services/web-app-development/wad-webapp.jpg";
+import wadMobile from "@/assets/services/web-app-development/wad-mobile.jpg";
+import wadWordpress from "@/assets/services/web-app-development/wad-wordpress.jpg";
+import wadShopify from "@/assets/services/web-app-development/wad-shopify.jpg";
+import wadEcommerce from "@/assets/services/web-app-development/wad-ecommerce.jpg";
+import wadAi from "@/assets/services/web-app-development/wad-ai.jpg";
+import wadApi from "@/assets/services/web-app-development/wad-api.jpg";
+import wadModular from "@/assets/services/web-app-development/wad-modular.jpg";
 
 /* ================================================================
    FINAL APPROVED CONTENT — do not alter wording
@@ -213,7 +213,9 @@ function WebAppDevelopmentPage() {
                   </h1>
                 </Reveal>
                 <Reveal delay={160}>
-                  <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">{heroParagraph}</p>
+                  <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
+                    {heroParagraph}
+                  </p>
                 </Reveal>
                 <Reveal delay={230}>
                   <div className="mt-10 flex items-center gap-8">
@@ -229,104 +231,106 @@ function WebAppDevelopmentPage() {
               {/* ---- Digital product ecosystem showcase ---- */}
               <Reveal delay={180} className="lg:col-span-6">
                 <HeroScale designWidth={620} className="relative">
-                <div className="relative mx-auto w-full">
-                  {/* atmospheric depth */}
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute left-1/2 top-1/2 block h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.08] blur-[130px]"
-                    style={{ background: "radial-gradient(circle, #010C62 0%, transparent 70%)" }}
-                  />
-                  {/* dotted technical connectors + labels (desktop) */}
-                  <svg
-                    aria-hidden
-                    viewBox="0 0 100 100"
-                    preserveAspectRatio="none"
-                    className="pointer-events-none absolute inset-0 block h-full w-full"
-                  >
+                  <div className="relative mx-auto w-full">
+                    {/* atmospheric depth */}
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute left-1/2 top-1/2 block h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.08] blur-[130px]"
+                      style={{ background: "radial-gradient(circle, #010C62 0%, transparent 70%)" }}
+                    />
+                    {/* dotted technical connectors + labels (desktop) */}
+                    <svg
+                      aria-hidden
+                      viewBox="0 0 100 100"
+                      preserveAspectRatio="none"
+                      className="pointer-events-none absolute inset-0 block h-full w-full"
+                    >
+                      <path
+                        d="M56 8 L66 8 L66 15"
+                        fill="none"
+                        stroke="#010C62"
+                        strokeOpacity="0.35"
+                        strokeWidth="0.3"
+                        strokeDasharray="2 2"
+                        vectorEffect="non-scaling-stroke"
+                      />
+                      <path
+                        d="M96 62 L92 62 L92 74"
+                        fill="none"
+                        stroke="#010C62"
+                        strokeOpacity="0.3"
+                        strokeWidth="0.3"
+                        strokeDasharray="2 2"
+                        vectorEffect="non-scaling-stroke"
+                      />
+                      <path
+                        d="M4 88 L14 88 L14 80"
+                        fill="none"
+                        stroke="#010C62"
+                        strokeOpacity="0.3"
+                        strokeWidth="0.3"
+                        strokeDasharray="2 2"
+                        vectorEffect="non-scaling-stroke"
+                      />
+                    </svg>
 
-                    <path
-                      d="M56 8 L66 8 L66 15"
-                      fill="none"
-                      stroke="#010C62"
-                      strokeOpacity="0.35"
-                      strokeWidth="0.3"
-                      strokeDasharray="2 2"
-                      vectorEffect="non-scaling-stroke"
-                    />
-                    <path
-                      d="M96 62 L92 62 L92 74"
-                      fill="none"
-                      stroke="#010C62"
-                      strokeOpacity="0.3"
-                      strokeWidth="0.3"
-                      strokeDasharray="2 2"
-                      vectorEffect="non-scaling-stroke"
-                    />
-                    <path
-                      d="M4 88 L14 88 L14 80"
-                      fill="none"
-                      stroke="#010C62"
-                      strokeOpacity="0.3"
-                      strokeWidth="0.3"
-                      strokeDasharray="2 2"
-                      vectorEffect="non-scaling-stroke"
-                    />
-                  </svg>
-
-                  <div className="block pb-[14%] pl-[6%] pr-[6%] pt-[14%]">
-                    {/* 01 — main web experience */}
-                    <figure className="relative ml-auto w-[86%]" style={{ perspective: "1600px" }}>
-                      <div
-                        className="overflow-hidden rounded-2xl border border-navy/[0.08] bg-white shadow-[0_46px_90px_-46px_rgba(1,12,98,0.4)]"
-                        style={{ transform: "rotateY(-7deg) rotateX(2deg) rotate(-1.5deg)" }}
+                    <div className="block pb-[14%] pl-[6%] pr-[6%] pt-[14%]">
+                      {/* 01 — main web experience */}
+                      <figure
+                        className="relative ml-auto w-[86%]"
+                        style={{ perspective: "1600px" }}
                       >
-                        <div className="flex h-7 items-center gap-1.5 border-b border-navy/[0.06] bg-white px-3">
-                          <span className="h-1.5 w-1.5 rounded-full bg-ember/50" />
-                          <span className="h-1.5 w-1.5 rounded-full bg-amber/60" />
-                          <span className="h-1.5 w-1.5 rounded-full bg-navy/15" />
-                          <span className="ml-3 h-2 w-24 rounded-full bg-navy/[0.05]" />
+                        <div
+                          className="overflow-hidden rounded-2xl border border-navy/[0.08] bg-white shadow-[0_46px_90px_-46px_rgba(1,12,98,0.4)]"
+                          style={{ transform: "rotateY(-7deg) rotateX(2deg) rotate(-1.5deg)" }}
+                        >
+                          <div className="flex h-7 items-center gap-1.5 border-b border-navy/[0.06] bg-white px-3">
+                            <span className="h-1.5 w-1.5 rounded-full bg-ember/50" />
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber/60" />
+                            <span className="h-1.5 w-1.5 rounded-full bg-navy/15" />
+                            <span className="ml-3 h-2 w-24 rounded-full bg-navy/[0.05]" />
+                          </div>
+                          <img
+                            src={wadHeroMain}
+                            alt="Premium corporate website interface displayed in a browser window"
+                            width={1280}
+                            height={1024}
+                            className="aspect-[5/4] w-full object-cover"
+                          />
                         </div>
-                        <img
-                          src={wadHeroMain}
-                          alt="Premium corporate website interface displayed in a browser window"
-                          width={1280}
-                          height={1024}
-                          className="aspect-[5/4] w-full object-cover"
-                        />
-                      </div>
-                    </figure>
+                      </figure>
 
-                    {/* 02 — application dashboard, upper-right overlap */}
-                    <figure className="absolute right-0 top-[2%] z-20 w-[46%]">
-                      <div className="overflow-hidden rounded-xl border border-navy/[0.08] bg-white shadow-[0_28px_60px_-30px_rgba(1,12,98,0.35)]">
-                        <img
-                          src={wadHeroPanel}
-                          alt="Web application analytics dashboard panel"
-                          loading="lazy"
-                          width={1024}
-                          height={768}
-                          className="block aspect-[4/3] w-full object-cover"
-                        />
-                      </div>
-                    </figure>
+                      {/* 02 — application dashboard, upper-right overlap */}
+                      <figure className="absolute right-0 top-[2%] z-20 w-[46%]">
+                        <div className="overflow-hidden rounded-xl border border-navy/[0.08] bg-white shadow-[0_28px_60px_-30px_rgba(1,12,98,0.35)]">
+                          <img
+                            src={wadHeroPanel}
+                            alt="Web application analytics dashboard panel"
+                            loading="lazy"
+                            width={1024}
+                            height={768}
+                            className="block aspect-[4/3] w-full object-cover"
+                          />
+                        </div>
+                      </figure>
 
-                    {/* 03 — mobile app, lower-left overlap */}
-                    <figure className="wad-float absolute bottom-[8%] left-0 z-20 w-[22%]">
-                      <div className="overflow-hidden rounded-[1.1rem] border border-navy/15 bg-navy shadow-[0_28px_58px_-26px_rgba(1,12,98,0.45)]">
-                        <img
-                          src={wadHeroMobile}
-                          alt="Mobile application interface screen"
-                          loading="lazy"
-                          width={720}
-                          height={1280}
-                          className="block aspect-[9/18] w-full rounded-[1rem] object-cover object-top"
-                        />
-                      </div>
-                    </figure>
-                  </div>
+                      {/* 03 — mobile app, lower-left overlap */}
+                      <figure className="wad-float absolute bottom-[8%] left-0 z-20 w-[22%]">
+                        <div className="overflow-hidden rounded-[1.1rem] border border-navy/15 bg-navy shadow-[0_28px_58px_-26px_rgba(1,12,98,0.45)]">
+                          <img
+                            src={wadHeroMobile}
+                            alt="Mobile application interface screen"
+                            loading="lazy"
+                            width={720}
+                            height={1280}
+                            className="block aspect-[9/18] w-full rounded-[1rem] object-cover object-top"
+                          />
+                        </div>
+                      </figure>
+                    </div>
 
-                  {/* subtle markers */}
-                  {/* <span
+                    {/* subtle markers */}
+                    {/* <span
                     aria-hidden
                     className="absolute left-[40%] top-[6%] hidden text-[0.58rem] font-medium uppercase tracking-[0.26em] text-navy/40 sm:block"
                   >
@@ -344,13 +348,12 @@ function WebAppDevelopmentPage() {
                   >
                     03 — Mobile
                   </span> */}
-                  <span
-                    aria-hidden
-                    className="absolute right-[3%] top-[46%] block h-1.5 w-1.5 rounded-full bg-amber"
-                  />
-                </div>
+                    <span
+                      aria-hidden
+                      className="absolute right-[3%] top-[46%] block h-1.5 w-1.5 rounded-full bg-amber"
+                    />
+                  </div>
                 </HeroScale>
-
               </Reveal>
             </div>
           </div>
@@ -366,7 +369,10 @@ function WebAppDevelopmentPage() {
                 <h2 className="display mt-5 text-[2.1rem] leading-[1.1] text-navy sm:text-4xl lg:text-[3rem]">
                   More Than Just a Website.
                 </h2>
-                <span aria-hidden className="mt-8 block h-px w-24 bg-gradient-to-r from-amber to-ember" />
+                <span
+                  aria-hidden
+                  className="mt-8 block h-px w-24 bg-gradient-to-r from-amber to-ember"
+                />
                 <div className="mt-9 space-y-6">
                   {overviewParagraphs.map((p) => (
                     <p key={p} className="max-w-xl text-lg leading-[1.75] text-navy/75">
@@ -423,7 +429,10 @@ function WebAppDevelopmentPage() {
               <Reveal className="lg:col-span-5">
                 <p className="eyebrow text-azure">Services</p>
                 <h2 className="display mt-5 text-4xl text-navy lg:text-5xl">What We Build</h2>
-                <span aria-hidden className="mt-9 block h-px w-24 bg-gradient-to-r from-amber to-ember" />
+                <span
+                  aria-hidden
+                  className="mt-9 block h-px w-24 bg-gradient-to-r from-amber to-ember"
+                />
                 <ul className="mt-12">
                   {serviceAreas.map((s, i) => {
                     const on = i === activeService;
@@ -484,8 +493,12 @@ function WebAppDevelopmentPage() {
                   <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-ember">
                     {String(activeService + 1).padStart(2, "0")} — Capability
                   </p>
-                  <h3 className="display mt-4 text-3xl text-navy xl:text-[2.5rem]">{active.name}</h3>
-                  <p className="mt-6 max-w-2xl text-[1.2rem] leading-[1.7] text-navy/80">{active.text}</p>
+                  <h3 className="display mt-4 text-3xl text-navy xl:text-[2.5rem]">
+                    {active.name}
+                  </h3>
+                  <p className="mt-6 max-w-2xl text-[1.2rem] leading-[1.7] text-navy/80">
+                    {active.text}
+                  </p>
                   <div className="relative mt-9">
                     <span
                       aria-hidden
@@ -503,12 +516,15 @@ function WebAppDevelopmentPage() {
                           aria-hidden={i !== activeService}
                           className={cn(
                             "absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-out",
-                            i === activeService ? "scale-100 opacity-100" : "scale-[1.04] opacity-0",
+                            i === activeService
+                              ? "scale-100 opacity-100"
+                              : "scale-[1.04] opacity-0",
                           )}
                         />
                       ))}
                       <span className="absolute left-5 top-5 rounded-full border border-white/25 bg-navy/55 px-3.5 py-1.5 font-mono text-[11px] tracking-[0.18em] text-white backdrop-blur-sm">
-                        {String(activeService + 1).padStart(2, "0")} / {String(serviceAreas.length).padStart(2, "0")}
+                        {String(activeService + 1).padStart(2, "0")} /{" "}
+                        {String(serviceAreas.length).padStart(2, "0")}
                       </span>
                     </div>
                   </div>
@@ -532,7 +548,9 @@ function WebAppDevelopmentPage() {
                         <span
                           className={cn(
                             "flex h-7 w-7 items-center justify-center font-mono text-[12px] font-medium text-transparent transition-all duration-300",
-                            on ? "[-webkit-text-stroke:1px_#ff483f]" : "[-webkit-text-stroke:1px_rgba(1,12,98,0.25)]",
+                            on
+                              ? "[-webkit-text-stroke:1px_#ff483f]"
+                              : "[-webkit-text-stroke:1px_rgba(1,12,98,0.25)]",
                           )}
                         >
                           {String(i + 1).padStart(2, "0")}
@@ -588,7 +606,9 @@ function WebAppDevelopmentPage() {
             <Reveal className="flex flex-wrap items-end justify-between gap-6">
               <div>
                 <p className="eyebrow text-azure">Our approach</p>
-                <h2 className="display mt-5 text-[2rem] text-navy sm:text-4xl lg:text-[2.75rem]">Our Approach</h2>
+                <h2 className="display mt-5 text-[2rem] text-navy sm:text-4xl lg:text-[2.75rem]">
+                  Our Approach
+                </h2>
               </div>
               <p
                 aria-hidden
@@ -721,7 +741,9 @@ function WebAppDevelopmentPage() {
                       key={s.name}
                       className={cn(
                         "w-[62%] shrink-0 snap-center rounded-2xl border bg-white p-6 transition-all duration-500",
-                        current ? "border-navy/20 shadow-[0_24px_50px_-30px_rgba(1,12,98,0.35)]" : "border-navy/10",
+                        current
+                          ? "border-navy/20 shadow-[0_24px_50px_-30px_rgba(1,12,98,0.35)]"
+                          : "border-navy/10",
                       )}
                     >
                       <div className="flex items-center justify-between">
@@ -736,13 +758,17 @@ function WebAppDevelopmentPage() {
                         <span
                           className={cn(
                             "relative flex h-11 w-11 items-center justify-center rounded-xl border transition-colors duration-300",
-                            current ? "border-navy bg-navy text-white" : "border-navy/10 text-navy/50",
+                            current
+                              ? "border-navy bg-navy text-white"
+                              : "border-navy/10 text-navy/50",
                           )}
                         >
                           <Icon className="h-5 w-5" strokeWidth={1.5} />
                         </span>
                       </div>
-                      <h3 className="mt-5 text-lg font-semibold tracking-tight text-navy">{s.name}</h3>
+                      <h3 className="mt-5 text-lg font-semibold tracking-tight text-navy">
+                        {s.name}
+                      </h3>
                     </article>
                   );
                 })}
@@ -791,7 +817,10 @@ function WebAppDevelopmentPage() {
                   <br />
                   Around Your Business
                 </h2>
-                <span aria-hidden className="mt-8 block h-px w-24 bg-gradient-to-r from-amber to-ember" />
+                <span
+                  aria-hidden
+                  className="mt-8 block h-px w-24 bg-gradient-to-r from-amber to-ember"
+                />
                 <div className="mt-9 space-y-6">
                   {closingParagraphs.map((p) => (
                     <p key={p} className="max-w-xl text-lg leading-[1.75] text-navy/75">
@@ -845,7 +874,10 @@ function WebAppDevelopmentPage() {
 
               <div className="relative max-w-3xl">
                 <Reveal>
-                  <h2 className="display text-white" style={{ fontSize: "clamp(2rem, 4.2vw, 3.6rem)" }}>
+                  <h2
+                    className="display text-white"
+                    style={{ fontSize: "clamp(2rem, 4.2vw, 3.6rem)" }}
+                  >
                     Digital Experiences Built to Perform.
                   </h2>
                 </Reveal>
