@@ -10,6 +10,7 @@ import umamiSocial from "@/assets/umami-1.jpg";
 import learnIslamApp from "@/assets/learn-islam-app.jpg";
 
 const projects = [
+  //portfolio preview projects
   {
     title: "Roya Ventures",
     sector: "Investment & Advisory",
