@@ -1,9 +1,9 @@
-import brandImg from "@/assets/homepageservices/svc-brand-design.jpg";
-import webImg from "@/assets/homepageservices/svc-web-development.jpeg";
-import softwareImg from "@/assets/homepageservices/svc-software-solutions.jpg";
-import aiImg from "@/assets/homepageservices/svc-ai-automation.jpg";
-import marketingImg from "@/assets/homepageservices/svc-marketing-growth.jpg";
-import mediaImg from "@/assets/homepageservices/svc-media-production.jpg";
+import brandImg from "@/assets/services/brand-design/brand-hero.jpg";
+import webImg from "@/assets/services/web-app-development/wad-hero-main.jpg";
+import softwareImg from "@/assets/services/software-solution/sw-hero-main-v2.jpg";
+import aiImg from "@/assets/services/ai-automation/ai-hero-main.jpg";
+import marketingImg from "@/assets/mkt-hero-main.jpg";
+import mediaImg from "@/assets/services/media-production/mp-hero-main.jpg";
 import type { ServiceKey } from "./site-data";
 
 export interface ServiceContent {
