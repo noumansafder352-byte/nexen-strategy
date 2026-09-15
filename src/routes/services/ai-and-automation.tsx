@@ -8,18 +8,18 @@ import { Reveal } from "@/components/site/Reveal";
 import { HeroScale } from "@/components/site/HeroScale";
 import { cn } from "@/lib/utils";
 
-import aiHeroMain from "@/assets/ai-hero-main.jpg";
-import aiHeroPanel from "@/assets/ai-hero-panel.jpg";
+import aiHeroMain from "@/assets/services/ai-automation/ai-hero-main.jpg";
+import aiHeroPanel from "@/assets/services/ai-automation/ai-hero-panel.jpg";
 import aiHeroMobile from "@/assets/ai-hero-mobile.jpg";
-import aiChatbots from "@/assets/ai-chatbots.jpg";
-import aiAssistants from "@/assets/ai-assistants.jpg";
-import aiAgents from "@/assets/ai-agents.jpg";
-import aiWorkflow from "@/assets/ai-workflow.jpg";
-import aiMarketing from "@/assets/ai-marketing.jpg";
-import aiIntegrations from "@/assets/ai-integrations.jpg";
-import aiSocialMediaAutomation from "@/assets/ai-social-media-automation.jpg";
-import aiDataInsights from "@/assets/ai-data-insights.jpg";
-import aiBusinessValue from "@/assets/ai-business-value.jpg";
+import aiChatbots from "@/assets/services/ai-automation/ai-chatbots.jpg";
+import aiAssistants from "@/assets/services/ai-automation/ai-assistants.jpg";
+import aiAgents from "@/assets/services/ai-automation/ai-agents.jpg";
+import aiWorkflow from "@/assets/services/ai-automation/ai-workflow.jpg";
+import aiMarketing from "@/assets/services/ai-automation/ai-marketing.jpg";
+import aiIntegrations from "@/assets/services/ai-automation/ai-integrations.jpg";
+import aiSocialMediaAutomation from "@/assets/services/ai-automation/ai-social-media-automation.jpg";
+import aiDataInsights from "@/assets/services/ai-automation/ai-data-insights.jpg";
+import aiBusinessValue from "@/assets/services/ai-automation/ai-business-value.jpg";
 
 /* ================================================================
    FINAL APPROVED CONTENT — do not alter wording

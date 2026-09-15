@@ -5,7 +5,7 @@ import detailAi from "@/assets/detail-ai.jpg";
 import detailMarketing from "@/assets/detail-marketing.jpg";
 import detailMedia from "@/assets/detail-media.jpg";
 import media1 from "@/assets/media-1.jpg";
-import media2 from "@/assets/media-2.jpg";
+import media2 from "@/assets/services/media-production/media-2.jpg";
 import media3 from "@/assets/media-3.jpg";
 import media4 from "@/assets/media-4.jpg";
 import work5 from "@/assets/work-5.jpg";
@@ -71,10 +71,30 @@ export const serviceVisuals: Record<ServiceKey, ServiceVisuals> = {
     detailAlt: "Cinema camera on a dolly inside a lit production studio",
     detailRatio: "aspect-[16/9]",
     gallery: [
-      { src: media1, alt: "Cinema lens close-up with anamorphic flare", span: "lg:col-span-4", ratio: "aspect-[3/4]" },
-      { src: media2, alt: "Product photography studio lighting setup", span: "lg:col-span-8", ratio: "aspect-[7/5]" },
-      { src: media4, alt: "Colour grading suite with a cinematic timeline", span: "lg:col-span-7", ratio: "aspect-[16/10]" },
-      { src: media3, alt: "Vertical social content shoot in progress", span: "lg:col-span-5", ratio: "aspect-[3/4]" },
+      {
+        src: media1,
+        alt: "Cinema lens close-up with anamorphic flare",
+        span: "lg:col-span-4",
+        ratio: "aspect-[3/4]",
+      },
+      {
+        src: media2,
+        alt: "Product photography studio lighting setup",
+        span: "lg:col-span-8",
+        ratio: "aspect-[7/5]",
+      },
+      {
+        src: media4,
+        alt: "Colour grading suite with a cinematic timeline",
+        span: "lg:col-span-7",
+        ratio: "aspect-[16/10]",
+      },
+      {
+        src: media3,
+        alt: "Vertical social content shoot in progress",
+        span: "lg:col-span-5",
+        ratio: "aspect-[3/4]",
+      },
     ],
   },
 };

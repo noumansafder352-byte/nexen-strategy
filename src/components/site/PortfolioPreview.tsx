@@ -7,6 +7,7 @@ import royaWeb from "@/assets/roya-laptop.png";
 import hitechBrand from "@/assets/hitech-profile-1.jpg";
 import drShahidSocial from "@/assets/Dr-Shahid-Posts-Mockup.jpg";
 import umamiSocial from "@/assets/umami-1.jpg";
+import learnIslamApp from "@/assets/learn-islam-app.jpg";
 
 const projects = [
   {
@@ -26,12 +27,12 @@ const projects = [
     image: hitechBrand,
   },
   {
-    title: "Dr Shahid Mahmud Clinic",
-    sector: "Healthcare",
-    category: "Social Media Marketing",
+    title: "Learn Islam",
+    sector: "Education",
+    category: "App Development",
     summary:
-      "Social media marketing across multiple platforms — consistent content, increased visibility and strong engagement and audience growth for the clinic.",
-    image: drShahidSocial,
+      "A focused learning experience designed to make Islamic education accessible, engaging and easy to explore across mobile devices.",
+    image: learnIslamApp,
   },
   {
     title: "Umami",
@@ -40,6 +41,14 @@ const projects = [
     summary:
       "We delivered social media marketing for Umami, creating engaging content and a consistent digital presence designed to strengthen visibility, connect with the right audience and support brand growth.",
     image: umamiSocial,
+  },
+  {
+    title: "Dr Shahid Mahmud Clinic",
+    sector: "Healthcare",
+    category: "Social Media Marketing",
+    summary:
+      "Social media marketing across multiple platforms — consistent content, increased visibility and strong engagement and audience growth for the clinic.",
+    image: drShahidSocial,
   },
 ];
 
@@ -293,7 +302,7 @@ export function PortfolioPreview() {
         </div>
 
         {/* Navigation */}
-        <div className="mt-12 grid grid-cols-1 gap-px border-t border-white/10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-px border-t border-white/10 sm:grid-cols-2 lg:grid-cols-5">
           {projects.map((proj, i) => {
             const on = i === safeActive;
             return (

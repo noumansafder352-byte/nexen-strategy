@@ -8,17 +8,17 @@ import { Reveal } from "@/components/site/Reveal";
 import { HeroScale } from "@/components/site/HeroScale";
 import { cn } from "@/lib/utils";
 
-import mpHeroMain from "@/assets/mp-hero-main.jpg";
-import mpHeroVertical from "@/assets/mp-hero-vertical.jpg";
-import mpCorporate from "@/assets/mp-corporate-video.jpg";
-import mpPromotional from "@/assets/mp-promotional-video.jpg";
-import mpProduct from "@/assets/mp-product-video.jpg";
-import mpPhotography from "@/assets/mp-photography.jpg";
-import mpSocial from "@/assets/mp-social-content-v2.jpg";
-import mpMotion from "@/assets/mp-motion-graphics-v4.jpg";
-import mpAnimation from "@/assets/mp-animation-v3.jpg";
-import mpEditing from "@/assets/mp-video-editing.jpg";
-import mpDetail from "@/assets/media-2.jpg";
+import mpHeroMain from "@/assets/services/media-production/mp-hero-main.jpg";
+import mpHeroVertical from "@/assets/services/media-production/mp-hero-vertical.jpg";
+import mpCorporate from "@/assets/services/media-production/mp-corporate-video.jpg";
+import mpPromotional from "@/assets/services/media-production/mp-promotional-video.jpg";
+import mpProduct from "@/assets/services/media-production/mp-product-video.jpg";
+import mpPhotography from "@/assets/services/media-production/mp-photography.jpg";
+import mpSocial from "@/assets/services/media-production/mp-social-content.jpg";
+import mpMotion from "@/assets/services/media-production/mp-motion-graphics-v4.jpg";
+import mpAnimation from "@/assets/services/media-production/mp-animation-v3.jpg";
+import mpEditing from "@/assets/services/media-production/mp-video-editing.jpg";
+import mpDetail from "@/assets/services/media-production/media-2.jpg";
 
 /* ================================================================
    FINAL APPROVED CONTENT — do not alter wording
@@ -194,94 +194,92 @@ function MediaProductionPage() {
               {/* RIGHT — cinematic composition */}
               <Reveal delay={180} className="lg:col-span-6">
                 <HeroScale designWidth={620} className="relative">
-                <div className="relative mx-auto w-full pb-16 pl-8 pr-2">
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute right-[-8%] top-[-10%] h-[80%] w-[80%] rounded-full opacity-[0.10] blur-[110px]"
-                    style={{ background: "radial-gradient(circle, #4A73FF 0%, transparent 70%)" }}
-                  />
-                  {/* depth layers */}
-                  <span
-                    aria-hidden
-                    className="absolute right-0 top-3 block h-[72%] w-[88%] rounded-2xl border border-navy/10 bg-white/60"
-                  />
-                  <span
-                    aria-hidden
-                    className="absolute right-2 top-6 block h-[68%] w-[84%] rounded-2xl border border-navy/[0.07]"
-                  />
-
-                  {/* 01 — dominant cinematic frame */}
-                  <div className="relative ml-auto w-[95%] overflow-hidden rounded-2xl border border-navy/10 bg-navy shadow-[0_44px_86px_-42px_rgba(1,12,98,0.5)]">
-                    <img
-                      src={mpHeroMain}
-                      alt="Cinema camera rig on a film set during a premium production shoot"
-                      width={1600}
-                      height={1000}
-                      className="aspect-[16/10] w-full object-cover"
+                  <div className="relative mx-auto w-full pb-16 pl-8 pr-2">
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute right-[-8%] top-[-10%] h-[80%] w-[80%] rounded-full opacity-[0.10] blur-[110px]"
+                      style={{ background: "radial-gradient(circle, #4A73FF 0%, transparent 70%)" }}
+                    />
+                    {/* depth layers */}
+                    <span
+                      aria-hidden
+                      className="absolute right-0 top-3 block h-[72%] w-[88%] rounded-2xl border border-navy/10 bg-white/60"
                     />
                     <span
                       aria-hidden
-                      className="pointer-events-none absolute inset-0"
-                      style={{
-                        background:
-                          "linear-gradient(180deg, rgba(1,12,98,0.28) 0%, transparent 42%, rgba(1,12,98,0.45) 100%)",
-                      }}
+                      className="absolute right-2 top-6 block h-[68%] w-[84%] rounded-2xl border border-navy/[0.07]"
                     />
-                    <FrameCorners />
 
-                    {/* REC indicator */}
-                    <span className="absolute left-6 top-6 flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.22em] text-white/85 backdrop-blur-sm">
-                      <span className="mp-rec h-1.5 w-1.5 rounded-full bg-[#ff483f]" />
-                      Rec
-                    </span>
+                    {/* 01 — dominant cinematic frame */}
+                    <div className="relative ml-auto w-[95%] overflow-hidden rounded-2xl border border-navy/10 bg-navy shadow-[0_44px_86px_-42px_rgba(1,12,98,0.5)]">
+                      <img
+                        src={mpHeroMain}
+                        alt="Cinema camera rig on a film set during a premium production shoot"
+                        width={1600}
+                        height={1000}
+                        className="aspect-[16/10] w-full object-cover"
+                      />
+                      <span
+                        aria-hidden
+                        className="pointer-events-none absolute inset-0"
+                        style={{
+                          background:
+                            "linear-gradient(180deg, rgba(1,12,98,0.28) 0%, transparent 42%, rgba(1,12,98,0.45) 100%)",
+                        }}
+                      />
+                      <FrameCorners />
 
-                    {/* play indicator */}
-                    <span className="mp-pulse absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-sm">
-                      <Play aria-hidden className="ml-0.5 h-5 w-5 fill-white text-white" />
-                    </span>
+                      {/* REC indicator */}
+                      <span className="absolute left-6 top-6 flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.22em] text-white/85 backdrop-blur-sm">
+                        <span className="mp-rec h-1.5 w-1.5 rounded-full bg-[#ff483f]" />
+                        Rec
+                      </span>
 
-                  </div>
+                      {/* play indicator */}
+                      <span className="mp-pulse absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-sm">
+                        <Play aria-hidden className="ml-0.5 h-5 w-5 fill-white text-white" />
+                      </span>
+                    </div>
 
-                  {/* 02 — vertical social frame */}
-                  <div className="mp-float absolute bottom-4 left-0 w-[18%] overflow-hidden rounded-[0.9rem] border-[3px] border-white bg-navy shadow-[0_30px_60px_-28px_rgba(1,12,98,0.55)]">
-                    <img
-                      src={mpHeroVertical}
-                      alt="Vertical social video frame of a creator filmed in a studio"
-                      loading="lazy"
-                      width={720}
-                      height={1280}
-                      className="aspect-[9/16] w-full object-cover"
+                    {/* 02 — vertical social frame */}
+                    <div className="mp-float absolute bottom-4 left-0 w-[18%] overflow-hidden rounded-[0.9rem] border-[3px] border-white bg-navy shadow-[0_30px_60px_-28px_rgba(1,12,98,0.55)]">
+                      <img
+                        src={mpHeroVertical}
+                        alt="Vertical social video frame of a creator filmed in a studio"
+                        loading="lazy"
+                        width={720}
+                        height={1280}
+                        className="aspect-[9/16] w-full object-cover"
+                      />
+                      <span className="absolute left-2 top-2 h-1.5 w-1.5 rounded-full bg-[#3af1ff]" />
+                    </div>
+
+                    {/* 03 — photography / edit preview */}
+                    <div className="absolute bottom-8 right-[6%] w-[30%] overflow-hidden rounded-xl border border-navy/10 bg-white p-1 shadow-[0_28px_58px_-30px_rgba(1,12,98,0.45)]">
+                      <img
+                        src={mpDetail}
+                        alt="Photography studio lighting setup used during a commercial shoot"
+                        loading="lazy"
+                        width={1280}
+                        height={960}
+                        className="aspect-[4/3] w-full rounded-lg object-cover"
+                      />
+                      <span className="absolute bottom-3 left-3 rounded-full bg-navy/70 px-2 py-0.5 font-mono text-[9px] tracking-[0.2em] text-white">
+                        FRAME 04
+                      </span>
+                    </div>
+
+                    {/* fine technical accents */}
+                    <span
+                      aria-hidden
+                      className="absolute left-[6%] top-[10%] block h-14 w-px bg-gradient-to-b from-cyan/70 to-transparent"
                     />
-                    <span className="absolute left-2 top-2 h-1.5 w-1.5 rounded-full bg-[#3af1ff]" />
-                  </div>
-
-                  {/* 03 — photography / edit preview */}
-                  <div className="absolute bottom-8 right-[6%] w-[30%] overflow-hidden rounded-xl border border-navy/10 bg-white p-1 shadow-[0_28px_58px_-30px_rgba(1,12,98,0.45)]">
-                    <img
-                      src={mpDetail}
-                      alt="Photography studio lighting setup used during a commercial shoot"
-                      loading="lazy"
-                      width={1280}
-                      height={960}
-                      className="aspect-[4/3] w-full rounded-lg object-cover"
+                    <span
+                      aria-hidden
+                      className="absolute right-[6%] top-[-10px] block h-px w-20 bg-gradient-to-r from-amber to-ember"
                     />
-                    <span className="absolute bottom-3 left-3 rounded-full bg-navy/70 px-2 py-0.5 font-mono text-[9px] tracking-[0.2em] text-white">
-                      FRAME 04
-                    </span>
                   </div>
-
-                  {/* fine technical accents */}
-                  <span
-                    aria-hidden
-                    className="absolute left-[6%] top-[10%] block h-14 w-px bg-gradient-to-b from-cyan/70 to-transparent"
-                  />
-                  <span
-                    aria-hidden
-                    className="absolute right-[6%] top-[-10px] block h-px w-20 bg-gradient-to-r from-amber to-ember"
-                  />
-                </div>
                 </HeroScale>
-
               </Reveal>
             </div>
 
@@ -380,7 +378,9 @@ function MediaProductionPage() {
                   <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-ember">
                     {String(activeCapability + 1).padStart(2, "0")} — Production
                   </p>
-                  <h3 className="display mt-4 text-3xl text-navy xl:text-[2.4rem]">{active.name}</h3>
+                  <h3 className="display mt-4 text-3xl text-navy xl:text-[2.4rem]">
+                    {active.name}
+                  </h3>
                   <p className="mt-6 max-w-2xl text-[1.15rem] leading-[1.7] text-navy/80">
                     {active.text}
                   </p>
@@ -541,7 +541,10 @@ function MediaProductionPage() {
               >
                 <div className="flex h-full flex-col justify-around py-6">
                   {Array.from({ length: 7 }).map((_, i) => (
-                    <span key={i} className="mx-auto block h-6 w-10 rounded-sm border border-white/10" />
+                    <span
+                      key={i}
+                      className="mx-auto block h-6 w-10 rounded-sm border border-white/10"
+                    />
                   ))}
                 </div>
               </div>
