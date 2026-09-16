@@ -43,6 +43,7 @@ import chickChicken from "@/assets/clients/client-chick-chicken.svg";
 import austinPizza from "@/assets/clients/client-austin-pizza.svg";
 import amigos from "@/assets/clients/client-amigos.svg";
 import heroVideo from "@/assets/clients/clients-hero.mp4";
+import lscLogo from "@/assets/lsc-logo.svg";
 
 type Client = { name: string; src: string };
 
@@ -52,11 +53,12 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
     title: "Education & Training",
     note: "From education providers to training organisations, we create digital solutions that support learning, communication, and professional development.",
     clients: [
-      { name: "Comwave", src: comwave },
+      { name: "LSC", src: lscLogo },
       { name: "GATD", src: gatd },
-      { name: "PHR", src: phr },
-      { name: "Quran Reading", src: quranReading },
       { name: "Torque", src: torque },
+      { name: "Comwave", src: comwave },
+      { name: "Quran Reading", src: quranReading },
+      { name: "PHR", src: phr },
       { name: "VIVD", src: vivd },
     ],
   },
@@ -81,13 +83,13 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
     title: "Real Estate",
     note: "We help property brands, developers, and real estate businesses create digital experiences that build trust and connect them with their audiences.",
     clients: [
-      { name: "Adobe Property Advisor", src: adobeProperty },
       { name: "DXB Real Estate", src: dxb },
       { name: "May Fair", src: mayfair },
-      { name: "Muazzam Real Estate", src: muazzamEstate },
       { name: "Mustafa Al Ansari Real Estate", src: mustafaAlAnsari },
       { name: "Right Move", src: rightMove },
       { name: "Roof Connect", src: roofConnect },
+      { name: "Adobe Property Advisor", src: adobeProperty },
+      { name: "Muazzam Real Estate", src: muazzamEstate },
     ],
   },
   {
@@ -95,12 +97,12 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
     title: "Technology & Business Solutions",
     note: "We work with technology and business-focused organisations to create practical digital solutions that improve operations, experiences, and growth.",
     clients: [
-      { name: "Hi Tech", src: hiTech },
-      { name: "Mumps Motors", src: mumpsMotors },
+      { name: "Roya Ventures", src: royaVenture },
       { name: "Sbidernet", src: sbidernet },
+      { name: "Hi Tech", src: hiTech },
       { name: "Ocean of Shore", src: oceanOffshore },
       { name: "Mohsan & Co", src: mohsanCo },
-      { name: "Roya Ventures", src: royaVenture },
+      { name: "Mumps Motors", src: mumpsMotors },
     ],
   },
   {
@@ -109,9 +111,9 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
     note: "We help fashion and lifestyle brands build distinctive digital experiences that showcase their products and connect with their audiences.",
     clients: [
       { name: "Borsac", src: borsac },
+      { name: "Glam by Noor", src: glamByNoor },
       { name: "NH Fusion", src: nhFusion },
       { name: "Fly Shop", src: flyShop },
-      { name: "Glam by Noor", src: glamByNoor },
       { name: "Minahil Khan", src: minahilKhan },
     ],
   },

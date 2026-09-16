@@ -41,6 +41,7 @@ import chickChicken from "@/assets/clients/client-chick-chicken.svg";
 import austinPizza from "@/assets/clients/client-austin-pizza.svg";
 import amigos from "@/assets/clients/client-amigos.svg";
 import vivd from "@/assets/clients/client-vivd-v2.svg";
+import lscLogo from "@/assets/lsc-logo.svg";
 
 const LOGO_CLS = "h-9 lg:h-12";
 const COMPACT_LOGO_CLS = "h-12 lg:h-16";
@@ -59,6 +60,7 @@ const clients = [
   { name: "Adobe Property Advisor", src: adobeProperty, cls: COMPACT_LOGO_CLS },
   { name: "Fly Shop", src: flyShop, cls: LOGO_CLS },
   { name: "GATD", src: gatd, cls: LOGO_CLS },
+  { name: "LSC", src: lscLogo, cls: COMPACT_LOGO_CLS },
   { name: "Hi Tech", src: hiTech, cls: LOGO_CLS },
   { name: "Mayfair", src: mayfair, cls: LOGO_CLS },
   { name: "Healthy Life Path", src: healthyLifePath, cls: LOGO_CLS },
