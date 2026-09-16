@@ -121,30 +121,43 @@ function SoftwareSolutionsPage() {
         @keyframes sw-dash{to{stroke-dashoffset:-1600}}
         .sw-dash{stroke-dasharray:160 900;animation:sw-dash 20s linear infinite}
         .sw-dash2{stroke-dasharray:120 1000;animation:sw-dash 26s linear infinite;animation-delay:-8s}
-        @media (prefers-reduced-motion: reduce){.sw-caption,.sw-float,.sw-cta-drift,.sw-cta-grid,.sw-dash,.sw-dash2{animation:none !important}}
+        @keyframes sw-ring{0%,100%{transform:translate(-50%,-50%) rotate(-7deg) scale(1)}50%{transform:translate(-50%,-50%) rotate(3deg) scale(1.035)}}
+        .sw-ring{animation:sw-ring 18s ease-in-out infinite}
+        @media (prefers-reduced-motion: reduce){.sw-caption,.sw-float,.sw-cta-drift,.sw-cta-grid,.sw-dash,.sw-dash2,.sw-ring{animation:none !important}}
       `}</style>
 
-      <Header />
+      <Header overHero />
       <main className="bg-white">
         {/* ============ HERO ============ */}
-        <section className="relative overflow-hidden pt-[8.75rem] pb-16 lg:pt-36 lg:pb-24">
-          <div aria-hidden className="grid-faint-dark absolute inset-0 opacity-40" />
+        <section
+          className="relative overflow-hidden bg-navy-deep pt-[8.75rem] pb-16 lg:pt-36 lg:pb-24"
+          style={{
+            background:
+              "radial-gradient(circle at 78% 48%, rgba(36, 73, 177, 0.28) 0%, transparent 34%), radial-gradient(circle at 18% 92%, rgba(255, 111, 53, 0.1) 0%, transparent 27%), linear-gradient(125deg, #07043f 0%, #010c62 58%, #05052f 100%)",
+          }}
+        >
+          <div aria-hidden className="grid-faint absolute inset-0 opacity-60" />
           <div
             aria-hidden
             className="pointer-events-none absolute -top-40 right-[-12%] h-[560px] w-[560px] rounded-full opacity-[0.08] blur-[140px]"
-            style={{ background: "radial-gradient(circle, #4A73FF 0%, transparent 70%)" }}
+            style={{ background: "radial-gradient(circle, #3AF1FF 0%, transparent 70%)" }}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-48 left-[12%] h-[420px] w-[420px] rounded-full opacity-[0.1] blur-[150px]"
+            style={{ background: "radial-gradient(circle, #FF7A3D 0%, transparent 70%)" }}
           />
           <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
             <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
               <div className="relative z-10 lg:col-span-6">
                 <Reveal>
                   <div className="flex items-center gap-5">
-                    <p className="eyebrow text-azure">03 — Software Solutions</p>
+                    <p className="eyebrow text-cyan">03 — Software Solutions</p>
                     <span aria-hidden className="h-px w-12 bg-gradient-to-r from-amber to-ember" />
                   </div>
                 </Reveal>
                 <Reveal delay={80}>
-                  <h1 className="display mt-7 text-[3rem] leading-[1.02] text-navy sm:text-6xl lg:text-[4.4rem]">
+                  <h1 className="display mt-7 text-[3rem] leading-[1.02] text-white sm:text-6xl lg:text-[4.4rem]">
                     Software
                     <br />
                     That Works Around Your Business.
@@ -153,7 +166,7 @@ function SoftwareSolutionsPage() {
                 <Reveal delay={160}>
                   <div className="mt-8 space-y-5">
                     {heroParagraphs.map((p) => (
-                      <p key={p} className="max-w-lg text-lg leading-relaxed text-muted-foreground">
+                      <p key={p} className="max-w-lg text-lg leading-relaxed text-white/70">
                         {p}
                       </p>
                     ))}
@@ -165,7 +178,7 @@ function SoftwareSolutionsPage() {
                       Discuss Your Project
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
-                    <span aria-hidden className="hidden h-px w-16 bg-navy/15 sm:block" />
+                    <span aria-hidden className="hidden h-px w-16 bg-white/20 sm:block" />
                   </div>
                 </Reveal>
               </div>
@@ -174,12 +187,28 @@ function SoftwareSolutionsPage() {
               <Reveal delay={180} className="lg:col-span-6">
                 <HeroScale designWidth={600} className="relative">
                   <div className="relative flex items-center justify-center px-10 py-10">
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute left-[54%] top-[51%] block h-[78%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-cyan/10 bg-[radial-gradient(ellipse_at_58%_48%,rgba(58,241,255,0.13),transparent_58%),linear-gradient(135deg,rgba(74,115,255,0.09),transparent_62%)] shadow-[0_0_90px_rgba(58,241,255,0.08)]"
+                    />
+                    <span
+                      aria-hidden
+                      className="sw-ring pointer-events-none absolute left-[55%] top-[50%] block h-[82%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-white/[0.08]"
+                      style={{ transform: "translate(-50%, -50%) rotate(-7deg)" }}
+                    />
                     <div className="relative w-[88%]">
                       <span
                         aria-hidden
-                        className="absolute -top-6 -right-6 block h-full w-full rounded-2xl border border-navy/12"
+                        className="absolute -top-6 -right-6 block h-full w-full rounded-2xl border border-white/15"
                       />
-                      <div className="relative overflow-hidden rounded-2xl bg-secondary/40 shadow-[0_50px_90px_-40px_rgba(1,12,98,0.4)]">
+                      <div
+                        className="relative overflow-hidden rounded-2xl border border-white/25 bg-white shadow-[0_52px_90px_-34px_rgba(0,0,0,0.78),0_0_34px_-18px_rgba(58,241,255,0.5)]"
+                        style={{
+                          transform:
+                            "perspective(1600px) rotateY(-9deg) rotateX(4deg) rotate(-1.5deg)",
+                          transformStyle: "preserve-3d",
+                        }}
+                      >
                         <img
                           src={swHeroMain}
                           alt="Central business platform dashboard with analytics, metrics and data tables"
@@ -188,7 +217,10 @@ function SoftwareSolutionsPage() {
                           className="aspect-[5/4] w-full object-cover"
                         />
                       </div>
-                      <div className="sw-float absolute -bottom-10 -left-8 block w-[26%] overflow-hidden rounded-[1.1rem] border-[5px] border-white shadow-[0_36px_70px_-28px_rgba(1,12,98,0.5)]">
+                      <div
+                        className="sw-float absolute -bottom-10 -left-8 block w-[26%] overflow-hidden rounded-[1.1rem] border-[5px] border-white/90 shadow-[0_30px_58px_-24px_rgba(0,0,0,0.82),0_0_24px_-14px_rgba(255,165,60,0.5)]"
+                        style={{ transform: "rotateY(9deg) rotateX(-3deg) rotate(-4deg)" }}
+                      >
                         <img
                           src={swHeroMobile}
                           alt="Mobile business application showing customer records and metrics"
@@ -198,7 +230,10 @@ function SoftwareSolutionsPage() {
                           className="aspect-[9/16] w-full object-cover object-top"
                         />
                       </div>
-                      <div className="absolute -right-6 top-[12%] block w-[42%] overflow-hidden rounded-xl border-[5px] border-white shadow-[0_34px_66px_-28px_rgba(1,12,98,0.45)]">
+                      <div
+                        className="absolute -right-6 top-[12%] block w-[42%] overflow-hidden rounded-xl border-[5px] border-white/90 shadow-[0_30px_58px_-24px_rgba(0,0,0,0.8),0_0_26px_-14px_rgba(58,241,255,0.45)]"
+                        style={{ transform: "rotateY(-11deg) rotateX(3deg) rotate(2deg)" }}
+                      >
                         <img
                           src={swHeroPanel}
                           alt="Connected workflow module showing process status and performance"
@@ -226,7 +261,7 @@ function SoftwareSolutionsPage() {
             <Reveal delay={260}>
               <ul
                 aria-hidden
-                className="mt-16 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground lg:mt-20"
+                className="mt-16 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-white/60 lg:mt-20"
               >
                 {[
                   "CRM",

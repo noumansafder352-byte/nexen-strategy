@@ -182,18 +182,31 @@ function WebAppDevelopmentPage() {
         @keyframes wad-dash{to{stroke-dashoffset:-1600}}
         .wad-dash{stroke-dasharray:160 900;animation:wad-dash 20s linear infinite}
         .wad-dash2{stroke-dasharray:120 1000;animation:wad-dash 26s linear infinite;animation-delay:-8s}
-        @media (prefers-reduced-motion: reduce){.wad-caption,.wad-float,.wad-cta-drift,.wad-cta-grid,.wad-dash,.wad-dash2{animation:none !important}}
+        @keyframes wad-ring{0%,100%{transform:translate(-50%,-50%) rotate(-7deg) scale(1)}50%{transform:translate(-50%,-50%) rotate(3deg) scale(1.035)}}
+        .wad-ring{animation:wad-ring 18s ease-in-out infinite}
+        @media (prefers-reduced-motion: reduce){.wad-caption,.wad-float,.wad-cta-drift,.wad-cta-grid,.wad-dash,.wad-dash2,.wad-ring{animation:none !important}}
       `}</style>
 
-      <Header />
+      <Header overHero />
       <main className="bg-white">
         {/* ============ HERO ============ */}
-        <section className="relative overflow-hidden pt-[8.75rem] pb-16 lg:pt-36 lg:pb-24">
-          <div aria-hidden className="grid-faint-dark absolute inset-0 opacity-40" />
+        <section
+          className="relative overflow-hidden bg-navy-deep pt-[8.75rem] pb-16 lg:pt-36 lg:pb-24"
+          style={{
+            background:
+              "radial-gradient(circle at 78% 48%, rgba(36, 73, 177, 0.28) 0%, transparent 34%), radial-gradient(circle at 18% 92%, rgba(255, 111, 53, 0.1) 0%, transparent 27%), linear-gradient(125deg, #07043f 0%, #010c62 58%, #05052f 100%)",
+          }}
+        >
+          <div aria-hidden className="grid-faint absolute inset-0 opacity-60" />
           <div
             aria-hidden
             className="pointer-events-none absolute -top-40 right-[-12%] h-[560px] w-[560px] rounded-full opacity-[0.08] blur-[140px]"
-            style={{ background: "radial-gradient(circle, #4A73FF 0%, transparent 70%)" }}
+            style={{ background: "radial-gradient(circle, #3AF1FF 0%, transparent 70%)" }}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-48 left-[12%] h-[420px] w-[420px] rounded-full opacity-[0.1] blur-[150px]"
+            style={{ background: "radial-gradient(circle, #FF7A3D 0%, transparent 70%)" }}
           />
           <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
             <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
@@ -201,19 +214,19 @@ function WebAppDevelopmentPage() {
               <div className="relative z-10 lg:col-span-6">
                 <Reveal>
                   <div className="flex items-center gap-5">
-                    <p className="eyebrow text-azure">02 — Web &amp; App Development</p>
+                    <p className="eyebrow text-cyan">02 — Web &amp; App Development</p>
                     <span aria-hidden className="h-px w-12 bg-gradient-to-r from-amber to-ember" />
                   </div>
                 </Reveal>
                 <Reveal delay={80}>
-                  <h1 className="display mt-7 text-[3rem] leading-[1.02] text-navy sm:text-6xl lg:text-[4.6rem]">
+                  <h1 className="display mt-7 text-[3rem] leading-[1.02] text-white sm:text-6xl lg:text-[4.6rem]">
                     Digital
                     <br />
                     Experiences Built to Perform.
                   </h1>
                 </Reveal>
                 <Reveal delay={160}>
-                  <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
+                  <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/70">
                     {heroParagraph}
                   </p>
                 </Reveal>
@@ -223,7 +236,7 @@ function WebAppDevelopmentPage() {
                       Discuss Your Project
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
-                    <span aria-hidden className="hidden h-px w-16 bg-navy/15 sm:block" />
+                    <span aria-hidden className="hidden h-px w-16 bg-white/20 sm:block" />
                   </div>
                 </Reveal>
               </div>
@@ -232,11 +245,20 @@ function WebAppDevelopmentPage() {
               <Reveal delay={180} className="lg:col-span-6">
                 <HeroScale designWidth={620} className="relative">
                   <div className="relative mx-auto w-full">
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute left-[54%] top-[51%] block h-[78%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-cyan/10 bg-[radial-gradient(ellipse_at_58%_48%,rgba(58,241,255,0.13),transparent_58%),linear-gradient(135deg,rgba(74,115,255,0.09),transparent_62%)] shadow-[0_0_90px_rgba(58,241,255,0.08)]"
+                    />
+                    <span
+                      aria-hidden
+                      className="wad-ring pointer-events-none absolute left-[55%] top-[50%] block h-[82%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-white/[0.08]"
+                      style={{ transform: "translate(-50%, -50%) rotate(-7deg)" }}
+                    />
                     {/* atmospheric depth */}
                     <span
                       aria-hidden
                       className="pointer-events-none absolute left-1/2 top-1/2 block h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.08] blur-[130px]"
-                      style={{ background: "radial-gradient(circle, #010C62 0%, transparent 70%)" }}
+                      style={{ background: "radial-gradient(circle, #3AF1FF 0%, transparent 70%)" }}
                     />
                     {/* dotted technical connectors + labels (desktop) */}
                     <svg
@@ -248,8 +270,8 @@ function WebAppDevelopmentPage() {
                       <path
                         d="M56 8 L66 8 L66 15"
                         fill="none"
-                        stroke="#010C62"
-                        strokeOpacity="0.35"
+                        stroke="#3AF1FF"
+                        strokeOpacity="0.45"
                         strokeWidth="0.3"
                         strokeDasharray="2 2"
                         vectorEffect="non-scaling-stroke"
@@ -257,8 +279,8 @@ function WebAppDevelopmentPage() {
                       <path
                         d="M96 62 L92 62 L92 74"
                         fill="none"
-                        stroke="#010C62"
-                        strokeOpacity="0.3"
+                        stroke="#3AF1FF"
+                        strokeOpacity="0.4"
                         strokeWidth="0.3"
                         strokeDasharray="2 2"
                         vectorEffect="non-scaling-stroke"
@@ -266,8 +288,8 @@ function WebAppDevelopmentPage() {
                       <path
                         d="M4 88 L14 88 L14 80"
                         fill="none"
-                        stroke="#010C62"
-                        strokeOpacity="0.3"
+                        stroke="#3AF1FF"
+                        strokeOpacity="0.4"
                         strokeWidth="0.3"
                         strokeDasharray="2 2"
                         vectorEffect="non-scaling-stroke"
@@ -281,8 +303,11 @@ function WebAppDevelopmentPage() {
                         style={{ perspective: "1600px" }}
                       >
                         <div
-                          className="overflow-hidden rounded-2xl border border-navy/[0.08] bg-white shadow-[0_46px_90px_-46px_rgba(1,12,98,0.4)]"
-                          style={{ transform: "rotateY(-7deg) rotateX(2deg) rotate(-1.5deg)" }}
+                          className="overflow-hidden rounded-2xl border border-white/25 bg-white shadow-[0_52px_90px_-34px_rgba(0,0,0,0.78),0_0_34px_-18px_rgba(58,241,255,0.5)]"
+                          style={{
+                            transform: "rotateY(-9deg) rotateX(4deg) rotate(-1.5deg)",
+                            transformStyle: "preserve-3d",
+                          }}
                         >
                           <div className="flex h-7 items-center gap-1.5 border-b border-navy/[0.06] bg-white px-3">
                             <span className="h-1.5 w-1.5 rounded-full bg-ember/50" />
@@ -301,8 +326,11 @@ function WebAppDevelopmentPage() {
                       </figure>
 
                       {/* 02 — application dashboard, upper-right overlap */}
-                      <figure className="absolute right-0 top-[2%] z-20 w-[46%]">
-                        <div className="overflow-hidden rounded-xl border border-navy/[0.08] bg-white shadow-[0_28px_60px_-30px_rgba(1,12,98,0.35)]">
+                      <figure className="absolute right-0 top-[55%] z-20 w-[46%]">
+                        <div
+                          className="overflow-hidden rounded-xl border border-white/30 bg-white shadow-[0_30px_58px_-24px_rgba(0,0,0,0.8),0_0_26px_-14px_rgba(58,241,255,0.45)]"
+                          style={{ transform: "rotateY(-11deg) rotateX(3deg) rotate(2deg)" }}
+                        >
                           <img
                             src={wadHeroPanel}
                             alt="Web application analytics dashboard panel"
@@ -316,7 +344,10 @@ function WebAppDevelopmentPage() {
 
                       {/* 03 — mobile app, lower-left overlap */}
                       <figure className="wad-float absolute bottom-[8%] left-0 z-20 w-[22%]">
-                        <div className="overflow-hidden rounded-[1.1rem] border border-navy/15 bg-navy shadow-[0_28px_58px_-26px_rgba(1,12,98,0.45)]">
+                        <div
+                          className="overflow-hidden rounded-[1.1rem] border border-white/30 bg-navy shadow-[0_30px_58px_-24px_rgba(0,0,0,0.82),0_0_24px_-14px_rgba(255,165,60,0.5)]"
+                          style={{ transform: "rotateY(9deg) rotateX(-3deg) rotate(-4deg)" }}
+                        >
                           <img
                             src={wadHeroMobile}
                             alt="Mobile application interface screen"

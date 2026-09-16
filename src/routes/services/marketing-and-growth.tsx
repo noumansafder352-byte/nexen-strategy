@@ -1,6 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Eye, Magnet, MousePointerClick, TrendingUp, Users, type LucideIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Eye,
+  Magnet,
+  MousePointerClick,
+  TrendingUp,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
 
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -256,7 +264,9 @@ function GrowthJourney() {
                 key={s.name}
                 className={cn(
                   "w-[62%] shrink-0 snap-center rounded-2xl border bg-white p-6 transition-all duration-500",
-                  current ? "border-navy/20 shadow-[0_24px_50px_-30px_rgba(1,12,98,0.35)]" : "border-navy/10",
+                  current
+                    ? "border-navy/20 shadow-[0_24px_50px_-30px_rgba(1,12,98,0.35)]"
+                    : "border-navy/10",
                 )}
               >
                 <div className="flex items-center justify-between">
@@ -337,39 +347,50 @@ function MarketingGrowthPage() {
         @keyframes mkt-dash{to{stroke-dashoffset:-1600}}
         .mkt-dash{stroke-dasharray:160 900;animation:mkt-dash 20s linear infinite}
         .mkt-dash2{stroke-dasharray:120 1000;animation:mkt-dash 26s linear infinite;animation-delay:-8s}
-        @media (prefers-reduced-motion: reduce){.mkt-caption,.mkt-float,.mkt-draw,.mkt-flow,.mkt-cta-drift,.mkt-cta-grid,.mkt-dash,.mkt-dash2{animation:none !important}.mkt-draw{stroke-dashoffset:0}}
+        @keyframes mkt-ring{0%,100%{transform:translate(-50%,-50%) rotate(-7deg) scale(1)}50%{transform:translate(-50%,-50%) rotate(3deg) scale(1.035)}}
+        .mkt-ring{animation:mkt-ring 18s ease-in-out infinite}
+        @media (prefers-reduced-motion: reduce){.mkt-caption,.mkt-float,.mkt-draw,.mkt-flow,.mkt-cta-drift,.mkt-cta-grid,.mkt-dash,.mkt-dash2,.mkt-ring{animation:none !important}.mkt-draw{stroke-dashoffset:0}}
       `}</style>
 
-      <Header />
+      <Header overHero />
       <main className="bg-white">
         {/* ============ HERO ============ */}
-        <section className="relative overflow-hidden pt-[8.75rem] pb-16 lg:pt-36 lg:pb-24">
-          <div aria-hidden className="grid-faint-dark absolute inset-0 opacity-40" />
+        <section
+          className="relative overflow-hidden bg-navy-deep pt-[8.75rem] pb-16 lg:pt-36 lg:pb-24"
+          style={{
+            background:
+              "radial-gradient(circle at 78% 48%, rgba(36, 73, 177, 0.28) 0%, transparent 34%), radial-gradient(circle at 18% 92%, rgba(255, 111, 53, 0.1) 0%, transparent 27%), linear-gradient(125deg, #07043f 0%, #010c62 58%, #05052f 100%)",
+          }}
+        >
+          <div aria-hidden className="grid-faint absolute inset-0 opacity-60" />
           <div
             aria-hidden
             className="pointer-events-none absolute -top-40 right-[-12%] h-[560px] w-[560px] rounded-full opacity-[0.08] blur-[140px]"
-            style={{ background: "radial-gradient(circle, #4A73FF 0%, transparent 70%)" }}
+            style={{ background: "radial-gradient(circle, #3AF1FF 0%, transparent 70%)" }}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-48 left-[12%] h-[420px] w-[420px] rounded-full opacity-[0.1] blur-[150px]"
+            style={{ background: "radial-gradient(circle, #FF7A3D 0%, transparent 70%)" }}
           />
           <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
             <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
               <div className="relative z-10 lg:col-span-6">
                 <Reveal>
                   <div className="flex items-center gap-5">
-                    <p className="eyebrow text-azure">05 — Marketing &amp; Growth</p>
+                    <p className="eyebrow text-cyan">05 — Marketing &amp; Growth</p>
                     <span aria-hidden className="h-px w-12 bg-gradient-to-r from-amber to-ember" />
                   </div>
                 </Reveal>
                 <Reveal delay={80}>
-                  <h1 className="display mt-7 text-[3rem] leading-[1.03] text-navy sm:text-6xl lg:text-[4.4rem]">
+                  <h1 className="display mt-7 text-[3rem] leading-[1.03] text-white sm:text-6xl lg:text-[4.4rem]">
                     Turn
                     <br />
                     Attention Into Opportunity.
                   </h1>
                 </Reveal>
                 <Reveal delay={160}>
-                  <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-                    {heroIntro}
-                  </p>
+                  <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/70">{heroIntro}</p>
                 </Reveal>
                 <Reveal delay={230}>
                   <div className="mt-10 flex items-center gap-8">
@@ -377,7 +398,7 @@ function MarketingGrowthPage() {
                       Start Growing
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
-                    <span aria-hidden className="hidden h-px w-16 bg-navy/15 sm:block" />
+                    <span aria-hidden className="hidden h-px w-16 bg-white/20 sm:block" />
                   </div>
                 </Reveal>
               </div>
@@ -385,79 +406,98 @@ function MarketingGrowthPage() {
               {/* ---- Marketing intelligence composition ---- */}
               <Reveal delay={180} className="lg:col-span-6">
                 <HeroScale designWidth={620} className="relative">
-                <div className="relative mx-auto w-full pb-16 pl-8 pr-2">
-                  {/* soft background glow */}
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute right-[-8%] top-[-10%] h-[80%] w-[80%] rounded-full opacity-[0.10] blur-[110px]"
-                    style={{ background: "radial-gradient(circle, #4A73FF 0%, transparent 70%)" }}
-                  />
-                  {/* depth layers behind the dashboard */}
-                  <span
-                    aria-hidden
-                    className="absolute right-0 top-3 block h-[74%] w-[88%] rounded-2xl border border-navy/10 bg-white/60"
-                  />
-                  <span
-                    aria-hidden
-                    className="absolute right-2 top-6 block h-[70%] w-[84%] rounded-2xl border border-navy/[0.07]"
-                  />
+                  <div className="relative mx-auto w-full pb-16 pl-8 pr-2">
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute left-[54%] top-[48%] block h-[78%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-cyan/10 bg-[radial-gradient(ellipse_at_58%_48%,rgba(58,241,255,0.13),transparent_58%),linear-gradient(135deg,rgba(74,115,255,0.09),transparent_62%)] shadow-[0_0_90px_rgba(58,241,255,0.08)]"
+                    />
+                    <span
+                      aria-hidden
+                      className="mkt-ring pointer-events-none absolute left-[55%] top-[48%] block h-[82%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-white/[0.08]"
+                      style={{ transform: "translate(-50%, -50%) rotate(-7deg)" }}
+                    />
+                    {/* soft background glow */}
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute right-[-8%] top-[-10%] h-[80%] w-[80%] rounded-full opacity-[0.12] blur-[110px]"
+                      style={{ background: "radial-gradient(circle, #3AF1FF 0%, transparent 70%)" }}
+                    />
+                    {/* depth layers behind the dashboard */}
+                    <span
+                      aria-hidden
+                      className="absolute right-0 top-3 block h-[74%] w-[88%] rounded-2xl border border-white/15 bg-white/[0.06]"
+                    />
+                    <span
+                      aria-hidden
+                      className="absolute right-2 top-6 block h-[70%] w-[84%] rounded-2xl border border-white/[0.08]"
+                    />
 
-                  {/* 1 — main dashboard, biased right */}
-                  <div className="relative ml-auto w-[94%] overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-[0_44px_86px_-42px_rgba(1,12,98,0.42)]">
-                    <img
-                      src={mktHeroMain}
-                      alt="Marketing intelligence dashboard showing audience analytics, campaign performance, traffic and conversion growth"
-                      width={1280}
-                      height={1024}
-                      className="aspect-[5/4] w-full object-cover"
+                    {/* 1 — main dashboard, biased right */}
+                    <div
+                      className="relative ml-auto w-[94%] overflow-hidden rounded-2xl border border-white/25 bg-white shadow-[0_52px_90px_-34px_rgba(0,0,0,0.78),0_0_34px_-18px_rgba(58,241,255,0.5)]"
+                      style={{
+                        transform:
+                          "perspective(1600px) rotateY(-9deg) rotateX(4deg) rotate(-1.5deg)",
+                        transformStyle: "preserve-3d",
+                      }}
+                    >
+                      <img
+                        src={mktHeroMain}
+                        alt="Marketing intelligence dashboard showing audience analytics, campaign performance, traffic and conversion growth"
+                        width={1280}
+                        height={1024}
+                        className="aspect-[5/4] w-full object-cover"
+                      />
+                    </div>
+
+                    {/* 2 — growth / conversion insight panel, docked to the dashboard */}
+                    <div
+                      className="absolute bottom-4 right-[6%] w-[42%] overflow-hidden rounded-xl border border-white/30 bg-white p-1 shadow-[0_30px_58px_-24px_rgba(0,0,0,0.8),0_0_26px_-14px_rgba(58,241,255,0.45)]"
+                      style={{
+                        transform: "perspective(1200px) rotateY(-11deg) rotateX(3deg) rotate(2deg)",
+                      }}
+                    >
+                      <img
+                        src={mktHeroPanel}
+                        alt="Growth journey panel linking attention, engagement, leads, customers and growth"
+                        loading="lazy"
+                        width={1024}
+                        height={768}
+                        className="aspect-[4/3] w-full rounded-lg object-cover"
+                      />
+                    </div>
+
+                    {/* 3 — supporting mobile preview, lower-left with controlled overlap */}
+                    <div className="mkt-float absolute bottom-6 left-0 w-[15%] overflow-hidden rounded-[0.9rem] border-[4px] border-white/90 bg-white shadow-[0_30px_58px_-24px_rgba(0,0,0,0.82),0_0_24px_-14px_rgba(255,165,60,0.5)]">
+                      <img
+                        src={mktHeroMobile}
+                        alt="Mobile marketing app showing campaign performance and new lead volume"
+                        loading="lazy"
+                        width={720}
+                        height={1280}
+                        className="aspect-[9/16] w-full object-cover object-top"
+                      />
+                    </div>
+
+                    {/* refined accents */}
+                    <span
+                      aria-hidden
+                      className="absolute left-[6%] top-[10%] block h-14 w-px bg-gradient-to-b from-cyan/70 to-transparent"
+                    />
+                    <span
+                      aria-hidden
+                      className="absolute right-[6%] top-[-10px] block h-px w-20 bg-gradient-to-r from-amber to-ember"
                     />
                   </div>
-
-                  {/* 2 — growth / conversion insight panel, docked to the dashboard */}
-                  <div className="absolute bottom-4 right-[6%] w-[42%] overflow-hidden rounded-xl border border-navy/10 bg-white p-1 shadow-[0_28px_58px_-30px_rgba(1,12,98,0.4)]">
-                    <img
-                      src={mktHeroPanel}
-                      alt="Growth journey panel linking attention, engagement, leads, customers and growth"
-                      loading="lazy"
-                      width={1024}
-                      height={768}
-                      className="aspect-[4/3] w-full rounded-lg object-cover"
-                    />
-                  </div>
-
-                  {/* 3 — supporting mobile preview, lower-left with controlled overlap */}
-                  <div className="mkt-float absolute bottom-6 left-0 w-[15%] overflow-hidden rounded-[0.9rem] border-[4px] border-white bg-white shadow-[0_30px_60px_-28px_rgba(1,12,98,0.45)]">
-                    <img
-                      src={mktHeroMobile}
-                      alt="Mobile marketing app showing campaign performance and new lead volume"
-                      loading="lazy"
-                      width={720}
-                      height={1280}
-                      className="aspect-[9/16] w-full object-cover object-top"
-                    />
-                  </div>
-
-                  {/* refined accents */}
-                  <span
-                    aria-hidden
-                    className="absolute left-[6%] top-[10%] block h-14 w-px bg-gradient-to-b from-cyan/70 to-transparent"
-                  />
-                  <span
-                    aria-hidden
-                    className="absolute right-[6%] top-[-10px] block h-px w-20 bg-gradient-to-r from-amber to-ember"
-                  />
-                </div>
                 </HeroScale>
-
               </Reveal>
-
             </div>
 
             {/* Growth chain — technical strip */}
             <Reveal delay={260}>
               <ul
                 aria-hidden
-                className="mt-16 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground lg:mt-20"
+                className="mt-16 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-white/60 lg:mt-20"
               >
                 {["Attention", "Engagement", "Leads", "Customers", "Growth"].map((t) => (
                   <li key={t} className="flex items-center gap-2">
@@ -548,7 +588,9 @@ function MarketingGrowthPage() {
                   <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-ember">
                     {String(activeCapability + 1).padStart(2, "0")} — Capability
                   </p>
-                  <h3 className="display mt-4 text-3xl text-navy xl:text-[2.4rem]">{active.name}</h3>
+                  <h3 className="display mt-4 text-3xl text-navy xl:text-[2.4rem]">
+                    {active.name}
+                  </h3>
                   <p className="mt-6 max-w-2xl text-[1.15rem] leading-[1.7] text-navy/80">
                     {active.text}
                   </p>
@@ -656,10 +698,7 @@ function MarketingGrowthPage() {
 
         {/* ============ OUR APPROACH ============ */}
         <section className="relative overflow-hidden border-t border-border bg-white">
-          <div
-            aria-hidden
-            className="grid-faint pointer-events-none absolute inset-0 opacity-40"
-          />
+          <div aria-hidden className="grid-faint pointer-events-none absolute inset-0 opacity-40" />
           <div className="relative mx-auto max-w-[1400px] px-6 py-20 lg:px-12 lg:py-24">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
               {/* LEFT */}
@@ -755,7 +794,6 @@ function MarketingGrowthPage() {
             </div>
           </div>
         </section>
-
 
         {/* ============ CLOSING CTA ============ */}
         <section className="relative bg-white pb-16 lg:pb-24">

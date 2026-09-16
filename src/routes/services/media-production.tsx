@@ -145,18 +145,31 @@ function MediaProductionPage() {
         .mp-dash2{stroke-dasharray:120 1000;animation:mp-dash 28s linear infinite;animation-delay:-8s}
         @keyframes mp-cta-drift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(3%,-2.5%,0) scale(1.06)}}
         .mp-cta-drift{animation:mp-cta-drift 26s ease-in-out infinite}
-        @media (prefers-reduced-motion: reduce){.mp-caption,.mp-float,.mp-pulse,.mp-rec,.mp-playhead,.mp-scrub,.mp-dash,.mp-dash2,.mp-cta-drift{animation:none !important}}
+        @keyframes mp-ring{0%,100%{transform:translate(-50%,-50%) rotate(-7deg) scale(1)}50%{transform:translate(-50%,-50%) rotate(3deg) scale(1.035)}}
+        .mp-ring{animation:mp-ring 18s ease-in-out infinite}
+        @media (prefers-reduced-motion: reduce){.mp-caption,.mp-float,.mp-pulse,.mp-rec,.mp-playhead,.mp-scrub,.mp-dash,.mp-dash2,.mp-cta-drift,.mp-ring{animation:none !important}}
       `}</style>
 
-      <Header />
+      <Header overHero />
       <main className="bg-white">
         {/* ============ HERO ============ */}
-        <section className="relative overflow-hidden pt-[8.75rem] pb-16 lg:pt-36 lg:pb-24">
-          <div aria-hidden className="grid-faint-dark absolute inset-0 opacity-40" />
+        <section
+          className="relative overflow-hidden bg-navy-deep pt-[8.75rem] pb-16 lg:pt-36 lg:pb-24"
+          style={{
+            background:
+              "radial-gradient(circle at 78% 48%, rgba(36, 73, 177, 0.28) 0%, transparent 34%), radial-gradient(circle at 18% 92%, rgba(255, 111, 53, 0.1) 0%, transparent 27%), linear-gradient(125deg, #07043f 0%, #010c62 58%, #05052f 100%)",
+          }}
+        >
+          <div aria-hidden className="grid-faint absolute inset-0 opacity-60" />
           <div
             aria-hidden
             className="pointer-events-none absolute -top-40 right-[-12%] h-[560px] w-[560px] rounded-full opacity-[0.08] blur-[140px]"
-            style={{ background: "radial-gradient(circle, #4A73FF 0%, transparent 70%)" }}
+            style={{ background: "radial-gradient(circle, #3AF1FF 0%, transparent 70%)" }}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-48 left-[12%] h-[420px] w-[420px] rounded-full opacity-[0.1] blur-[150px]"
+            style={{ background: "radial-gradient(circle, #FF7A3D 0%, transparent 70%)" }}
           />
           <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
             <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
@@ -164,21 +177,19 @@ function MediaProductionPage() {
               <div className="relative z-10 lg:col-span-6">
                 <Reveal>
                   <div className="flex items-center gap-5">
-                    <p className="eyebrow text-azure">06 — Media Production</p>
+                    <p className="eyebrow text-cyan">06 — Media Production</p>
                     <span aria-hidden className="h-px w-12 bg-gradient-to-r from-amber to-ember" />
                   </div>
                 </Reveal>
                 <Reveal delay={80}>
-                  <h1 className="display mt-7 text-[3rem] leading-[1.03] text-navy sm:text-6xl lg:text-[4.4rem]">
+                  <h1 className="display mt-7 text-[3rem] leading-[1.03] text-white sm:text-6xl lg:text-[4.4rem]">
                     Make
                     <br />
                     Your Story Impossible to Ignore.
                   </h1>
                 </Reveal>
                 <Reveal delay={160}>
-                  <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-                    {heroIntro}
-                  </p>
+                  <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/70">{heroIntro}</p>
                 </Reveal>
                 <Reveal delay={230}>
                   <div className="mt-10 flex items-center gap-8">
@@ -186,7 +197,7 @@ function MediaProductionPage() {
                       Start a Production Project
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
-                    <span aria-hidden className="hidden h-px w-16 bg-navy/15 sm:block" />
+                    <span aria-hidden className="hidden h-px w-16 bg-white/20 sm:block" />
                   </div>
                 </Reveal>
               </div>
@@ -197,21 +208,37 @@ function MediaProductionPage() {
                   <div className="relative mx-auto w-full pb-16 pl-8 pr-2">
                     <span
                       aria-hidden
+                      className="pointer-events-none absolute left-[54%] top-[48%] block h-[78%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-cyan/10 bg-[radial-gradient(ellipse_at_58%_48%,rgba(58,241,255,0.13),transparent_58%),linear-gradient(135deg,rgba(74,115,255,0.09),transparent_62%)] shadow-[0_0_90px_rgba(58,241,255,0.08)]"
+                    />
+                    <span
+                      aria-hidden
+                      className="mp-ring pointer-events-none absolute left-[55%] top-[48%] block h-[82%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-white/[0.08]"
+                      style={{ transform: "translate(-50%, -50%) rotate(-7deg)" }}
+                    />
+                    <span
+                      aria-hidden
                       className="pointer-events-none absolute right-[-8%] top-[-10%] h-[80%] w-[80%] rounded-full opacity-[0.10] blur-[110px]"
-                      style={{ background: "radial-gradient(circle, #4A73FF 0%, transparent 70%)" }}
+                      style={{ background: "radial-gradient(circle, #3AF1FF 0%, transparent 70%)" }}
                     />
                     {/* depth layers */}
                     <span
                       aria-hidden
-                      className="absolute right-0 top-3 block h-[72%] w-[88%] rounded-2xl border border-navy/10 bg-white/60"
+                      className="absolute right-0 top-3 block h-[72%] w-[88%] rounded-2xl border border-white/15 bg-white/[0.06]"
                     />
                     <span
                       aria-hidden
-                      className="absolute right-2 top-6 block h-[68%] w-[84%] rounded-2xl border border-navy/[0.07]"
+                      className="absolute right-2 top-6 block h-[68%] w-[84%] rounded-2xl border border-white/[0.08]"
                     />
 
                     {/* 01 — dominant cinematic frame */}
-                    <div className="relative ml-auto w-[95%] overflow-hidden rounded-2xl border border-navy/10 bg-navy shadow-[0_44px_86px_-42px_rgba(1,12,98,0.5)]">
+                    <div
+                      className="relative ml-auto w-[95%] overflow-hidden rounded-2xl border border-white/25 bg-navy shadow-[0_52px_90px_-34px_rgba(0,0,0,0.78),0_0_34px_-18px_rgba(58,241,255,0.5)]"
+                      style={{
+                        transform:
+                          "perspective(1600px) rotateY(-9deg) rotateX(4deg) rotate(-1.5deg)",
+                        transformStyle: "preserve-3d",
+                      }}
+                    >
                       <img
                         src={mpHeroMain}
                         alt="Cinema camera rig on a film set during a premium production shoot"
@@ -242,7 +269,7 @@ function MediaProductionPage() {
                     </div>
 
                     {/* 02 — vertical social frame */}
-                    <div className="mp-float absolute bottom-4 left-0 w-[18%] overflow-hidden rounded-[0.9rem] border-[3px] border-white bg-navy shadow-[0_30px_60px_-28px_rgba(1,12,98,0.55)]">
+                    <div className="mp-float absolute bottom-4 left-0 w-[18%] overflow-hidden rounded-[0.9rem] border-[3px] border-white/90 bg-navy shadow-[0_30px_58px_-24px_rgba(0,0,0,0.82),0_0_24px_-14px_rgba(255,165,60,0.5)]">
                       <img
                         src={mpHeroVertical}
                         alt="Vertical social video frame of a creator filmed in a studio"
@@ -255,7 +282,12 @@ function MediaProductionPage() {
                     </div>
 
                     {/* 03 — photography / edit preview */}
-                    <div className="absolute bottom-8 right-[6%] w-[30%] overflow-hidden rounded-xl border border-navy/10 bg-white p-1 shadow-[0_28px_58px_-30px_rgba(1,12,98,0.45)]">
+                    <div
+                      className="absolute bottom-8 right-[6%] w-[30%] overflow-hidden rounded-xl border border-white/30 bg-white p-1 shadow-[0_30px_58px_-24px_rgba(0,0,0,0.8),0_0_26px_-14px_rgba(58,241,255,0.45)]"
+                      style={{
+                        transform: "perspective(1200px) rotateY(-11deg) rotateX(3deg) rotate(2deg)",
+                      }}
+                    >
                       <img
                         src={mpDetail}
                         alt="Photography studio lighting setup used during a commercial shoot"
@@ -287,7 +319,7 @@ function MediaProductionPage() {
             <Reveal delay={260}>
               <ul
                 aria-hidden
-                className="mt-16 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground lg:mt-20"
+                className="mt-16 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-white/60 lg:mt-20"
               >
                 {["Direction", "Production", "Photography", "Motion", "Post"].map((t) => (
                   <li key={t} className="flex items-center gap-2">

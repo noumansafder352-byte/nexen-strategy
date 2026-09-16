@@ -417,7 +417,7 @@ function BrandDesignPage() {
 
               {/* Right: label → title → description → large visual */}
               <Reveal delay={120} className="lg:col-span-7">
-                <div key={activeService} className="bd-caption">
+                <div key={activeService} className="bd-caption relative z-10">
                   <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-ember">
                     {String(activeService + 1).padStart(2, "0")} — Capability
                   </p>

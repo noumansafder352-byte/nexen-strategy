@@ -129,30 +129,43 @@ function AiAutomationPage() {
         .ai-dash2{stroke-dasharray:120 1000;animation:ai-dash 26s linear infinite;animation-delay:-8s}
         @keyframes ai-flow{to{stroke-dashoffset:-240}}
         .ai-flow{stroke-dasharray:6 10;animation:ai-flow 6s linear infinite}
-        @media (prefers-reduced-motion: reduce){.ai-caption,.ai-float,.ai-cta-drift,.ai-cta-grid,.ai-dash,.ai-dash2,.ai-flow{animation:none !important}}
+        @keyframes ai-ring{0%,100%{transform:translate(-50%,-50%) rotate(-7deg) scale(1)}50%{transform:translate(-50%,-50%) rotate(3deg) scale(1.035)}}
+        .ai-ring{animation:ai-ring 18s ease-in-out infinite}
+        @media (prefers-reduced-motion: reduce){.ai-caption,.ai-float,.ai-cta-drift,.ai-cta-grid,.ai-dash,.ai-dash2,.ai-flow,.ai-ring{animation:none !important}}
       `}</style>
 
-      <Header />
+      <Header overHero />
       <main className="bg-white">
         {/* ============ HERO ============ */}
-        <section className="relative overflow-hidden pt-[8.75rem] pb-16 lg:pt-36 lg:pb-24">
-          <div aria-hidden className="grid-faint-dark absolute inset-0 opacity-40" />
+        <section
+          className="relative overflow-hidden bg-navy-deep pt-[8.75rem] pb-16 lg:pt-36 lg:pb-24"
+          style={{
+            background:
+              "radial-gradient(circle at 78% 48%, rgba(36, 73, 177, 0.28) 0%, transparent 34%), radial-gradient(circle at 18% 92%, rgba(255, 111, 53, 0.1) 0%, transparent 27%), linear-gradient(125deg, #07043f 0%, #010c62 58%, #05052f 100%)",
+          }}
+        >
+          <div aria-hidden className="grid-faint absolute inset-0 opacity-60" />
           <div
             aria-hidden
             className="pointer-events-none absolute -top-40 right-[-12%] h-[560px] w-[560px] rounded-full opacity-[0.08] blur-[140px]"
             style={{ background: "radial-gradient(circle, #3AF1FF 0%, transparent 70%)" }}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-48 left-[12%] h-[420px] w-[420px] rounded-full opacity-[0.1] blur-[150px]"
+            style={{ background: "radial-gradient(circle, #FF7A3D 0%, transparent 70%)" }}
           />
           <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12">
             <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
               <div className="relative z-10 lg:col-span-6">
                 <Reveal>
                   <div className="flex items-center gap-5">
-                    <p className="eyebrow text-azure">04 — AI &amp; Automation</p>
+                    <p className="eyebrow text-cyan">04 — AI &amp; Automation</p>
                     <span aria-hidden className="h-px w-12 bg-gradient-to-r from-amber to-ember" />
                   </div>
                 </Reveal>
                 <Reveal delay={80}>
-                  <h1 className="display mt-7 text-[3.2rem] leading-[1.02] text-navy sm:text-6xl lg:text-[4.6rem]">
+                  <h1 className="display mt-7 text-[3.2rem] leading-[1.02] text-white sm:text-6xl lg:text-[4.6rem]">
                     Put
                     <br />
                     AI to Work.
@@ -161,7 +174,7 @@ function AiAutomationPage() {
                 <Reveal delay={160}>
                   <div className="mt-8 space-y-5">
                     {heroParagraphs.map((p) => (
-                      <p key={p} className="max-w-lg text-lg leading-relaxed text-muted-foreground">
+                      <p key={p} className="max-w-lg text-lg leading-relaxed text-white/70">
                         {p}
                       </p>
                     ))}
@@ -173,7 +186,7 @@ function AiAutomationPage() {
                       Discover What's Possible
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
-                    <span aria-hidden className="hidden h-px w-16 bg-navy/15 sm:block" />
+                    <span aria-hidden className="hidden h-px w-16 bg-white/20 sm:block" />
                   </div>
                 </Reveal>
               </div>
@@ -191,6 +204,15 @@ function AiAutomationPage() {
                   {/* ===== One proportionally scaled composition at every breakpoint ===== */}
                   <HeroScale designWidth={560} className="relative">
                     <div className="relative aspect-[10/9] w-full">
+                      <span
+                        aria-hidden
+                        className="pointer-events-none absolute left-[54%] top-[51%] block h-[82%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-cyan/10 bg-[radial-gradient(ellipse_at_58%_48%,rgba(58,241,255,0.13),transparent_58%),linear-gradient(135deg,rgba(74,115,255,0.09),transparent_62%)] shadow-[0_0_90px_rgba(58,241,255,0.08)]"
+                      />
+                      <span
+                        aria-hidden
+                        className="ai-ring pointer-events-none absolute left-[55%] top-[50%] block h-[86%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-white/[0.08]"
+                        style={{ transform: "translate(-50%, -50%) rotate(-7deg)" }}
+                      />
                       <svg
                         aria-hidden
                         className="pointer-events-none absolute inset-0 h-full w-full"
@@ -201,8 +223,8 @@ function AiAutomationPage() {
                         {/* mobile → bottom rail → robot icon */}
                         <path
                           d="M30 78 L62 78 L62 84 L86 84"
-                          stroke="#010C62"
-                          strokeOpacity="0.16"
+                          stroke="#3AF1FF"
+                          strokeOpacity="0.35"
                           strokeWidth="0.3"
                           strokeDasharray="1.4 2"
                         />
@@ -216,8 +238,8 @@ function AiAutomationPage() {
                         {/* brain icon → down → right → down → top of mobile assistant */}
                         <path
                           d="M6 22 L6 34 L14 34 L14 42"
-                          stroke="#010C62"
-                          strokeOpacity="0.16"
+                          stroke="#3AF1FF"
+                          strokeOpacity="0.35"
                           strokeWidth="0.3"
                           strokeDasharray="1.4 2"
                         />
@@ -231,19 +253,26 @@ function AiAutomationPage() {
                         {/* automation panel → sparkle */}
                         <path
                           d="M97 45 L97 20"
-                          stroke="#010C62"
-                          strokeOpacity="0.14"
+                          stroke="#3AF1FF"
+                          strokeOpacity="0.3"
                           strokeWidth="0.3"
                           strokeDasharray="1.4 2"
                         />
 
-                        <circle cx="14" cy="42" r="0.8" fill="#010C62" fillOpacity="0.3" />
-                        <circle cx="62" cy="78" r="0.8" fill="#010C62" fillOpacity="0.3" />
-                        <circle cx="97" cy="45" r="0.8" fill="#010C62" fillOpacity="0.3" />
+                        <circle cx="14" cy="42" r="0.8" fill="#3AF1FF" fillOpacity="0.7" />
+                        <circle cx="62" cy="78" r="0.8" fill="#3AF1FF" fillOpacity="0.7" />
+                        <circle cx="97" cy="45" r="0.8" fill="#3AF1FF" fillOpacity="0.7" />
                       </svg>
 
                       {/* MAIN — AI operations dashboard */}
-                      <figure className="absolute left-[12%] top-[8%] w-[76%] overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-[0_46px_92px_-46px_rgba(1,12,98,0.42)]">
+                      <figure
+                        className="absolute left-[12%] top-[8%] w-[76%] overflow-hidden rounded-2xl border border-white/25 bg-white shadow-[0_52px_90px_-34px_rgba(0,0,0,0.78),0_0_34px_-18px_rgba(58,241,255,0.5)]"
+                        style={{
+                          transform:
+                            "perspective(1600px) rotateY(-9deg) rotateX(4deg) rotate(-1.5deg)",
+                          transformStyle: "preserve-3d",
+                        }}
+                      >
                         <div className="flex h-7 items-center gap-1.5 border-b border-navy/[0.07] bg-[#F7F8FC] px-3">
                           <span className="h-1.5 w-1.5 rounded-full bg-navy/15" />
                           <span className="h-1.5 w-1.5 rounded-full bg-navy/10" />
@@ -268,7 +297,13 @@ function AiAutomationPage() {
                       </figure>
 
                       {/* AUTOMATION FLOW — floating vertical panel, right of dashboard */}
-                      <figure className="absolute right-0 top-[38%] w-[30%] overflow-hidden rounded-xl border border-navy/10 bg-white shadow-[0_34px_70px_-34px_rgba(1,12,98,0.42)]">
+                      <figure
+                        className="absolute right-0 top-[38%] w-[30%] overflow-hidden rounded-xl border border-white/30 bg-white shadow-[0_30px_58px_-24px_rgba(0,0,0,0.8),0_0_26px_-14px_rgba(58,241,255,0.45)]"
+                        style={{
+                          transform:
+                            "perspective(1200px) rotateY(-11deg) rotateX(3deg) rotate(2deg)",
+                        }}
+                      >
                         <div className="flex items-center justify-between border-b border-navy/[0.07] bg-white px-2.5 py-1.5">
                           <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-navy/45">
                             Automation Flow
@@ -286,7 +321,7 @@ function AiAutomationPage() {
                       </figure>
 
                       {/* MOBILE AI ASSISTANT — lower-left, overlapping dashboard */}
-                      <figure className="ai-float absolute bottom-[6%] left-[2%] w-[24%] overflow-hidden rounded-[1rem] border-[3px] border-white bg-white shadow-[0_36px_70px_-30px_rgba(1,12,98,0.5)]">
+                      <figure className="ai-float absolute bottom-[6%] left-[2%] w-[24%] overflow-hidden rounded-[1rem] border-[3px] border-white/90 bg-white shadow-[0_30px_58px_-24px_rgba(0,0,0,0.82),0_0_24px_-14px_rgba(255,165,60,0.5)]">
                         <img
                           src={aiHeroMobile}
                           alt="Mobile AI assistant showing a conversation and an automation status card"
@@ -300,19 +335,19 @@ function AiAutomationPage() {
                       {/* Floating AI markers */}
                       <span
                         aria-hidden
-                        className="absolute left-0 top-[13%] flex h-11 w-11 items-center justify-center rounded-xl border border-navy/10 bg-white shadow-[0_18px_36px_-22px_rgba(1,12,98,0.5)]"
+                        className="absolute left-0 top-[13%] flex h-11 w-11 items-center justify-center rounded-xl border border-white/25 bg-navy/75 shadow-[0_18px_36px_-22px_rgba(0,0,0,0.7)] backdrop-blur-sm"
                       >
-                        <BrainCircuit className="h-5 w-5 text-navy/70" strokeWidth={1.4} />
+                        <BrainCircuit className="h-5 w-5 text-cyan" strokeWidth={1.4} />
                       </span>
                       <span
                         aria-hidden
-                        className="absolute bottom-[4%] right-[8%] flex h-11 w-11 items-center justify-center rounded-xl border border-navy/10 bg-white shadow-[0_18px_36px_-22px_rgba(1,12,98,0.5)]"
+                        className="absolute bottom-[4%] right-[8%] flex h-11 w-11 items-center justify-center rounded-xl border border-white/25 bg-navy/75 shadow-[0_18px_36px_-22px_rgba(0,0,0,0.7)] backdrop-blur-sm"
                       >
-                        <Bot className="h-5 w-5 text-navy/70" strokeWidth={1.4} />
+                        <Bot className="h-5 w-5 text-cyan" strokeWidth={1.4} />
                       </span>
                       <span
                         aria-hidden
-                        className="absolute right-[1%] top-[14%] flex h-8 w-8 items-center justify-center rounded-lg border border-navy/10 bg-white shadow-[0_14px_28px_-20px_rgba(1,12,98,0.5)]"
+                        className="absolute right-[1%] top-[14%] flex h-8 w-8 items-center justify-center rounded-lg border border-white/25 bg-navy/75 shadow-[0_14px_28px_-20px_rgba(0,0,0,0.7)] backdrop-blur-sm"
                       >
                         <Sparkles className="h-4 w-4 text-[#3AF1FF]" strokeWidth={1.6} />
                       </span>
@@ -326,7 +361,7 @@ function AiAutomationPage() {
             <Reveal delay={260}>
               <ul
                 aria-hidden
-                className="mt-16 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground lg:mt-20"
+                className="mt-16 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-white/60 lg:mt-20"
               >
                 {[
                   "Customer",
