@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://nexenstrategy.com/</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/about</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/clients</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/gallery</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/portfolio</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/contact</loc>
+  </url>
+  <!-- Services pages -->
+  <url>
+    <loc>https://nexenstrategy.com/services/ai-and-automation</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/services/brand-design</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/services/marketing-and-growth</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/services/media-production</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/services/software-solutions</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/services/web-and-app-development</loc>
+  </url>
+  <!-- Legal pages -->
+  <url>
+    <loc>https://nexenstrategy.com/privacy-policy</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/cookie-policy</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/terms-and-conditions</loc>
+  </url>
+  <url>
+    <loc>https://nexenstrategy.com/disclaimer</loc>
+  </url>
+</urlset>

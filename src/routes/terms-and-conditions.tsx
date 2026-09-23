@@ -4,6 +4,9 @@ import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 
 export const Route = createFileRoute("/terms-and-conditions")({
+  head: () => ({
+    meta: [{ title: "Terms & Conditions — Nexen Strategy" }],
+  }),
   component: TermsAndConditionsPage,
 });
 

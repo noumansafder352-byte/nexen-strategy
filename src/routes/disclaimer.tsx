@@ -4,6 +4,9 @@ import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 
 export const Route = createFileRoute("/disclaimer")({
+  head: () => ({
+    meta: [{ title: "Disclaimer — Nexen Strategy" }],
+  }),
   component: DisclaimerPage,
 });
 

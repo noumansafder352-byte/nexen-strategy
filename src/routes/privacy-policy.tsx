@@ -513,6 +513,9 @@ import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 
 export const Route = createFileRoute("/privacy-policy")({
+  head: () => ({
+    meta: [{ title: "Privacy Policy — Nexen Strategy" }],
+  }),
   component: PrivacyPolicyPage,
 });
 
