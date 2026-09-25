@@ -11,16 +11,35 @@ import {
   Gauge,
   type LucideIcon,
 } from "lucide-react";
+import {
+  SiFigma,
+  SiFlutter,
+  SiAngular,
+  SiDocker,
+  SiGit,
+  SiGraphql,
+  SiLaravel,
+  SiMongodb,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiShopify,
+  SiTailwindcss,
+  SiTypescript,
+  SiVuedotjs,
+  SiWordpress,
+} from "react-icons/si";
+import { FaAws } from "react-icons/fa6";
+import { RiOpenaiFill } from "react-icons/ri";
+import type { IconType } from "react-icons";
 
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Reveal } from "@/components/site/Reveal";
-import { HeroScale } from "@/components/site/HeroScale";
 import { cn } from "@/lib/utils";
 
-import wadHeroMain from "@/assets/services/web-app-development/wad-hero-main.jpg";
-import wadHeroMobile from "@/assets/services/web-app-development/wad-hero-mobile.jpg";
-import wadHeroPanel from "@/assets/services/web-app-development/wad-hero-panel.jpg";
 import wadOverview from "@/assets/services/web-app-development/wad-overview.jpg";
 import wadWebsite from "@/assets/services/web-app-development/wad-website.jpg";
 import wadWebapp from "@/assets/services/web-app-development/wad-webapp.jpg";
@@ -105,6 +124,37 @@ const pipeline: { name: string; icon: LucideIcon }[] = [
   { name: "Optimisation", icon: Gauge },
 ];
 
+const technologyStack = [
+  { name: "React", icon: SiReact, tone: "cyan", x: 8, y: 18, rotate: -8, depth: 0 },
+  { name: "TypeScript", icon: SiTypescript, tone: "blue", x: 34, y: 5, rotate: 6, depth: 1 },
+  { name: "Next.js", icon: SiNextdotjs, tone: "white", x: 65, y: 12, rotate: 9, depth: 0 },
+  { name: "Node.js", icon: SiNodedotjs, tone: "lime", x: 82, y: 29, rotate: -7, depth: 2 },
+  { name: "Python", icon: SiPython, tone: "gold", x: 4, y: 49, rotate: 8, depth: 1 },
+  { name: "PostgreSQL", icon: SiPostgresql, tone: "blue", x: 25, y: 35, rotate: -5, depth: 2 },
+  { name: "MongoDB", icon: SiMongodb, tone: "lime", x: 52, y: 32, rotate: 4, depth: 0 },
+  { name: "AWS", icon: FaAws, tone: "orange", x: 72, y: 49, rotate: -9, depth: 1 },
+  { name: "Tailwind", icon: SiTailwindcss, tone: "cyan", x: 16, y: 70, rotate: -6, depth: 0 },
+  { name: "WordPress", icon: SiWordpress, tone: "blue", x: 43, y: 61, rotate: 8, depth: 2 },
+  { name: "Shopify", icon: SiShopify, tone: "lime", x: 68, y: 70, rotate: -4, depth: 1 },
+  { name: "Figma", icon: SiFigma, tone: "pink", x: 88, y: 65, rotate: 8, depth: 2 },
+  { name: "Flutter", icon: SiFlutter, tone: "cyan", x: 2, y: 84, rotate: 7, depth: 1 },
+  { name: "OpenAI", icon: RiOpenaiFill, tone: "white", x: 51, y: 86, rotate: -7, depth: 0 },
+  { name: "GraphQL", icon: SiGraphql, tone: "pink", x: 82, y: 88, rotate: 5, depth: 2 },
+  { name: "Vue", icon: SiVuedotjs, tone: "lime", x: 12, y: 96, rotate: -4, depth: 1 },
+  { name: "Angular", icon: SiAngular, tone: "pink", x: 34, y: 96, rotate: 6, depth: 0 },
+  { name: "Laravel", icon: SiLaravel, tone: "orange", x: 56, y: 96, rotate: -7, depth: 2 },
+  { name: "Docker", icon: SiDocker, tone: "blue", x: 72, y: 96, rotate: 5, depth: 1 },
+  { name: "Git", icon: SiGit, tone: "orange", x: 90, y: 96, rotate: -5, depth: 0 },
+] satisfies Array<{
+  name: string;
+  icon: IconType;
+  tone: string;
+  x: number;
+  y: number;
+  rotate: number;
+  depth: number;
+}>;
+
 const closingParagraphs = [
   "We don't start with a template.",
   "We start with your goals, audience and requirements, then select the right approach to deliver the best outcome.",
@@ -173,8 +223,6 @@ function WebAppDevelopmentPage() {
       <style>{`
         @keyframes wad-caption{0%{opacity:0;transform:translateY(6px)}100%{opacity:1;transform:translateY(0)}}
         .wad-caption{animation:wad-caption .45s ease-out both}
-        @keyframes wad-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-        .wad-float{animation:wad-float 9s ease-in-out infinite}
         @keyframes wad-cta-drift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(3%,-2.5%,0) scale(1.06)}}
         .wad-cta-drift{animation:wad-cta-drift 24s ease-in-out infinite}
         @keyframes wad-cta-grid{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-72px,-72px,0)}}
@@ -182,9 +230,28 @@ function WebAppDevelopmentPage() {
         @keyframes wad-dash{to{stroke-dashoffset:-1600}}
         .wad-dash{stroke-dasharray:160 900;animation:wad-dash 20s linear infinite}
         .wad-dash2{stroke-dasharray:120 1000;animation:wad-dash 26s linear infinite;animation-delay:-8s}
-        @keyframes wad-ring{0%,100%{transform:translate(-50%,-50%) rotate(-7deg) scale(1)}50%{transform:translate(-50%,-50%) rotate(3deg) scale(1.035)}}
-        .wad-ring{animation:wad-ring 18s ease-in-out infinite}
-        @media (prefers-reduced-motion: reduce){.wad-caption,.wad-float,.wad-cta-drift,.wad-cta-grid,.wad-dash,.wad-dash2,.wad-ring{animation:none !important}}
+        @keyframes wad-tech-scan{0%,100%{opacity:.35;transform:translateX(-100%)}50%{opacity:.9;transform:translateX(100%)}}
+        .wad-tech-scan{animation:wad-tech-scan 5s ease-in-out infinite}
+        @keyframes wad-tech-card-in{0%{opacity:0;filter:blur(8px)}100%{opacity:1;filter:blur(0)}}
+        @keyframes wad-tech-card-live{0%,100%{box-shadow:0 18px 28px -22px rgba(0,0,0,.95),inset 0 1px 0 rgba(255,255,255,.16)}50%{box-shadow:0 20px 30px -21px rgba(0,0,0,.95),0 0 18px rgba(58,241,255,.1),inset 0 1px 0 rgba(255,255,255,.2)}}
+        .wad-tech-stage{perspective:1500px;transform-style:preserve-3d}
+        .wad-tech-console{transform:rotateX(7deg) rotateY(-8deg) rotateZ(-1deg);transform-style:preserve-3d;box-shadow:35px 45px 80px -42px rgba(0,0,0,.95),inset 0 1px 0 rgba(255,255,255,.18);backdrop-filter:blur(14px)}
+        .wad-tech-console:before{content:"";position:absolute;inset:10px;border:1px solid rgba(255,255,255,.07);pointer-events:none}
+        .wad-tech-card{box-shadow:0 18px 28px -22px rgba(0,0,0,.95),inset 0 1px 0 rgba(255,255,255,.16);transform:translateZ(10px);transition:transform .35s ease,background .35s ease,box-shadow .35s ease;animation:wad-tech-card-in .7s cubic-bezier(.2,.8,.2,1) both,wad-tech-card-live 4.8s ease-in-out infinite}
+        .wad-tech-card:nth-child(n+6):nth-child(-n+10){transform:translateZ(20px)}
+        .wad-tech-card:nth-child(n+11){transform:translateZ(30px)}
+        .wad-tech-card:hover{transform:translateZ(48px) scale(1.08);background:rgba(25,45,112,.92);box-shadow:0 25px 35px -18px rgba(0,0,0,.95),0 0 30px rgba(58,241,255,.18)}
+        .tech-mark{display:flex;height:2rem;width:2rem;align-items:center;justify-content:center;border-radius:.55rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;font-weight:700;letter-spacing:-.04em}
+        .tech-mark-cyan{background:rgba(58,241,255,.14);color:#3af1ff;box-shadow:0 0 18px rgba(58,241,255,.2)}
+        .tech-mark-blue{background:rgba(82,132,255,.2);color:#9db9ff}
+        .tech-mark-white{background:rgba(255,255,255,.12);color:#fff}
+        .tech-mark-lime{background:rgba(167,236,92,.16);color:#c4f68a}
+        .tech-mark-gold{background:rgba(255,195,78,.16);color:#ffd37a}
+        .tech-mark-orange{background:rgba(255,122,61,.16);color:#ff9b70}
+        .tech-mark-pink{background:rgba(255,111,183,.16);color:#ff9fce}
+        @media (prefers-reduced-motion: reduce){.wad-caption,.wad-cta-drift,.wad-cta-grid,.wad-dash,.wad-dash2,.wad-tech-scan,.wad-tech-card{animation:none !important}}
+        @media (max-width: 1023px){.wad-tech-console{transform:none}}
+        @media (max-width: 520px){.wad-tech-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.wad-tech-card:nth-child(n){transform:translateZ(8px)}.wad-tech-card:hover{transform:translateZ(22px) scale(1.04)}}
       `}</style>
 
       <Header overHero />
@@ -240,151 +307,56 @@ function WebAppDevelopmentPage() {
                   </div>
                 </Reveal>
               </div>
-
-              {/* ---- Digital product ecosystem showcase ---- */}
-              <Reveal delay={180} className="lg:col-span-6">
-                <HeroScale designWidth={620} className="relative">
-                  <div className="relative mx-auto w-full">
-                    <span
+              <Reveal delay={180} className="relative z-10 -mt-8 lg:col-span-6 lg:-mt-16">
+                <div className="wad-tech-stage relative mx-auto w-full max-w-[680px] py-3 sm:py-6">
+                  <div className="wad-tech-console relative overflow-hidden rounded-[2rem] border border-white/15 bg-[#071348]/75 p-5 sm:p-7">
+                    <div
                       aria-hidden
-                      className="pointer-events-none absolute left-[54%] top-[51%] block h-[78%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-cyan/10 bg-[radial-gradient(ellipse_at_58%_48%,rgba(58,241,255,0.13),transparent_58%),linear-gradient(135deg,rgba(74,115,255,0.09),transparent_62%)] shadow-[0_0_90px_rgba(58,241,255,0.08)]"
+                      className="wad-tech-scan pointer-events-none absolute left-0 top-0 h-px w-1/3 bg-gradient-to-r from-transparent via-cyan to-transparent"
                     />
-                    <span
-                      aria-hidden
-                      className="wad-ring pointer-events-none absolute left-[55%] top-[50%] block h-[82%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border border-white/[0.08]"
-                      style={{ transform: "translate(-50%, -50%) rotate(-7deg)" }}
-                    />
-                    {/* atmospheric depth */}
-                    <span
-                      aria-hidden
-                      className="pointer-events-none absolute left-1/2 top-1/2 block h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.08] blur-[130px]"
-                      style={{ background: "radial-gradient(circle, #3AF1FF 0%, transparent 70%)" }}
-                    />
-                    {/* dotted technical connectors + labels (desktop) */}
-                    <svg
-                      aria-hidden
-                      viewBox="0 0 100 100"
-                      preserveAspectRatio="none"
-                      className="pointer-events-none absolute inset-0 block h-full w-full"
-                    >
-                      <path
-                        d="M56 8 L66 8 L66 15"
-                        fill="none"
-                        stroke="#3AF1FF"
-                        strokeOpacity="0.45"
-                        strokeWidth="0.3"
-                        strokeDasharray="2 2"
-                        vectorEffect="non-scaling-stroke"
-                      />
-                      <path
-                        d="M96 62 L92 62 L92 74"
-                        fill="none"
-                        stroke="#3AF1FF"
-                        strokeOpacity="0.4"
-                        strokeWidth="0.3"
-                        strokeDasharray="2 2"
-                        vectorEffect="non-scaling-stroke"
-                      />
-                      <path
-                        d="M4 88 L14 88 L14 80"
-                        fill="none"
-                        stroke="#3AF1FF"
-                        strokeOpacity="0.4"
-                        strokeWidth="0.3"
-                        strokeDasharray="2 2"
-                        vectorEffect="non-scaling-stroke"
-                      />
-                    </svg>
-
-                    <div className="block pb-[14%] pl-[6%] pr-[6%] pt-[14%]">
-                      {/* 01 — main web experience */}
-                      <figure
-                        className="relative ml-auto w-[86%]"
-                        style={{ perspective: "1600px" }}
-                      >
-                        <div
-                          className="overflow-hidden rounded-2xl border border-white/25 bg-white shadow-[0_52px_90px_-34px_rgba(0,0,0,0.78),0_0_34px_-18px_rgba(58,241,255,0.5)]"
-                          style={{
-                            transform: "rotateY(-9deg) rotateX(4deg) rotate(-1.5deg)",
-                            transformStyle: "preserve-3d",
-                          }}
-                        >
-                          <div className="flex h-7 items-center gap-1.5 border-b border-navy/[0.06] bg-white px-3">
-                            <span className="h-1.5 w-1.5 rounded-full bg-ember/50" />
-                            <span className="h-1.5 w-1.5 rounded-full bg-amber/60" />
-                            <span className="h-1.5 w-1.5 rounded-full bg-navy/15" />
-                            <span className="ml-3 h-2 w-24 rounded-full bg-navy/[0.05]" />
-                          </div>
-                          <img
-                            src={wadHeroMain}
-                            alt="Premium corporate website interface displayed in a browser window"
-                            width={1280}
-                            height={1024}
-                            className="aspect-[5/4] w-full object-cover"
-                          />
+                    <div className="relative mb-6 flex items-end justify-between border-b border-white/10 pb-5">
+                      <div>
+                        <div className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.28em] text-cyan">
+                          <span className="h-1.5 w-1.5 rounded-full bg-cyan shadow-[0_0_10px_#3af1ff]" />
+                          Nexen / Core systems
                         </div>
-                      </figure>
-
-                      {/* 02 — application dashboard, upper-right overlap */}
-                      <figure className="absolute right-0 top-[55%] z-20 w-[46%]">
-                        <div
-                          className="overflow-hidden rounded-xl border border-white/30 bg-white shadow-[0_30px_58px_-24px_rgba(0,0,0,0.8),0_0_26px_-14px_rgba(58,241,255,0.45)]"
-                          style={{ transform: "rotateY(-11deg) rotateX(3deg) rotate(2deg)" }}
-                        >
-                          <img
-                            src={wadHeroPanel}
-                            alt="Web application analytics dashboard panel"
-                            loading="lazy"
-                            width={1024}
-                            height={768}
-                            className="block aspect-[4/3] w-full object-cover"
-                          />
-                        </div>
-                      </figure>
-
-                      {/* 03 — mobile app, lower-left overlap */}
-                      <figure className="wad-float absolute bottom-[8%] left-0 z-20 w-[22%]">
-                        <div
-                          className="overflow-hidden rounded-[1.1rem] border border-white/30 bg-navy shadow-[0_30px_58px_-24px_rgba(0,0,0,0.82),0_0_24px_-14px_rgba(255,165,60,0.5)]"
-                          style={{ transform: "rotateY(9deg) rotateX(-3deg) rotate(-4deg)" }}
-                        >
-                          <img
-                            src={wadHeroMobile}
-                            alt="Mobile application interface screen"
-                            loading="lazy"
-                            width={720}
-                            height={1280}
-                            className="block aspect-[9/18] w-full rounded-[1rem] object-cover object-top"
-                          />
-                        </div>
-                      </figure>
+                        <p className="mt-2 text-xl font-medium tracking-tight text-white sm:text-2xl">
+                          Built on the right stack.
+                        </p>
+                      </div>
+                      <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">
+                        v. 02.26
+                      </span>
                     </div>
-
-                    {/* subtle markers */}
-                    {/* <span
-                    aria-hidden
-                    className="absolute left-[40%] top-[6%] hidden text-[0.58rem] font-medium uppercase tracking-[0.26em] text-navy/40 sm:block"
-                  >
-                    02 — App
-                  </span>
-                  <span
-                    aria-hidden
-                    className="absolute right-0 top-[58%] hidden text-[0.58rem] font-medium uppercase tracking-[0.26em] text-navy/40 sm:block"
-                  >
-                    01 — Web
-                  </span>
-                  <span
-                    aria-hidden
-                    className="absolute bottom-[8%] left-0 hidden text-[0.58rem] font-medium uppercase tracking-[0.26em] text-navy/40 sm:block"
-                  >
-                    03 — Mobile
-                  </span> */}
-                    <span
-                      aria-hidden
-                      className="absolute right-[3%] top-[46%] block h-1.5 w-1.5 rounded-full bg-amber"
-                    />
+                    <div className="wad-tech-grid relative grid grid-cols-5 gap-2.5 sm:gap-3">
+                      {technologyStack.map((technology, index) => (
+                        <div
+                          key={technology.name}
+                          className="wad-tech-card group relative flex min-h-[5rem] flex-col items-center justify-center rounded-xl border border-white/10 bg-white/[0.055] px-1 py-2.5 text-center"
+                          style={{
+                            animationDelay: `${index * 55}ms`,
+                          }}
+                          title={technology.name}
+                        >
+                          <span
+                            className={`tech-mark tech-mark-${technology.tone} transition-transform duration-300 group-hover:scale-110`}
+                          >
+                            <technology.icon aria-hidden className="h-5 w-5" />
+                          </span>
+                          <span className="mt-2 max-w-full truncate px-1 font-mono text-[8px] uppercase tracking-[0.08em] text-white/55 transition-colors group-hover:text-white/90">
+                            {technology.name}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="relative mt-5 flex items-center justify-between border-t border-white/10 pt-4 font-mono text-[8px] uppercase tracking-[0.18em] text-white/35">
+                      <span>20 technologies</span>
+                      <span className="flex items-center gap-2 text-cyan/70">
+                        <span className="h-1 w-1 rounded-full bg-cyan" /> Production ready
+                      </span>
+                    </div>
                   </div>
-                </HeroScale>
+                </div>
               </Reveal>
             </div>
           </div>
