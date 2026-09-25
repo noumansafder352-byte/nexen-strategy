@@ -279,7 +279,7 @@ function ContactPage() {
     ].join("\n");
 
     const encoded = encodeURIComponent(whatsappMessage);
-    window.location.href = `https://wa.link/u8asi4?text=${encoded}`;
+    window.location.href = `https://wa.me/923358084973?text=${encoded}`;
 
     setSent(true);
     toast.success("Enquiry received", {
