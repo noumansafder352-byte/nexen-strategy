@@ -91,7 +91,7 @@ const capabilities = [
 
 const approachParagraphs = [
   "We don't believe in chasing vanity metrics.",
-  "Our focus is on the metrics that matter to your business — visibility, engagement, leads, customers and growth.",
+  "Our focus is on the metrics that matter to your business, visibility, engagement, leads, customers and growth.",
 ];
 
 const growthStages: { name: string; icon: LucideIcon }[] = [

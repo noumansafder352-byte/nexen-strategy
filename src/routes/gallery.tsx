@@ -46,53 +46,53 @@ interface GalleryItem {
 const items: GalleryItem[] = [
   {
     src: mediaShoot1,
-    title: "Dr. Shoaib — Clinical Shoot",
+    title: "Dr. Shoaib, Clinical Shoot",
     alt: "Professional photography and video production for Dr. Shoaib.",
   },
   {
     src: mediaShoot2,
-    title: "Dr. Shoaib — Clinical Shoot",
+    title: "Dr. Shoaib, Clinical Shoot",
     alt: "Professional photography and video production for Dr. Shoaib.",
   },
   {
     src: mediaShoot3,
-    title: "Dr. Shoaib — Clinical Shoot",
+    title: "Dr. Shoaib, Clinical Shoot",
     alt: "Professional photography and video production for Dr. Shoaib.",
   },
   {
     src: mediaShoot4,
-    title: "Dr. Shoaib — Clinical Shoot",
+    title: "Dr. Shoaib, Clinical Shoot",
     alt: "Professional photography and video production for Dr. Shoaib.",
   },
   {
     src: mediaShoot5,
-    title: "Dr. Shoaib — Clinical Shoot",
+    title: "Dr. Shoaib, Clinical Shoot",
     alt: "Professional photography and video production for Dr. Shoaib.",
   },
   {
     src: mediaShoot6,
-    title: "Dr. Shoaib — Clinical Shoot",
+    title: "Dr. Shoaib, Clinical Shoot",
     alt: "Professional photography and video production for Dr. Shoaib.",
   },
 
   {
     src: drshahidimg1,
-    title: "Dr. Shahid Mahmud — Clinical Shoot",
+    title: "Dr. Shahid Mahmud, Clinical Shoot",
     alt: "Professional photography and video production for Dr. Shahid Mahmud",
   },
   {
     src: drshahidimg2,
-    title: "Dr. Shahid Mahmud — Clinical Shoot",
+    title: "Dr. Shahid Mahmud, Clinical Shoot",
     alt: "Professional photography and video production for Dr. Shahid Mahmud",
   },
   {
     src: drshahidimg3,
-    title: "Dr. Shahid Mahmud — Clinical Shoot",
+    title: "Dr. Shahid Mahmud, Clinical Shoot",
     alt: "Professional photography and video production for Dr. Shahid Mahmud",
   },
   {
     src: drshahidimg4,
-    title: "Dr. Shahid Mahmud — Clinical Shoot",
+    title: "Dr. Shahid Mahmud, Clinical Shoot",
     alt: "Professional photography and video production for Dr. Shahid Mahmud",
   },
 ];

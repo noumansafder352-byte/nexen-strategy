@@ -352,7 +352,7 @@ function ContactPage() {
             <Reveal delay={140}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground lg:text-xl">
                 Whether it's your business, digital presence, technology, AI, marketing or creative
-                requirements — tell us where you're heading and we'll show you how we can help you
+                requirements, tell us where you're heading and we'll show you how we can help you
                 get there.
               </p>
             </Reveal>
@@ -375,7 +375,7 @@ function ContactPage() {
               <Reveal delay={70}>
                 <p className="mt-6 max-w-md leading-relaxed text-muted-foreground">
                   Share a few details about your project and a senior member of the team will come
-                  back to you with an honest view on how we'd approach it — and whether we're the
+                  back to you with an honest view on how we'd approach it, and whether we're the
                   right partner for the work.
                 </p>
               </Reveal>

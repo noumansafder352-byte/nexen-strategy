@@ -16,7 +16,7 @@ const projects = [
     sector: "Investment & Advisory",
     category: "Web & App Development",
     summary:
-      "A responsive digital experience engineered end to end — clear communication, intuitive journeys and a scalable foundation built to support growth.",
+      "A responsive digital experience engineered end to end, clear communication, intuitive journeys and a scalable foundation built to support growth.",
     image: royaWeb,
   },
   {
@@ -48,7 +48,7 @@ const projects = [
     sector: "Healthcare",
     category: "Social Media Marketing",
     summary:
-      "Social media marketing across multiple platforms — consistent content, increased visibility and strong engagement and audience growth for the clinic.",
+      "Social media marketing across multiple platforms, consistent content, increased visibility and strong engagement and audience growth for the clinic.",
     image: drShahidSocial,
   },
 ];

@@ -498,7 +498,7 @@ function AboutPage() {
                 <Reveal delay={230}>
                   <p className="mt-7 text-lg leading-relaxed text-white/70">
                     From there, we develop practical, scalable solutions designed around what your
-                    business actually needs — not simply what is technically possible.
+                    business actually needs, not simply what is technically possible.
                   </p>
                 </Reveal>
               </div>

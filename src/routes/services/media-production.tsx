@@ -28,7 +28,7 @@ const heroIntro =
   "From corporate films to social content, professional photography and motion graphics, we create visual experiences that communicate your message and strengthen your brand.";
 
 const closingIntro =
-  "We combine strategy, creative direction and production to create content that doesn't just look good — it communicates.";
+  "We combine strategy, creative direction and production to create content that doesn't just look good, it communicates.";
 
 const capabilities = [
   {
