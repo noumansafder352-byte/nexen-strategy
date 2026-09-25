@@ -12,6 +12,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import {
+  SiClaude,
   SiFigma,
   SiFlutter,
   SiAngular,
@@ -32,7 +33,6 @@ import {
   SiWordpress,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa6";
-import { RiOpenaiFill } from "react-icons/ri";
 import type { IconType } from "react-icons";
 
 import { Header } from "@/components/site/Header";
@@ -138,7 +138,7 @@ const technologyStack = [
   { name: "Shopify", icon: SiShopify, tone: "lime", x: 68, y: 70, rotate: -4, depth: 1 },
   { name: "Figma", icon: SiFigma, tone: "pink", x: 88, y: 65, rotate: 8, depth: 2 },
   { name: "Flutter", icon: SiFlutter, tone: "cyan", x: 2, y: 84, rotate: 7, depth: 1 },
-  { name: "OpenAI", icon: RiOpenaiFill, tone: "white", x: 51, y: 86, rotate: -7, depth: 0 },
+  { name: "Claude Code", icon: SiClaude, tone: "white", x: 51, y: 86, rotate: -7, depth: 0 },
   { name: "GraphQL", icon: SiGraphql, tone: "pink", x: 82, y: 88, rotate: 5, depth: 2 },
   { name: "Vue", icon: SiVuedotjs, tone: "lime", x: 12, y: 96, rotate: -4, depth: 1 },
   { name: "Angular", icon: SiAngular, tone: "pink", x: 34, y: 96, rotate: 6, depth: 0 },
