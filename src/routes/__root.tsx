@@ -151,7 +151,14 @@
 // }
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Outlet, Link, createRootRouteWithContext, useRouter } from "@tanstack/react-router";
+// import { Outlet, Link, createRootRouteWithContext, useRouter } from "@tanstack/react-router";
+import {
+  Outlet,
+  Link,
+  HeadContent,
+  createRootRouteWithContext,
+  useRouter,
+} from "@tanstack/react-router";
 import { useEffect } from "react";
 
 import { Toaster } from "@/components/ui/sonner";
@@ -235,12 +242,30 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Outlet />
+    <>
+      <HeadContent />
 
-      <Toaster position="bottom-left" />
+      <QueryClientProvider client={queryClient}>
+        <Outlet />
 
-      <FloatingActions />
-    </QueryClientProvider>
+        <Toaster position="bottom-left" />
+
+        <FloatingActions />
+      </QueryClientProvider>
+    </>
   );
 }
+
+// function RootComponent() {
+//   const { queryClient } = Route.useRouteContext();
+
+//   return (
+//     <QueryClientProvider client={queryClient}>
+//       <Outlet />
+
+//       <Toaster position="bottom-left" />
+
+//       <FloatingActions />
+//     </QueryClientProvider>
+//   );
+// }

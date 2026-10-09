@@ -44,6 +44,8 @@ import austinPizza from "@/assets/clients/client-austin-pizza.svg";
 import amigos from "@/assets/clients/client-amigos.svg";
 import heroVideo from "@/assets/clients/clients-hero.mp4";
 import lscLogo from "@/assets/lsc-logo.svg";
+import highreach from "@/assets/clients/highreach-logo.png";
+import trllogo from "@/assets/clients/trl-logo.svg";
 
 type Client = { name: string; src: string };
 
@@ -55,6 +57,8 @@ const industries: { num: string; title: string; note: string; clients: Client[] 
     clients: [
       { name: "LSC", src: lscLogo },
       { name: "GATD", src: gatd },
+      { name: "TRL", src: trllogo },
+      { name: "HighReach", src: highreach },
       { name: "Torque", src: torque },
       { name: "Comwave", src: comwave },
       { name: "Quran Reading", src: quranReading },
