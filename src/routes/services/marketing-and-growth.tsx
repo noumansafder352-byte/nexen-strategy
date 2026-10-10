@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
@@ -311,8 +312,7 @@ function GrowthJourney() {
 export const Route = createFileRoute("/services/marketing-and-growth")({
   head: () => ({
     meta: [
-      { title: "Marketing & Growth — Nexen Strategy" },
-      { name: "description", content: heroIntro.slice(0, 155) },
+      ...seoMeta("/services/marketing-and-growth"),
       {
         property: "og:title",
         content: "Turn Attention Into Opportunity. | Marketing & Growth — Nexen Strategy",
@@ -321,6 +321,7 @@ export const Route = createFileRoute("/services/marketing-and-growth")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: seoLinks("/services/marketing-and-growth"),
   }),
   component: MarketingGrowthPage,
 });

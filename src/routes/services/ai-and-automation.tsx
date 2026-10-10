@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { useState } from "react";
 import { ArrowRight, Bot, BrainCircuit, Sparkles } from "lucide-react";
 
@@ -89,8 +90,7 @@ const purposeParagraphs = [
 export const Route = createFileRoute("/services/ai-and-automation")({
   head: () => ({
     meta: [
-      { title: "AI & Automation — Nexen Strategy" },
-      { name: "description", content: heroParagraphs[1]!.slice(0, 155) },
+      ...seoMeta("/services/ai-and-automation"),
       {
         property: "og:title",
         content: "Put AI to Work. | AI & Automation — Nexen Strategy",
@@ -99,12 +99,7 @@ export const Route = createFileRoute("/services/ai-and-automation")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      {
-        rel: "canonical",
-        href: "https://nexen-launchpad-studio.lovable.app/services/ai-and-automation",
-      },
-    ],
+    links: seoLinks("/services/ai-and-automation"),
   }),
   component: AiAutomationPage,
 });

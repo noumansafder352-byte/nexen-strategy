@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
@@ -83,8 +84,7 @@ const whyParagraphs = [
 export const Route = createFileRoute("/services/software-solutions")({
   head: () => ({
     meta: [
-      { title: "Software Solutions — Nexen Strategy" },
-      { name: "description", content: heroParagraphs[1]!.slice(0, 155) },
+      ...seoMeta("/services/software-solutions"),
       {
         property: "og:title",
         content: "Software That Works Around Your Business. | Software Solutions — Nexen Strategy",
@@ -93,12 +93,7 @@ export const Route = createFileRoute("/services/software-solutions")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      {
-        rel: "canonical",
-        href: "https://nexen-launchpad-studio.lovable.app/services/software-solutions",
-      },
-    ],
+    links: seoLinks("/services/software-solutions"),
   }),
   component: SoftwareSolutionsPage,
 });

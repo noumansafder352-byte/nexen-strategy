@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { useRef, useState } from "react";
 import {
   ArrowRight,
@@ -25,12 +26,7 @@ const aboutEcosystem = aboutEcosystemAsset;
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Nexen Strategy" },
-      {
-        name: "description",
-        content:
-          "Nexen Strategy brings together strategy, technology, creativity, and innovation to help businesses build, transform, and grow in an increasingly digital world.",
-      },
+      ...seoMeta("/about"),
       { property: "og:title", content: "About Nexen Strategy" },
       {
         property: "og:description",
@@ -40,6 +36,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: seoLinks("/about"),
   }),
   component: AboutPage,
 });

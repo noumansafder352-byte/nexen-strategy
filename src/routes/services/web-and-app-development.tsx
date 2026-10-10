@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
@@ -163,8 +164,7 @@ const closingParagraphs = [
 export const Route = createFileRoute("/services/web-and-app-development")({
   head: () => ({
     meta: [
-      { title: "Web & App Development — Nexen Strategy" },
-      { name: "description", content: heroParagraph.slice(0, 155) },
+      ...seoMeta("/services/web-and-app-development"),
       {
         property: "og:title",
         content: "Digital Experiences Built to Perform. | Web & App Development — Nexen Strategy",
@@ -173,6 +173,7 @@ export const Route = createFileRoute("/services/web-and-app-development")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: seoLinks("/services/web-and-app-development"),
   }),
   component: WebAppDevelopmentPage,
 });

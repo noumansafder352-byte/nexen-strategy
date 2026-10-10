@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { useState } from "react";
 
 import { Header } from "@/components/site/Header";
@@ -18,12 +19,7 @@ import drshahidimg4 from "@/assets/gallery/drshahid-img4.png";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Nexen Strategy" },
-      {
-        name: "description",
-        content:
-          "Visual Work. Real Stories. A curated selection of visual content created by Nexen Strategy to bring brands, people and ideas to life.",
-      },
+      ...seoMeta("/gallery"),
       { property: "og:title", content: "Gallery — Nexen Strategy" },
       {
         property: "og:description",
@@ -33,6 +29,7 @@ export const Route = createFileRoute("/gallery")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: seoLinks("/gallery"),
   }),
   component: GalleryPage,
 });

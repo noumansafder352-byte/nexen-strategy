@@ -1,11 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { ArrowRight, FileCheck2 } from "lucide-react";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 
 export const Route = createFileRoute("/terms-and-conditions")({
   head: () => ({
-    meta: [{ title: "Terms & Conditions — Nexen Strategy" }],
+    meta: seoMeta("/terms-and-conditions"),
+    links: seoLinks("/terms-and-conditions"),
   }),
   component: TermsAndConditionsPage,
 });

@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { useState } from "react";
 import { ArrowRight, Play } from "lucide-react";
 
@@ -84,8 +85,7 @@ const capabilities = [
 export const Route = createFileRoute("/services/media-production")({
   head: () => ({
     meta: [
-      { title: "Media Production — Nexen Strategy" },
-      { name: "description", content: heroIntro.slice(0, 155) },
+      ...seoMeta("/services/media-production"),
       {
         property: "og:title",
         content: "Make Your Story Impossible to Ignore. | Media Production — Nexen Strategy",
@@ -94,6 +94,7 @@ export const Route = createFileRoute("/services/media-production")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: seoLinks("/services/media-production"),
   }),
   component: MediaProductionPage,
 });

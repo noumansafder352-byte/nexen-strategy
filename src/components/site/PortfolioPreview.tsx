@@ -18,6 +18,8 @@ const projects = [
     summary:
       "A responsive digital experience engineered end to end, clear communication, intuitive journeys and a scalable foundation built to support growth.",
     image: royaWeb,
+    // wide website screenshot: show it whole instead of cropping the sides
+    contain: true,
   },
   {
     title: "Hightech",
@@ -245,12 +247,25 @@ export function PortfolioPreview() {
               className="group relative block overflow-hidden border border-white/10 transition-colors duration-500 hover:border-[#3AF1FF]/40"
               style={{ boxShadow: "0 30px 80px -40px rgba(0,0,0,0.8)" }}
             >
+              {"contain" in p && p.contain && (
+                <img
+                  key={`${p.image}-bg`}
+                  src={p.image}
+                  alt=""
+                  aria-hidden
+                  loading="lazy"
+                  className="pp-img absolute inset-0 h-full w-full scale-110 object-cover blur-xl"
+                />
+              )}
               <img
                 key={p.image}
                 src={p.image}
                 alt={`${p.title} — ${p.category} case study`}
                 loading="lazy"
-                className="pp-img h-[240px] w-full object-cover object-center transition-transform duration-[600ms] ease-out group-hover:scale-[1.02] sm:h-[320px] lg:h-[400px]"
+                className={cn(
+                  "pp-img relative h-[240px] w-full object-center transition-transform duration-[600ms] ease-out group-hover:scale-[1.02] sm:h-[320px] lg:h-[400px]",
+                  "contain" in p && p.contain ? "object-contain" : "object-cover",
+                )}
               />
               <span
                 aria-hidden

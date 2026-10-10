@@ -20,6 +20,11 @@ import imgSoftware from "@/assets/homepageservices/svc-software-solutions.jpg";
 import imgAi from "@/assets/homepageservices/svc-ai-automation.jpg";
 import imgMarketing from "@/assets/homepageservices/svc-marketing-growth.jpg";
 import imgMedia from "@/assets/homepageservices/svc-media-production.jpg";
+import imgBrandMobile from "@/assets/homepageservices/mobile/svc-brand-design-mobile.jpg";
+import imgWebMobile from "@/assets/homepageservices/mobile/svc-web-development-mobile.jpg";
+import imgSoftwareMobile from "@/assets/homepageservices/mobile/svc-software-solutions-mobile.jpg";
+import imgAiMobile from "@/assets/homepageservices/mobile/svc-ai-automation-mobile.jpg";
+import imgMarketingMobile from "@/assets/homepageservices/mobile/svc-marketing-growth-mobile.jpg";
 
 interface ShowcaseItem {
   no: string;
@@ -30,6 +35,7 @@ interface ShowcaseItem {
   cta: string;
   icon: LucideIcon;
   image: string;
+  mobileImage?: string;
   alt: string;
 }
 
@@ -44,6 +50,7 @@ const items: ShowcaseItem[] = [
     cta: "Explore Brand & Design",
     icon: PenTool,
     image: imgBrand,
+    mobileImage: imgBrandMobile,
     alt: "Brand identity and visual design system laid out across print and digital collateral",
   },
   {
@@ -56,6 +63,7 @@ const items: ShowcaseItem[] = [
     cta: "Explore Web & App Development",
     icon: MonitorSmartphone,
     image: imgWeb,
+    mobileImage: imgWebMobile,
     alt: "High-end website and mobile application interfaces displayed on modern devices",
   },
   {
@@ -68,6 +76,7 @@ const items: ShowcaseItem[] = [
     cta: "Explore Software Solutions",
     icon: Layers,
     image: imgSoftware,
+    mobileImage: imgSoftwareMobile,
     alt: "Business software platform and operational dashboard environment",
   },
   {
@@ -80,6 +89,7 @@ const items: ShowcaseItem[] = [
     cta: "Explore AI & Automation",
     icon: Sparkles,
     image: imgAi,
+    mobileImage: imgAiMobile,
     alt: "Intelligent automation and AI assisted workflow visual",
   },
   {
@@ -92,6 +102,7 @@ const items: ShowcaseItem[] = [
     cta: "Explore Marketing & Growth",
     icon: TrendingUp,
     image: imgMarketing,
+    mobileImage: imgMarketingMobile,
     alt: "Digital marketing campaign performance and audience analytics",
   },
   {
@@ -164,18 +175,20 @@ export function ServiceShowcase() {
             }}
           >
             {items.map((s, i) => (
-              <img
-                key={s.slug}
-                src={s.image}
-                alt={s.alt}
-                loading="lazy"
-                className={
-                  "absolute inset-0 h-full w-full object-cover transition-all duration-[420ms] ease-out motion-reduce:transition-none " +
-                  (i === active
-                    ? "scale-100 opacity-100 blur-0"
-                    : "scale-[1.04] opacity-0 blur-[2px]")
-                }
-              />
+              <picture key={s.slug}>
+                {s.mobileImage && <source media="(max-width: 1023px)" srcSet={s.mobileImage} />}
+                <img
+                  src={s.image}
+                  alt={s.alt}
+                  loading="lazy"
+                  className={
+                    "absolute inset-0 h-full w-full object-cover transition-all duration-[420ms] ease-out motion-reduce:transition-none " +
+                    (i === active
+                      ? "scale-100 opacity-100 blur-0"
+                      : "scale-[1.04] opacity-0 blur-[2px]")
+                  }
+                />
+              </picture>
             ))}
             <span
               aria-hidden
@@ -306,12 +319,12 @@ export function ServiceShowcase() {
               const isActive = i === active;
               return (
                 <li key={s.slug} className="min-w-0 flex-1 border-r border-border last:border-r-0">
-                  <button
-                    type="button"
+                  <Link
+                    to="/services/$slug"
+                    params={{ slug: s.slug }}
                     onMouseEnter={() => select(i)}
                     onFocus={() => select(i)}
-                    onClick={() => select(i)}
-                    aria-pressed={isActive}
+                    aria-current={isActive ? "true" : undefined}
                     className="group relative block w-full px-4 py-4 text-left outline-none"
                   >
                     <span
@@ -349,7 +362,7 @@ export function ServiceShowcase() {
                         }
                       />
                     </span>
-                  </button>
+                  </Link>
                 </li>
               );
             })}

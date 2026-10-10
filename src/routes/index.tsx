@@ -407,6 +407,7 @@
 // // }
 
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -444,14 +445,7 @@ const partnerLogos = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      {
-        title: "Nexen Strategy — Build Better. Move Smarter. Grow Further.",
-      },
-      {
-        name: "description",
-        content:
-          "A UK digital solutions partner for brand, web and app development, software, AI and automation, marketing and media production.",
-      },
+      ...seoMeta("/"),
       {
         property: "og:title",
         content: "Build Better. Move Smarter. Grow Further.",
@@ -470,6 +464,7 @@ export const Route = createFileRoute("/")({
         content: "summary_large_image",
       },
     ],
+    links: seoLinks("/"),
   }),
   component: Home,
 });

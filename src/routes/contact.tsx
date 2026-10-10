@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { useMemo, useState, type FormEvent } from "react";
 import {
   ArrowRight,
@@ -38,12 +39,7 @@ function countryFlag(code: string) {
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Nexen Strategy" },
-      {
-        name: "description",
-        content:
-          "Let's build something that matters. Talk to Nexen Strategy about your business, digital, technology, AI, marketing or creative requirements.",
-      },
+      ...seoMeta("/contact"),
       { property: "og:title", content: "Contact — Nexen Strategy" },
       {
         property: "og:description",
@@ -53,6 +49,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: seoLinks("/contact"),
   }),
   component: ContactPage,
 });

@@ -1,11 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { ArrowRight, Cookie } from "lucide-react";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 
 export const Route = createFileRoute("/cookie-policy")({
   head: () => ({
-    meta: [{ title: "Cookie Policy — Nexen Strategy" }],
+    meta: seoMeta("/cookie-policy"),
+    links: seoLinks("/cookie-policy"),
   }),
   component: CookiePolicyPage,
 });
@@ -76,7 +78,7 @@ function CookiePolicyPage() {
                   How cookies and similar technologies support your experience on our website.
                 </p>
                 <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-white/55">
-                  <span>Last updated: September 2026</span>
+                  <span>Last updated: October 2026</span>
                   <span className="h-px w-12 bg-cyan/60" />
                   <span>9 sections</span>
                 </div>
@@ -157,8 +159,8 @@ function CookiePolicyPage() {
 
             <div className="max-w-3xl">
               <p className="mb-12 max-w-2xl text-xl leading-relaxed text-navy sm:text-2xl">
-                We keep our use of cookies limited to what is necessary for the website to function
-                and for visitors to use its features.
+                We keep our use of cookies limited to what is necessary for the website to function,
+                along with analytics cookies that help us understand how the website is used.
               </p>
               <div className="space-y-14 border-t border-border pt-12">
                 {/* 1 */}
@@ -187,9 +189,16 @@ function CookiePolicyPage() {
                   </h2>
 
                   <p className="mt-5 leading-relaxed text-muted-foreground">
-                    The current Nexen Strategy website does not intentionally use advertising
-                    cookies or analytics tracking technologies such as Google Analytics, Google Tag
-                    Manager, Meta Pixel, or similar behavioural tracking systems.
+                    The Nexen Strategy website uses Google Analytics to understand how visitors use
+                    the site, such as which pages are viewed, how long visits last, approximate
+                    location, and the type of device and browser used. Google Analytics sets cookies
+                    such as <code>_ga</code> and <code>_ga_*</code>, which typically expire after up
+                    to two years.
+                  </p>
+
+                  <p className="mt-4 leading-relaxed text-muted-foreground">
+                    We do not use advertising cookies or advertising tracking technologies such as
+                    Meta Pixel.
                   </p>
 
                   <p className="mt-4 leading-relaxed text-muted-foreground">
@@ -229,8 +238,8 @@ function CookiePolicyPage() {
                   </ul>
 
                   <p className="mt-5 leading-relaxed text-muted-foreground">
-                    Nexen Strategy does not currently intentionally deploy analytics or advertising
-                    cookie systems on this website.
+                    Nexen Strategy uses analytics cookies (Google Analytics) on this website. We do
+                    not use advertising cookies.
                   </p>
                 </section>
 
@@ -255,6 +264,12 @@ function CookiePolicyPage() {
                   <p className="mt-4 leading-relaxed text-muted-foreground">
                     We recommend reviewing the privacy and cookie information of any third-party
                     service before using it.
+                  </p>
+
+                  <p className="mt-4 leading-relaxed text-muted-foreground">
+                    Google Analytics is provided by Google, which processes this information
+                    according to its own privacy policy. You can opt out of Google Analytics using
+                    the Google Analytics Opt-out Browser Add-on provided by Google.
                   </p>
                 </section>
 

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { CtaSection } from "@/components/site/CtaSection";
@@ -170,12 +171,7 @@ function LogoGrid({ clients }: { clients: Client[] }) {
 export const Route = createFileRoute("/clients")({
   head: () => ({
     meta: [
-      { title: "Clients — Nexen Strategy" },
-      {
-        name: "description",
-        content:
-          "Businesses Nexen Strategy has helped move forward across real estate, healthcare, education, fashion, engineering and hospitality.",
-      },
+      ...seoMeta("/clients"),
       { property: "og:title", content: "Clients — Nexen Strategy" },
       {
         property: "og:description",
@@ -185,6 +181,7 @@ export const Route = createFileRoute("/clients")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: seoLinks("/clients"),
   }),
   component: ClientsPage,
 });

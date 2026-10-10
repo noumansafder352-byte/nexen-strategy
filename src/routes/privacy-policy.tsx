@@ -508,13 +508,15 @@
 // }
 
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
-    meta: [{ title: "Privacy Policy — Nexen Strategy" }],
+    meta: seoMeta("/privacy-policy"),
+    links: seoLinks("/privacy-policy"),
   }),
   component: PrivacyPolicyPage,
 });
@@ -603,7 +605,7 @@ function PrivacyPolicyPage() {
                 </p>
 
                 <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-white/55">
-                  <span>Last updated: September 2026</span>
+                  <span>Last updated: October 2026</span>
                   <span className="h-px w-12 bg-cyan/60" />
                   <span>15 sections</span>
                 </div>
@@ -931,9 +933,15 @@ function PrivacyPolicyPage() {
                   </h2>
 
                   <p className="mt-5 leading-relaxed text-muted-foreground">
-                    Our current website implementation does not intentionally use advertising or
-                    analytics tracking technologies such as Google Analytics, Meta Pixel, or similar
-                    behavioural tracking tools.
+                    Our website uses Google Analytics to understand how visitors use the site, such
+                    as which pages are viewed, how long visits last, approximate location, and the
+                    type of device and browser used. This information is collected through cookies
+                    and is used in aggregate to improve the website. We do not use advertising
+                    tracking technologies such as Meta Pixel.
+                  </p>
+
+                  <p className="mt-4 leading-relaxed text-muted-foreground">
+                    Google processes this information according to its own privacy policy.
                   </p>
 
                   <p className="mt-4 leading-relaxed text-muted-foreground">

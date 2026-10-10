@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { seoLinks, seoMeta } from "@/lib/seo";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/site/Header";
@@ -66,12 +67,7 @@ import mediaShoot3 from "@/assets/portfolio/media-img4.png";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portfolio — Nexen Strategy" },
-      {
-        name: "description",
-        content:
-          "Selected digital solutions, technology platforms and business-focused projects built by Nexen Strategy to help organisations launch, transform, automate and grow.",
-      },
+      ...seoMeta("/portfolio"),
       {
         property: "og:title",
         content: "Solutions Built for Real Business Challenges — Nexen Strategy",
@@ -84,6 +80,7 @@ export const Route = createFileRoute("/portfolio")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: seoLinks("/portfolio"),
   }),
   component: PortfolioPage,
 });

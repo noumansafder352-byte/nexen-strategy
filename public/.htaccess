@@ -1,0 +1,17 @@
+RewriteEngine On
+
+RewriteBase /
+
+RewriteRule ^index\.html$ - [L]
+
+# Serve the pre-built HTML for known pages (e.g. /about -> /_pages/about.html)
+# so each page's title and description are in the HTML that crawlers fetch.
+RewriteCond %{REQUEST_URI} ^/(.+?)/?$
+RewriteCond %{DOCUMENT_ROOT}/_pages/%1.html -f
+RewriteRule ^ /_pages/%1.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule . /index.html [L]
