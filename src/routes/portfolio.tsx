@@ -18,7 +18,6 @@ import drshahidLaptop from "@/assets/portfolio/drshahid-laptop-2.png";
 import drshahidMobile from "@/assets/portfolio/drshahid-mobile-2.png";
 import drshahidThird from "@/assets/portfolio/drshahid-img3.png";
 import royaLaptop from "@/assets/portfolio/roya-laptop.png";
-import royaMobile from "@/assets/portfolio/roya-mobile.png";
 import royaMobile2 from "@/assets/portfolio/roya-mobile-2.png";
 import royaThird from "@/assets/portfolio/roya-img3.png";
 import drsarfrazLaptop from "@/assets/portfolio/drsarfraz-laptop.png";

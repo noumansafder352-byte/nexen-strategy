@@ -8,8 +8,6 @@ import usaFlag from "@/assets/clients/flag_of_united_states.png";
 
 type Country = { name: string; short: string; flag: React.ReactNode };
 
-const V = "0 0 60 40";
-
 const countries: Country[] = [
   {
     name: "Pakistan",
