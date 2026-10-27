@@ -152,9 +152,14 @@ export function Header({
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link to="/contact" className="btn-primary hidden !py-3 !text-[0.85rem] lg:inline-flex">
-            Start a Project
-          </Link>
+          <a
+            href="/company-profile.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary hidden !py-3 !text-[0.85rem] lg:inline-flex"
+          >
+            Company Profile
+          </a>
           <button
             type="button"
             aria-label="Open menu"
@@ -292,14 +297,16 @@ export function Header({
                   <ArrowRight className="h-4 w-4 -translate-x-1 text-cyan opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
                 </Link>
               ))}
-              <Link
-                to="/contact"
+              <a
+                href="/company-profile.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="btn-primary mt-8 mb-4 justify-center"
               >
-                Start a Project
+                Company Profile
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
 
               <div className="mt-7 border-t border-white/10 pt-5 pb-3">
                 <p className="eyebrow mb-3 text-[0.65rem] text-cyan">Contact</p>
